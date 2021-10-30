@@ -10,7 +10,7 @@ namespace cinepolisproyect
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new Views.DashboardPage();
         }
 
         protected override void OnStart()

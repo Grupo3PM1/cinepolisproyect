@@ -14,5 +14,10 @@ namespace cinepolisproyect
         {
             InitializeComponent();
         }
+
+        private void btnDahsbord_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -15,6 +15,16 @@ namespace cinepolisproyect.Views
         public Dashbord()
         {
             InitializeComponent();
+            ToolbarItem item = new ToolbarItem
+            {
+                Text = "Example Item",
+                IconImageSource = ImageSource.FromFile("Cinepolislogo.png"),
+                Order = ToolbarItemOrder.Primary,
+                Priority = 0
+            };
+
+            // "this" refers to a Page object
+            this.ToolbarItems.Add(item);
         }
     }
 }

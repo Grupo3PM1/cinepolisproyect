@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="cinepolisproyect.Views.PeliculasPage"
-             Title="Peliculas"
-             Icon="baseline_movie_black_24dp.png">
+             x:Class="cinepolisproyect.Views.HistorialPage"
+             Title="Historial"
+             Icon="outline_article_black_24dp.png">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to PeliculasPage!"
+            <Label Text="Welcome to HistorialPage!"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
         </StackLayout>
