@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace cinepolisproyect.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Prueba : ContentPage
+    public partial class RegistroPage : ContentPage
     {
-        public Prueba()
+        public RegistroPage()
         {
             InitializeComponent();
         }
