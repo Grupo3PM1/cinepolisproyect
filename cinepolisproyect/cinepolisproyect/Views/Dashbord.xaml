@@ -1,14 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:local1="clr-namespace:cinepolisproyect.Views"
              x:Class="cinepolisproyect.Views.Dashbord">
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Example Item"
-                 IconImageSource="Cinepolislogo.png"
-                 Order="Primary"
-                 Priority="0" />
-    </ContentPage.ToolbarItems>
-    <ContentPage.Content>
-        
-    </ContentPage.Content>
 </ContentPage>
