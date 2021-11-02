@@ -4,11 +4,12 @@
              x:Class="cinepolisproyect.Views.HistorialPage"
              Title="Historial"
              Icon="outline_article_black_24dp.png">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to HistorialPage!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+    <StackLayout>
+        <Frame Padding="8" CornerRadius="0">
+            <FlexLayout>
+                <Image Source="Cinepolislogo.png" HeightRequest="40" HorizontalOptions="Start"/>
+                <Label Text="CINEPOLIS" HorizontalOptions="Center" FontSize="24"/>
+            </FlexLayout>
+        </Frame>
+    </StackLayout>
 </ContentPage>

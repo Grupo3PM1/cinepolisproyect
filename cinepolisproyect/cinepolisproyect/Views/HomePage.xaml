@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="cinepolisproyect.Views.HomePage"
              Title="Home"
-             Icon="outline_home_black_24dp.png">
+             Icon="outline_home_black_24dp.png"
+             BackgroundImage="fondodashboard.png">
     <StackLayout>
         <Frame Padding="8" CornerRadius="0">
             <FlexLayout>
@@ -16,8 +17,7 @@
         </Picker>
         <BoxView x:Name="CmbOptions" VerticalOptions="CenterAndExpand"/>
         <Label Text="Estrenos" HorizontalOptions="Center" FontSize="24"/>
-        <Image Source="img1.jpg" WidthRequest="400" HorizontalOptions="Center"/>
-        <Image Source="img2.jpg" WidthRequest="400" HorizontalOptions="Center"/>
-        <Label Text="Logo"/>
+        <Image Source="img1.jpg" WidthRequest="350" HorizontalOptions="Center"/>
+        <Image Source="img2.jpg" WidthRequest="350" HorizontalOptions="Center"/>
     </StackLayout>
 </ContentPage>

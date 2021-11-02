@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="cinepolisproyect.Views.TiendaPage"
+             x:Class="cinepolisproyect.Views.HorariosPage"
              BackgroundImage="fondotienda.png">
     <StackLayout>
         <Frame Padding="8" CornerRadius="0">
@@ -10,21 +10,21 @@
                 <Label Text="CINEPOLIS" HorizontalOptions="Center" FontSize="24"/>
             </FlexLayout>
         </Frame>
-        <Label Text="Tienda" HorizontalOptions="Center" FontSize="24"/>
+        <Label Text="Horarios" HorizontalOptions="Center" FontSize="24"/>
         <FlexLayout>
             <Label Text="    "/>
-            <Button ImageSource="combo1.jpg"></Button>
-            <Label Text="Combo 1: Palomitas de maíz + dos refrescos (L. 120)" WidthRequest="200" FontSize="20"/>
+            <Button ImageSource="tres.jpg"></Button>
+            <Label Text=" 3 00pm" FontSize="36"/>
         </FlexLayout>
         <FlexLayout>
             <Label Text="    "/>
-            <Button ImageSource="combo2.jpg"></Button>
-            <Label Text="Combo 2: Palomitas de maíz + un refresco (L. 95)" WidthRequest="200" FontSize="20"/>
+            <Button ImageSource="cinco.jpg"></Button>
+            <Label Text=" 5 00pm" FontSize="36"/>
         </FlexLayout>
         <FlexLayout>
             <Label Text="    "/>
-            <Button ImageSource="combo3.jpg"></Button>
-            <Label Text="Combo 3: Nachos + un refresco (L. 100)" WidthRequest="200" FontSize="20"/>
+            <Button ImageSource="siete.jpg"></Button>
+            <Label Text=" 7 00pm" FontSize="36"/>
         </FlexLayout>
     </StackLayout>
 </ContentPage>

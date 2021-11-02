@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="cinepolisproyect.Views.PeliculasPage"
              Title="Peliculas"
-             Icon="baseline_movie_black_24dp.png">
+             Icon="baseline_movie_black_24dp.png"
+             BackgroundImage="fondotienda.png">
     <StackLayout>
         <Frame Padding="8" CornerRadius="0">
             <FlexLayout>
