@@ -15,6 +15,7 @@ namespace cinepolisproyect.Views
         public DashboardPage()
         {
             InitializeComponent();
+            
         }
     }
 }

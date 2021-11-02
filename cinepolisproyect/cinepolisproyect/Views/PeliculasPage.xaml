@@ -4,11 +4,25 @@
              x:Class="cinepolisproyect.Views.PeliculasPage"
              Title="Peliculas"
              Icon="baseline_movie_black_24dp.png">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to PeliculasPage!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+    <StackLayout>
+        <Frame Padding="8" CornerRadius="0">
+            <FlexLayout>
+                <Image Source="Cinepolislogo.png" HeightRequest="40" HorizontalOptions="Start"/>
+                <Label Text="CINEPOLIS" HorizontalOptions="Center" FontSize="24"/>
+            </FlexLayout>
+        </Frame>
+        <Label Text="Peliculas" HorizontalOptions="Center" FontSize="24"/>
+        <FlexLayout>
+            <Button ImageSource="img1x1.jpg"></Button>
+            <Label Text="Los Vengadores (3D)" FontSize="24"/>
+        </FlexLayout>
+        <FlexLayout>
+            <Button ImageSource="img1x1.jpg"></Button>
+            <Label Text="Los Vengadores (3D)" FontSize="24"/>
+        </FlexLayout>
+        <FlexLayout>
+            <Button ImageSource="img1x1.jpg"></Button>
+            <Label Text="Los Vengadores (3D)" FontSize="24"/>
+        </FlexLayout>
+    </StackLayout>
 </ContentPage>

@@ -4,11 +4,20 @@
              x:Class="cinepolisproyect.Views.HomePage"
              Title="Home"
              Icon="outline_home_black_24dp.png">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Home!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+    <StackLayout>
+        <Frame Padding="8" CornerRadius="0">
+            <FlexLayout>
+                <Image Source="Cinepolislogo.png" HeightRequest="40" HorizontalOptions="Start"/>
+                <Label Text="CINEPOLIS" HorizontalOptions="Center" FontSize="24"/>
+            </FlexLayout>
+        </Frame>
+        <Label Text="Cine:" FontSize="18"/>
+        <Picker x:Name="CmbCine" SelectedIndexChanged="CmbCine_SelectedIndexChanged">
+        </Picker>
+        <BoxView x:Name="CmbOptions" VerticalOptions="CenterAndExpand"/>
+        <Label Text="Estrenos" HorizontalOptions="Center" FontSize="24"/>
+        <Image Source="img1.jpg" WidthRequest="400" HorizontalOptions="Center"/>
+        <Image Source="img2.jpg" WidthRequest="400" HorizontalOptions="Center"/>
+        <Label Text="Logo"/>
+    </StackLayout>
 </ContentPage>
