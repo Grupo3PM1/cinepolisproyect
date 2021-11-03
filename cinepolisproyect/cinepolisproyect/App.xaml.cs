@@ -12,7 +12,8 @@ namespace cinepolisproyect
 
             //MainPage = new Views.DashboardPage();
             //MainPage = new Views.TiendaPage();
-            MainPage = new Views.HorariosPage();
+            MainPage = new Views.ButacaPage();
+            //MainPage = new Views.HorariosPage();
         }
 
         protected override void OnStart()
