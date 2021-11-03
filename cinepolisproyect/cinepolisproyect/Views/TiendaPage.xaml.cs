@@ -16,5 +16,20 @@ namespace cinepolisproyect.Views
         {
             InitializeComponent();
         }
+
+        private async void StackCombo1_Tapped(object sender, EventArgs e)
+        {
+            await DisplayAlert("Alerta", "Selecciono Combo 1", "OK");
+        }
+
+        private async void StackCombo2_Tapped(object sender, EventArgs e)
+        {
+            await DisplayAlert("Alerta", "Selecciono Combo 2", "OK");
+        }
+
+        private async void StackCombo3_Tapped(object sender, EventArgs e)
+        {
+            await DisplayAlert("Alerta", "Selecciono Combo 3", "OK");
+        }
     }
 }

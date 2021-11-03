@@ -13,11 +13,12 @@
             </FlexLayout>
         </Frame>
         <Label Text="Cine:" FontSize="18"/>
-        <Picker x:Name="CmbCine" SelectedIndexChanged="CmbCine_SelectedIndexChanged">
-        </Picker>
-        <BoxView x:Name="CmbOptions" VerticalOptions="CenterAndExpand"/>
+        <Frame BorderColor="#6D66E8" BackgroundColor="Transparent" Padding="0" Margin="10">
+            <Picker x:Name="CmbCine" SelectedIndexChanged="CmbCine_SelectedIndexChanged"/>
+        </Frame>
         <Label Text="Estrenos" HorizontalOptions="Center" FontSize="24"/>
         <Image Source="img1.jpg" WidthRequest="350" HorizontalOptions="Center"/>
         <Image Source="img2.jpg" WidthRequest="350" HorizontalOptions="Center"/>
+        <BoxView x:Name="CmbOptions" VerticalOptions="Center"/>
     </StackLayout>
 </ContentPage>
