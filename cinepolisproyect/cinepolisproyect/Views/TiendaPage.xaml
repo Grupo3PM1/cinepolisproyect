@@ -11,20 +11,65 @@
             </FlexLayout>
         </Frame>
         <Label Text="Tienda" HorizontalOptions="Center" FontSize="24"/>
-        <FlexLayout>
-            <Label Text="    "/>
-            <Button ImageSource="combo1.jpg"></Button>
-            <Label Text="Combo 1: Palomitas de maíz + dos refrescos (L. 120)" WidthRequest="200" FontSize="20"/>
-        </FlexLayout>
-        <FlexLayout>
-            <Label Text="    "/>
-            <Button ImageSource="combo2.jpg"></Button>
-            <Label Text="Combo 2: Palomitas de maíz + un refresco (L. 95)" WidthRequest="200" FontSize="20"/>
-        </FlexLayout>
-        <FlexLayout>
-            <Label Text="    "/>
-            <Button ImageSource="combo3.jpg"></Button>
-            <Label Text="Combo 3: Nachos + un refresco (L. 100)" WidthRequest="200" FontSize="20"/>
-        </FlexLayout>
+        <StackLayout Orientation="Horizontal" Margin="8" BackgroundColor="#2DD9EA">
+            <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer  x:Name="StackCombo1"
+                    NumberOfTapsRequired="1"
+                    Tapped="StackCombo1_Tapped"/>
+            </StackLayout.GestureRecognizers>
+            <Image Source="combo1.jpg" HeightRequest="150"/>
+            <StackLayout Orientation="Vertical">
+                <Label Text="Combo 1" FontSize="24"/>
+                <StackLayout Orientation="Vertical">
+                    <Label Text="* Palomitas de maíz" FontSize="18"/>
+                    <Label Text="* Dos refrescos" FontSize="18"/>
+                    <Label Text=""/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Precio: " FontSize="18" FontAttributes="Bold"/>
+                    <Label Text="L. 120.00" FontSize="18" FontAttributes="Bold"/>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" Margin="8" BackgroundColor="#2DD9EA">
+            <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer  x:Name="StackCombo2"
+                    NumberOfTapsRequired="1"
+                    Tapped="StackCombo2_Tapped"/>
+            </StackLayout.GestureRecognizers>
+            <Image Source="combo2.jpg" HeightRequest="150"/>
+            <StackLayout Orientation="Vertical">
+                <Label Text="Combo 2" FontSize="24"/>
+                <StackLayout Orientation="Vertical">
+                    <Label Text="* Palomitas de maíz" FontSize="18"/>
+                    <Label Text="* Un refresco" FontSize="18"/>
+                    <Label Text=""/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Precio: " FontSize="18" FontAttributes="Bold"/>
+                    <Label Text="L. 95.00" FontSize="18" FontAttributes="Bold"/>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" Margin="8" BackgroundColor="#2DD9EA">
+            <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer  x:Name="StackCombo3"
+                    NumberOfTapsRequired="1"
+                    Tapped="StackCombo3_Tapped"/>
+            </StackLayout.GestureRecognizers>
+            <Image Source="combo3.jpg" HeightRequest="150"/>
+            <StackLayout Orientation="Vertical">
+                <Label Text="Combo 3" FontSize="24"/>
+                <StackLayout Orientation="Vertical">
+                    <Label Text="* Nachos" FontSize="18"/>
+                    <Label Text="* Un refresco" FontSize="18"/>
+                    <Label Text=""/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Precio: " FontSize="18" FontAttributes="Bold"/>
+                    <Label Text="L. 100.00" FontSize="18" FontAttributes="Bold"/>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
     </StackLayout>
 </ContentPage>

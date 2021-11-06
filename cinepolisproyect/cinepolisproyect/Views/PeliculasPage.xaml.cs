@@ -16,5 +16,20 @@ namespace cinepolisproyect.Views
         {
             InitializeComponent();
         }
+
+        private async void StackPeli1_Tapped(object sender, EventArgs e)
+        {
+            await DisplayAlert("Alerta", "Selecciono pelicula 1", "OK");
+        }
+
+        private async void StackPeli2_Tapped(object sender, EventArgs e)
+        {
+            await DisplayAlert("Alerta", "Selecciono pelicula 2", "OK");
+        }
+
+        private async void StackPeli3_Tapped(object sender, EventArgs e)
+        {
+            await DisplayAlert("Alerta", "Selecciono pelicula 3", "OK");
+        }
     }
 }
