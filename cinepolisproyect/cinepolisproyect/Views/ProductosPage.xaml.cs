@@ -16,5 +16,10 @@ namespace cinepolisproyect.Views
         {
             InitializeComponent();
         }
+
+        private async void btncomprar_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Views.TicketPage());
+        }
     }
 }

@@ -12,7 +12,7 @@ namespace cinepolisproyect
 
             MainPage = new Views.DashboardPage();
             //MainPage = new Views.TiendaPage();
-            //MainPage = new Views.ButacaPage();
+            //MainPage = new Views.ProductosPage();
             //MainPage = new Views.HorariosPage();
         }
 
