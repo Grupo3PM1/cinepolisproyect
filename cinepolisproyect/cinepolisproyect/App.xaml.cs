@@ -9,8 +9,8 @@ namespace cinepolisproyect
         public App()
         {
             InitializeComponent();
-
-            MainPage = new Views.DashboardPage();
+            MainPage = new NavigationPage(new Views.DashboardPage());
+            //MainPage = new Views.DashboardPage();
             //MainPage = new Views.TiendaPage();
             //MainPage = new Views.ProductosPage();
             //MainPage = new Views.HorariosPage();
