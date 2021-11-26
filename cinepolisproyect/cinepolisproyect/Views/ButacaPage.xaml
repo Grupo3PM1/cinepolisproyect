@@ -10,7 +10,7 @@
 
             <StackLayout Orientation="Horizontal" Margin="0,20" VerticalOptions="Start" Spacing="20">
 
-                <Image Source="Maligno.jpg" Aspect="AspectFill" WidthRequest="70" HeightRequest="90" HorizontalOptions="Start"/>
+                <Image Source="{Binding Imagepeli}" Aspect="AspectFill" HeightRequest="90" HorizontalOptions="Start"/>
 
                 <StackLayout>
                     <Label Text="{Binding Pelicula}" TextColor="White" FontSize="20"/>

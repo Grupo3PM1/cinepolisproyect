@@ -22,6 +22,7 @@ namespace cinepolisproyect.Views
             Models.pelicula classdata = new Models.pelicula
             {
                 Pelicula = this.txtpeli.Text,
+                Imagepeli = this.txtimage.Text,
                 Fechapeli = this.txtdate.Text,
                 Horario = this.lblhorap1.Text,
             };
@@ -35,6 +36,7 @@ namespace cinepolisproyect.Views
             Models.pelicula classdata = new Models.pelicula
             {
                 Pelicula = this.txtpeli.Text,
+                Imagepeli = this.txtimage.Text,
                 Fechapeli = this.txtdate.Text,
                 Horario = this.lblhorap2.Text,
             };
@@ -48,8 +50,9 @@ namespace cinepolisproyect.Views
             Models.pelicula classdata = new Models.pelicula
             {
                 Pelicula = this.txtpeli.Text,
+                Imagepeli = this.txtimage.Text,
                 Fechapeli = this.txtdate.Text,
-                Horario = this.lblhorap2.Text,
+                Horario = this.lblhorap3.Text,
             };
             var page = new Views.ButacaPage();
             page.BindingContext = classdata;

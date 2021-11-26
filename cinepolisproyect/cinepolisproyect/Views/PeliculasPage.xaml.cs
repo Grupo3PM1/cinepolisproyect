@@ -23,6 +23,7 @@ namespace cinepolisproyect.Views
             Models.pelicula classdata = new Models.pelicula
             {
                 Pelicula = this.lblpeli1.Text,
+                Imagepeli = "cartelera1.jpg",
                 Fechapeli = this.lbldate1.Text,
             };
             var page = new Views.HorariosPage();
@@ -36,6 +37,7 @@ namespace cinepolisproyect.Views
             Models.pelicula classdata = new Models.pelicula
             {
                 Pelicula = this.lblpeli2.Text,
+                Imagepeli = "cartelera2.jpg",
                 Fechapeli = this.lbldate2.Text,
             };
             var page = new Views.HorariosPage();
@@ -49,6 +51,7 @@ namespace cinepolisproyect.Views
             Models.pelicula classdata = new Models.pelicula
             {
                 Pelicula = this.lblpeli3.Text,
+                Imagepeli = "cartelera3.jpg",
                 Fechapeli = this.lbldate3.Text,
             };
             var page = new Views.HorariosPage();
