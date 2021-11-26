@@ -14,20 +14,21 @@
         <FlexLayout>
             <Label Text="    "/>
             <Button x:Name="btntrespm" ImageSource="tres.jpg" Clicked="btntrespm_Clicked"></Button>
-            <Label Text=" 3 00pm" FontSize="36"/>
+            <Label  x:Name="lblhorap1" Text=" 3 00pm" FontSize="36"/>
         </FlexLayout>
         <FlexLayout>
             <Label Text="    "/>
             <Button x:Name="btncincopm" ImageSource="cinco.jpg" Clicked="btncincopm_Clicked"></Button>
-            <Label Text=" 5 00pm" FontSize="36"/>
+            <Label  x:Name="lblhorap2" Text=" 5 00pm" FontSize="36"/>
         </FlexLayout>
         <FlexLayout>
             <Label Text="    "/>
             <Button x:Name="btnsietepm" ImageSource="siete.jpg" Clicked="btnsietepm_Clicked"></Button>
-            <Label Text=" 7 00pm" FontSize="36"/>
+            <Label  x:Name="lblhorap3"  Text=" 7 00pm" FontSize="36"/>
         </FlexLayout>
         <FlexLayout>
-            <Label x:Name="txtIdPeli" Text="{Binding IdPelicula}" TextColor="Transparent"/>
+            <Label x:Name="txtpeli" Text="{Binding Pelicula}" TextColor="Transparent"/>
+            <Label x:Name="txtdate" Text="{Binding Fechapeli}" TextColor="Transparent"/>
         </FlexLayout>
     </StackLayout>
 </ContentPage>

@@ -15,7 +15,9 @@ namespace cinepolisproyect.Views
     {
         public ButacaPage(/*Ticket ticket*/)
         {
+            
             InitializeComponent();
+
             /*SelectedTicket = ticket;
             Init();
             this.BindingContext = this;*/
@@ -26,5 +28,12 @@ namespace cinepolisproyect.Views
         {
             await Navigation.PushAsync(new Views.ProductosPage());
         }
+
+
+
+        private void seat1_Clicked(object sender, EventArgs e)
+        {
+        }
+
     }
 }

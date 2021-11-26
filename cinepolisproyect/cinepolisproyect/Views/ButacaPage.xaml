@@ -13,17 +13,16 @@
                 <Image Source="Maligno.jpg" Aspect="AspectFill" WidthRequest="70" HeightRequest="90" HorizontalOptions="Start"/>
 
                 <StackLayout>
-                    <Label Text="Maligno" TextColor="White" FontSize="20"/>
+                    <Label Text="{Binding Pelicula}" TextColor="White" FontSize="20"/>
 
                     <StackLayout Orientation="Horizontal" Spacing="15">
                         <Image Source="calendar.png" HeightRequest="15" WidthRequest="15"/>
-                        <Label Text="2/11/21" TextColor="white" FontSize="12" VerticalOptions="Center" />
-
+                        <Label Text="{Binding Fechapeli}" TextColor="white" FontSize="12" VerticalOptions="Center" />
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal" Spacing="15">
                         <Image Source="Time.png" HeightRequest="15" WidthRequest="15"/>
-                        <Label Text="3:00 PM" TextColor="white" FontSize="12" VerticalOptions="Center" />
+                        <Label Text="{Binding Horario}" TextColor="white" FontSize="12" VerticalOptions="Center" />
                     </StackLayout>
 
                 </StackLayout>
@@ -48,34 +47,54 @@
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
+                        <Button WidthRequest="15" BorderWidth="1" HeightRequest="15" >
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal">
+                                        <VisualState.Setters>
+                                            <Setter Property="BorderColor" Value="Pink" />
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                    <VisualState x:Name="Pressed">
+                                        <VisualState.Setters>
+                                            <Setter Property="BackgroundColor" Value="yellow" />
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                        </Button>
+                        </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button WidthRequest="15" HeightRequest="15" 
+                                BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button WidthRequest="15" HeightRequest="15" 
+                                BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button WidthRequest="15" HeightRequest="15" BorderColor="pink"
+                                BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button WidthRequest="15" HeightRequest="15" BorderColor="pink"
+                                BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
                         <Button  WidthRequest="15" HeightRequest="15" 
-                            BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
-                    </StackLayout>
-
-                    <StackLayout Orientation="Horizontal">
-                        <Button WidthRequest="15" HeightRequest="15" BackgroundColor="MediumVioletRed" HorizontalOptions="Center" VerticalOptions="End"/>
-                    </StackLayout>
-
-                    <StackLayout Orientation="Horizontal">
-                        <Button WidthRequest="15" HeightRequest="15" BackgroundColor="Orange" HorizontalOptions="Center" VerticalOptions="End"/>
-                    </StackLayout>
-
-                    <StackLayout Orientation="Horizontal">
-                        <Button WidthRequest="15" HeightRequest="15" BackgroundColor="Orange" HorizontalOptions="Center" VerticalOptions="End"/>
-                    </StackLayout>
-
-                    <StackLayout Orientation="Horizontal">
-                        <Button WidthRequest="15" HeightRequest="15" BackgroundColor="MediumVioletRed" HorizontalOptions="Center" VerticalOptions="End"/>
+                            BorderColor="pink" BorderWidth="1" 
+                                 BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
                         <Button  WidthRequest="15" HeightRequest="15" 
-                            BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
-                    </StackLayout>
-
-                    <StackLayout Orientation="Horizontal">
-                        <Button  WidthRequest="15" HeightRequest="15" 
-                            BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
+                             BorderWidth="1" BorderColor="pink"
+                                 BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
 

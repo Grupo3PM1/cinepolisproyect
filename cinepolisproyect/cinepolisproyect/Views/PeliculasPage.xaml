@@ -21,10 +21,10 @@
             </StackLayout.GestureRecognizers>
             <Image Source="cartelera1.jpg" HeightRequest="150"/>
             <StackLayout Orientation="Vertical">
-                <Label Text="Eternals" FontSize="24"/>
+                <Label x:Name="lblpeli1" Text="Eternals" FontSize="24"/>
                 <StackLayout Orientation="Horizontal">
                     <Label Text="Estreno: "/>
-                    <Label Text="5 de noviembre de 2021"/>
+                    <Label x:Name="lbldate1" Text="5 de noviembre de 2021"/>
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
                     <Label Text="Genero: "/>
@@ -44,10 +44,10 @@
             </StackLayout.GestureRecognizers>
             <Image Source="cartelera2.jpg" HeightRequest="150"/>
             <StackLayout Orientation="Vertical">
-                <Label Text="Venom: Carnage liberado" FontSize="24"/>
+                <Label x:Name="lblpeli2" Text="Venom: Carnage liberado" FontSize="24"/>
                 <StackLayout Orientation="Horizontal">
                     <Label Text="Estreno: "/>
-                    <Label Text="1 de octubre de 2021"/>
+                    <Label x:Name="lbldate2" Text="1 de octubre de 2021"/>
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
                     <Label Text="Genero: "/>
@@ -67,10 +67,10 @@
             </StackLayout.GestureRecognizers>
             <Image Source="cartelera3.jpg" HeightRequest="150"/>
             <StackLayout Orientation="Vertical">
-                <Label Text="Black Widow" FontSize="24"/>
+                <Label x:Name="lblpeli3" Text="Black Widow" FontSize="24"/>
                 <StackLayout Orientation="Horizontal">
                     <Label Text="Estreno: "/>
-                    <Label Text="9 de julio de 2021"/>
+                    <Label x:Name="lbldate3" Text="9 de julio de 2021"/>
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
                     <Label Text="Genero: "/>

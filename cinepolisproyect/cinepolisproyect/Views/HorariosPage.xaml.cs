@@ -21,8 +21,9 @@ namespace cinepolisproyect.Views
         {
             Models.pelicula classdata = new Models.pelicula
             {
-                IdPelicula = Convert.ToInt32(txtIdPeli.Text),
-                IdHorario = 1
+                Pelicula = this.txtpeli.Text,
+                Fechapeli = this.txtdate.Text,
+                Horario = this.lblhorap1.Text,
             };
             var page = new Views.ButacaPage();
             page.BindingContext = classdata;
@@ -33,8 +34,9 @@ namespace cinepolisproyect.Views
         {
             Models.pelicula classdata = new Models.pelicula
             {
-                IdPelicula = Convert.ToInt32(txtIdPeli.Text),
-                IdHorario = 2
+                Pelicula = this.txtpeli.Text,
+                Fechapeli = this.txtdate.Text,
+                Horario = this.lblhorap2.Text,
             };
             var page = new Views.ButacaPage();
             page.BindingContext = classdata;
@@ -45,8 +47,9 @@ namespace cinepolisproyect.Views
         {
             Models.pelicula classdata = new Models.pelicula
             {
-                IdPelicula = Convert.ToInt32(txtIdPeli.Text),
-                IdHorario = 3
+                Pelicula = this.txtpeli.Text,
+                Fechapeli = this.txtdate.Text,
+                Horario = this.lblhorap2.Text,
             };
             var page = new Views.ButacaPage();
             page.BindingContext = classdata;

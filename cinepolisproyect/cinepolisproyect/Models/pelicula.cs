@@ -6,8 +6,9 @@ namespace cinepolisproyect.Models
 {
     public class pelicula
     {
-        public int IdPelicula { get; set; }
-        public int IdHorario { get; set; }
+        public string Pelicula { get; set; }
+        public string Fechapeli { get; set; }
+        public string Horario { get; set; }
         public int IdCombo { get; set; }
         public int RefrescoExtra { get; set; }
     }
