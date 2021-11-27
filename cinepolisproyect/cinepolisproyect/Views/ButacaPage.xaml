@@ -47,52 +47,38 @@
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button WidthRequest="15" BorderWidth="1" HeightRequest="15" >
-                            <VisualStateManager.VisualStateGroups>
-                                <VisualStateGroup x:Name="CommonStates">
-                                    <VisualState x:Name="Normal">
-                                        <VisualState.Setters>
-                                            <Setter Property="BorderColor" Value="Pink" />
-                                        </VisualState.Setters>
-                                    </VisualState>
-                                    <VisualState x:Name="Pressed">
-                                        <VisualState.Setters>
-                                            <Setter Property="BackgroundColor" Value="yellow" />
-                                        </VisualState.Setters>
-                                    </VisualState>
-                                </VisualStateGroup>
-                            </VisualStateManager.VisualStateGroups>
-                        </Button>
+                        <Button WidthRequest="15" HeightRequest="15" x:Name="seat1" Clicked="seat1_Clicked"
+                                BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                         </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button WidthRequest="15" HeightRequest="15" 
+                        <Button WidthRequest="15" HeightRequest="15"  x:Name="seat2" Clicked="seat2_Clicked"
                                 BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button WidthRequest="15" HeightRequest="15" 
+                        <Button WidthRequest="15" HeightRequest="15"  x:Name="seat3" Clicked="seat3_Clicked"
                                 BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button WidthRequest="15" HeightRequest="15" BorderColor="pink"
-                                BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
+                        <Button WidthRequest="15" HeightRequest="15" x:Name="seat4" Clicked="seat4_Clicked"
+                                BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button WidthRequest="15" HeightRequest="15" BorderColor="pink"
-                                BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
+                        <Button WidthRequest="15" HeightRequest="15" x:Name="seat5" Clicked="seat5_Clicked"
+                                BorderColor="pink"  BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button  WidthRequest="15" HeightRequest="15" 
+                        <Button  WidthRequest="15" HeightRequest="15" x:Name="seat6" Clicked="seat6_Clicked"
                             BorderColor="pink" BorderWidth="1" 
                                  BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button  WidthRequest="15" HeightRequest="15" 
+                        <Button  WidthRequest="15" HeightRequest="15" x:Name="seat7" Clicked="seat7_Clicked"
                              BorderWidth="1" BorderColor="pink"
                                  BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
@@ -108,23 +94,28 @@
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button WidthRequest="15" HeightRequest="15" BackgroundColor="MediumVioletRed" HorizontalOptions="Center" VerticalOptions="End"/>
+                        <Button  WidthRequest="15" HeightRequest="15" 
+                            BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button WidthRequest="15" HeightRequest="15" BackgroundColor="Orange" HorizontalOptions="Center" VerticalOptions="End"/>
+                        <Button  WidthRequest="15" HeightRequest="15" 
+                            BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button WidthRequest="15" HeightRequest="15" BackgroundColor="MediumVioletRed" HorizontalOptions="Center" VerticalOptions="End"/>
+                        <Button  WidthRequest="15" HeightRequest="15" 
+                            BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button WidthRequest="15" HeightRequest="15" BackgroundColor="Orange" HorizontalOptions="Center" VerticalOptions="End"/>
+                        <Button  WidthRequest="15" HeightRequest="15" 
+                            BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button WidthRequest="15" HeightRequest="15" BackgroundColor="MediumVioletRed" HorizontalOptions="Center" VerticalOptions="End"/>
+                        <Button  WidthRequest="15" HeightRequest="15" 
+                            BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
@@ -158,15 +149,18 @@
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button WidthRequest="15" HeightRequest="15" BackgroundColor="Yellow" HorizontalOptions="Center" VerticalOptions="End"/>
+                        <Button  WidthRequest="15" HeightRequest="15" 
+                            BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button WidthRequest="15" HeightRequest="15" BackgroundColor="Yellow" HorizontalOptions="Center" VerticalOptions="End"/>
+                        <Button  WidthRequest="15" HeightRequest="15" 
+                            BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button WidthRequest="15" HeightRequest="15" BackgroundColor="Yellow" HorizontalOptions="Center" VerticalOptions="End"/>
+                        <Button  WidthRequest="15" HeightRequest="15" 
+                            BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
@@ -190,23 +184,28 @@
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button WidthRequest="15" HeightRequest="15" BackgroundColor="MediumVioletRed" HorizontalOptions="Center" VerticalOptions="End"/>
+                        <Button  WidthRequest="15" HeightRequest="15" 
+                            BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button WidthRequest="15" HeightRequest="15" BackgroundColor="Orange" HorizontalOptions="Center" VerticalOptions="End"/>
+                        <Button  WidthRequest="15" HeightRequest="15" 
+                            BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button WidthRequest="15" HeightRequest="15" BackgroundColor="Orange" HorizontalOptions="Center" VerticalOptions="End"/>
+                        <Button  WidthRequest="15" HeightRequest="15" 
+                            BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button WidthRequest="15" HeightRequest="15" BackgroundColor="Orange" HorizontalOptions="Center" VerticalOptions="End"/>
+                        <Button  WidthRequest="15" HeightRequest="15" 
+                            BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button WidthRequest="15" HeightRequest="15" BackgroundColor="MediumVioletRed" HorizontalOptions="Center" VerticalOptions="End"/>
+                        <Button  WidthRequest="15" HeightRequest="15" 
+                            BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
@@ -230,29 +229,33 @@
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button   WidthRequest="15" HeightRequest="15" BorderColor="pink" BorderWidth="1" 
-                                  BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
+                        <Button  WidthRequest="15" HeightRequest="15" 
+                            BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button   WidthRequest="15" HeightRequest="15" BorderColor="pink" BorderWidth="1" 
-                                  BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
+                        <Button  WidthRequest="15" HeightRequest="15" 
+                            BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button WidthRequest="15" HeightRequest="15" BackgroundColor="MediumVioletRed" HorizontalOptions="Center" VerticalOptions="End"/>
+                        <Button  WidthRequest="15" HeightRequest="15" 
+                            BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button WidthRequest="15" HeightRequest="15" BackgroundColor="Orange" HorizontalOptions="Center" VerticalOptions="End"/>
+                        <Button  WidthRequest="15" HeightRequest="15" 
+                            BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button WidthRequest="15" HeightRequest="15" BackgroundColor="Orange" HorizontalOptions="Center" VerticalOptions="End"/>
+                        <Button  WidthRequest="15" HeightRequest="15" 
+                            BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button WidthRequest="15" HeightRequest="15" BackgroundColor="MediumVioletRed" HorizontalOptions="Center" VerticalOptions="End"/>
+                        <Button  WidthRequest="15" HeightRequest="15" 
+                            BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
@@ -311,28 +314,28 @@
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button   WidthRequest="15" HeightRequest="15" BorderColor="pink" BorderWidth="1" 
-                                  BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
+                        <Button  WidthRequest="15" HeightRequest="15" 
+                            BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button  WidthRequest="15" HeightRequest="15" BorderColor="pink" BorderWidth="1" 
-                                 BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
+                        <Button  WidthRequest="15" HeightRequest="15" 
+                            BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button  WidthRequest="15" HeightRequest="15" BorderColor="pink" BorderWidth="1" 
-                                 BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
+                        <Button  WidthRequest="15" HeightRequest="15" 
+                            BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button  WidthRequest="15" HeightRequest="15" BorderColor="pink" BorderWidth="1" 
-                                 BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
+                        <Button  WidthRequest="15" HeightRequest="15" 
+                            BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button   WidthRequest="15" HeightRequest="15" BorderColor="pink" BorderWidth="1" 
-                                  BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
+                        <Button  WidthRequest="15" HeightRequest="15" 
+                            BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
 
@@ -389,14 +392,10 @@
 
 
                     <StackLayout Orientation="Horizontal">
-                        <Rectangle Fill="yellow" HeightRequest="15" WidthRequest="15" VerticalOptions="Center"/>
+                        <Rectangle Stroke="pink" StrokeThickness="1" Fill="yellow" HeightRequest="15" WidthRequest="15" VerticalOptions="Center"/>
                         <Label Text="Seleccionado" TextColor="White" FontSize="14" VerticalOptions="Center"/>
                     </StackLayout>
 
-                    <StackLayout Orientation="Horizontal">
-                        <Rectangle Fill="MediumVioletRed" HeightRequest="15" WidthRequest="15" VerticalOptions="Center"/>
-                        <Label Text="Bloqueado" TextColor="White" FontSize="14" VerticalOptions="Center"/>
-                    </StackLayout>
                 </StackLayout>
 
             </StackLayout>
