@@ -94,37 +94,37 @@
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button  WidthRequest="15" HeightRequest="15" 
+                        <Button  WidthRequest="15" HeightRequest="15" x:Name="seat8" Clicked="seat8_Clicked"
                             BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button  WidthRequest="15" HeightRequest="15" 
+                        <Button  WidthRequest="15" HeightRequest="15" x:Name="seat9" Clicked="seat9_Clicked"
                             BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button  WidthRequest="15" HeightRequest="15" 
+                        <Button  WidthRequest="15" HeightRequest="15" x:Name="seat10" Clicked="seat10_Clicked"
                             BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button  WidthRequest="15" HeightRequest="15" 
+                        <Button  WidthRequest="15" HeightRequest="15" x:Name="seat11" Clicked="seat11_Clicked"
                             BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button  WidthRequest="15" HeightRequest="15" 
+                        <Button  WidthRequest="15" HeightRequest="15" x:Name="seat12" Clicked="seat12_Clicked"
                             BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button  WidthRequest="15" HeightRequest="15" 
+                        <Button  WidthRequest="15" HeightRequest="15" x:Name="seat13" Clicked="seat13_Clicked"
                             BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button  WidthRequest="15" HeightRequest="15" 
+                        <Button  WidthRequest="15" HeightRequest="15" x:Name="seat14" Clicked="seat14_Clicked"
                             BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
@@ -139,37 +139,37 @@
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button   WidthRequest="15" HeightRequest="15" BorderColor="pink" BorderWidth="1" 
+                        <Button   WidthRequest="15" HeightRequest="15" x:Name="seat15" Clicked="seat15_Clicked"
+                                  BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button   WidthRequest="15" HeightRequest="15" x:Name="seat16" Clicked="seat16_Clicked" BorderColor="pink" BorderWidth="1" 
                                   BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button   WidthRequest="15" HeightRequest="15" BorderColor="pink" BorderWidth="1" 
-                                  BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
-                    </StackLayout>
-
-                    <StackLayout Orientation="Horizontal">
-                        <Button  WidthRequest="15" HeightRequest="15" 
+                        <Button  WidthRequest="15" HeightRequest="15" x:Name="seat17"  Clicked="seat17_Clicked"
                             BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button  WidthRequest="15" HeightRequest="15" 
+                        <Button  WidthRequest="15" HeightRequest="15"  x:Name="seat18"  Clicked="seat18_Clicked"
                             BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button  WidthRequest="15" HeightRequest="15" 
+                        <Button  WidthRequest="15" HeightRequest="15"  x:Name="seat19" Clicked="seat19_Clicked"
                             BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button  WidthRequest="15" HeightRequest="15" 
+                        <Button  WidthRequest="15" HeightRequest="15"  x:Name="seat20" Clicked="seat20_Clicked"
                             BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button  WidthRequest="15" HeightRequest="15" 
+                        <Button  WidthRequest="15" HeightRequest="15"  x:Name="seat21" Clicked="seat21_Clicked"
                             BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
@@ -184,37 +184,37 @@
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button  WidthRequest="15" HeightRequest="15" 
+                        <Button  WidthRequest="15" HeightRequest="15"  x:Name="seat22" Clicked="seat22_Clicked"
                             BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button  WidthRequest="15" HeightRequest="15" 
+                        <Button  WidthRequest="15" HeightRequest="15"  x:Name="seat23" Clicked="seat23_Clicked"
                             BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button  WidthRequest="15" HeightRequest="15" 
+                        <Button  WidthRequest="15" HeightRequest="15"  x:Name="seat24" Clicked="seat24_Clicked"
                             BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button  WidthRequest="15" HeightRequest="15" 
+                        <Button  WidthRequest="15" HeightRequest="15"  x:Name="seat25"  Clicked="seat25_Clicked"
                             BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button  WidthRequest="15" HeightRequest="15" 
+                        <Button  WidthRequest="15" HeightRequest="15"  x:Name="seat26" Clicked="seat26_Clicked"
                             BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button  WidthRequest="15" HeightRequest="15" 
+                        <Button  WidthRequest="15" HeightRequest="15"  x:Name="seat27" Clicked="seat27_Clicked"
                             BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button  WidthRequest="15" HeightRequest="15" 
+                        <Button  WidthRequest="15" HeightRequest="15"  x:Name="seat28" Clicked="seat28_Clicked"
                             BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
@@ -229,37 +229,37 @@
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button  WidthRequest="15" HeightRequest="15" 
+                        <Button  WidthRequest="15" HeightRequest="15"  x:Name="seat29"  Clicked="seat29_Clicked"
                             BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button  WidthRequest="15" HeightRequest="15" 
+                        <Button  WidthRequest="15" HeightRequest="15"  x:Name="seat30"  Clicked="seat30_Clicked"
                             BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button  WidthRequest="15" HeightRequest="15" 
+                        <Button  WidthRequest="15" HeightRequest="15"  x:Name="seat31" Clicked="seat31_Clicked"
                             BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button  WidthRequest="15" HeightRequest="15" 
+                        <Button  WidthRequest="15" HeightRequest="15"  x:Name="seat32" Clicked="seat32_Clicked"
                             BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button  WidthRequest="15" HeightRequest="15" 
+                        <Button  WidthRequest="15" HeightRequest="15"  x:Name="seat33" Clicked="seat33_Clicked"
                             BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button  WidthRequest="15" HeightRequest="15" 
+                        <Button  WidthRequest="15" HeightRequest="15"  x:Name="seat34" Clicked="seat34_Clicked"
                             BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button  WidthRequest="15" HeightRequest="15" 
+                        <Button  WidthRequest="15" HeightRequest="15"  x:Name="seat35" Clicked="seat35_Clicked"
                             BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
@@ -314,27 +314,27 @@
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button  WidthRequest="15" HeightRequest="15" 
+                        <Button  WidthRequest="15" HeightRequest="15"  x:Name="seat36" Clicked="seat36_Clicked"
                             BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button  WidthRequest="15" HeightRequest="15" 
+                        <Button  WidthRequest="15" HeightRequest="15"  x:Name="seat37" Clicked="seat37_Clicked"
                             BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button  WidthRequest="15" HeightRequest="15" 
+                        <Button  WidthRequest="15" HeightRequest="15"  x:Name="seat38" Clicked="seat38_Clicked"
                             BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button  WidthRequest="15" HeightRequest="15" 
+                        <Button  WidthRequest="15" HeightRequest="15"  x:Name="seat39" Clicked="seat39_Clicked"
                             BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button  WidthRequest="15" HeightRequest="15" 
+                        <Button  WidthRequest="15" HeightRequest="15"  x:Name="seat40" Clicked="seat40_Clicked"
                             BorderColor="pink" BorderWidth="1" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"/>
                     </StackLayout>
 
