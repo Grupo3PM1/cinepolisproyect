@@ -66,7 +66,7 @@ namespace cinepolisproyect.Views
                     string token = await authentication.LoginWithEmailAndPassword(ttemail_user.Text, ttpassword.Text);
                     if (token != string.Empty)
                     {
-                        Application.Current.MainPage = new HomePage();
+                        Application.Current.MainPage = new DashboardPage();
                     }
                     else
                     {
