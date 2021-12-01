@@ -1,4 +1,5 @@
-﻿using System;
+﻿using cinepolisproyect.Views;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -9,11 +10,7 @@ namespace cinepolisproyect
         public App()
         {
             InitializeComponent();
-            MainPage = new NavigationPage(new Views.DashboardPage());
-            //MainPage = new Views.DashboardPage();
-            //MainPage = new Views.TiendaPage();
-            //MainPage = new Views.ProductosPage();
-            //MainPage = new Views.HorariosPage();
+            MainPage = new NavigationPage(new StartPage());
         }
 
         protected override void OnStart()

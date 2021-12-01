@@ -1,12 +1,72 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:magic="clr-namespace:MagicGradients;assembly=MagicGradients"
              x:Class="cinepolisproyect.Views.RegistroPage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+    <Grid>
+        <magic:GradientView VerticalOptions="FillAndExpand">
+            <magic:GradientView.GradientSource>
+                <magic:LinearGradient Angle="333">
+                    <magic:GradientStop Color="#FFFFFF" Offset="0"/>
+                </magic:LinearGradient>
+            </magic:GradientView.GradientSource>
+        </magic:GradientView>
+
+        <Frame x:Name="Frame1" BackgroundColor="#20667db6" HasShadow="False" HorizontalOptions="Center" VerticalOptions="Start" Margin="0,20,0,0" WidthRequest="300">
+
+            <StackLayout>
+                <Label Text="Crea una cuenta"  VerticalOptions="Start" HorizontalOptions="Start" Margin="10,0,0,0" Padding="0,10,0,0" FontSize="25" FontAttributes="Bold"/>
+                <Label Text="Regístrate para continuar"  VerticalOptions="Start" HorizontalOptions="Start" Margin="15,0,0,0"  FontSize="14" />
+
+
+                <StackLayout Orientation="Horizontal" Margin="0,20,0,10">
+                    <Entry
+                           x:Name="ttname" 
+                           FontSize="15" 
+                           Placeholder="Nombre" 
+                           HorizontalOptions="FillAndExpand" 
+                           Keyboard="Text" />
+
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Margin="0,0,0,10">
+                    <Entry
+                           x:Name="ttlastname" 
+                           FontSize="15" 
+                           Placeholder="Apellido" 
+                           HorizontalOptions="FillAndExpand" 
+                           Keyboard="Text"/>
+                </StackLayout>
+
+
+
+                <StackLayout Orientation="Horizontal" Margin="0,0,0,10">
+                    <Entry
+                            x:Name="ttemail" 
+                            Placeholder="Correo Electrónico"  
+                            FontSize="15" 
+                            Keyboard="Email" 
+                            HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+
+
+
+                <StackLayout Orientation="Horizontal">
+                    <Entry
+                            x:Name="ttpassword" Placeholder="Contraseña"  
+                            FontSize="15" 
+                            IsPassword="True" 
+                            FontAttributes="None" 
+                            HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+
+
+                <Button Text="Crear Cuenta" Margin="0,30,0,20" VerticalOptions="EndAndExpand" WidthRequest="250" CornerRadius="30" FontSize="15" TextColor="White" HorizontalOptions="Center" BackgroundColor="#667db6" x:Name="btn_registrar" Clicked="btn_registrar_Clicked"/>
+                <Button Text="¿Ya tienes una cuenta? Entra Aquí." VerticalOptions="End" Margin="0,0,0,0" HorizontalOptions="Center" FontSize="12" x:Name="btn_enviologin" BackgroundColor="Transparent" TextColor="Gray" Clicked="btn_enviologin_Clicked"/>
+
+            </StackLayout>
+
+        </Frame>
+
+    </Grid>
 </ContentPage>

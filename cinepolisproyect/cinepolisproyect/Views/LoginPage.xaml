@@ -1,12 +1,41 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:magic="clr-namespace:MagicGradients;assembly=MagicGradients"
              x:Class="cinepolisproyect.Views.LoginPage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+
+
+    <Grid>
+        <magic:GradientView VerticalOptions="FillAndExpand">
+            <magic:GradientView.GradientSource>
+                <magic:LinearGradient Angle="333">
+                    <magic:GradientStop Color="#ffffff" Offset="0"/>
+                </magic:LinearGradient>
+            </magic:GradientView.GradientSource>
+        </magic:GradientView>
+
+
+        <Frame x:Name="Frame1"  BackgroundColor="#20667db6" HasShadow="False" HorizontalOptions="Center" VerticalOptions="Start" Margin="0,50,0,0" WidthRequest="300">
+
+            <StackLayout>
+                <Label Text="Inicia sesión en la cuenta"  VerticalOptions="Start" HorizontalOptions="Start" Margin="10,0,0,0"  FontSize="25" FontAttributes="Bold"/>
+                <Label Text="Inicia sesión para continuar"  VerticalOptions="Start" HorizontalOptions="Start" Margin="15,0,0,0"  FontSize="14" />
+
+                <StackLayout Orientation="Horizontal" Margin="0,30,0,10">
+                    <Entry x:Name="ttemail_user"  FontSize="15" Placeholder="Correo electrónico" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,0,0" Keyboard="Email" />
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Margin="0,0,0,20">
+                    <Entry x:Name="ttpassword" Placeholder="Contraseña"  FontSize="15" IsPassword="True" FontAttributes="None" HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+
+                <Button Text="Iniciar Sesión" VerticalOptions="EndAndExpand" WidthRequest="250" CornerRadius="30" FontSize="15" TextColor="White" HorizontalOptions="Center" BackgroundColor="#667db6" x:Name="btn_signIn" Clicked="btn_signIn_Clicked"/>
+                <Button Text="¿Olvidaste tu contraseña?" VerticalOptions="End" Margin="0,0,0,0" HorizontalOptions="Center" FontSize="12" TextColor="Gray" BackgroundColor="Transparent" x:Name="btn_contraseña" Clicked="btn_contraseña_Clicked"/>
+                <Button Text="¿No tienes una cuenta? Regístrate Aquí" VerticalOptions="End" Margin="0,0,0,0" HorizontalOptions="Center" FontSize="12" TextColor="Gray" BackgroundColor="Transparent" x:Name="btn_registrate" Clicked="btn_registrate_Clicked"/>
+
+            </StackLayout>
+
+        </Frame>
+
+    </Grid>
 </ContentPage>

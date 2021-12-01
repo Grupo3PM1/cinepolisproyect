@@ -1,9 +1,9 @@
-﻿using System;
-
+﻿
 using Android.App;
 using Android.Content.PM;
-using Android.Runtime;
 using Android.OS;
+using Android.Runtime;
+using Firebase;
 
 namespace cinepolisproyect.Droid
 {
@@ -14,6 +14,8 @@ namespace cinepolisproyect.Droid
         {
             base.OnCreate(savedInstanceState);
 
+            //Inicializamos firebase pasandole el contexto de nuestra aplicacion android
+            FirebaseApp.InitializeApp(Application.Context);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());

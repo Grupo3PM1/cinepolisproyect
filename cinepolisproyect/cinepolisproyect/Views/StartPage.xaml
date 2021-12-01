@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:magic="clr-namespace:MagicGradients;assembly=MagicGradients"
+             x:Class="cinepolisproyect.Views.StartPage">
+    <Grid>
+        <magic:GradientView VerticalOptions="FillAndExpand">
+            <magic:GradientView.GradientSource>
+
+                <magic:LinearGradient Angle="333">
+
+                    <magic:GradientStop Color="#FFFFFF" Offset="0"/>
+
+                </magic:LinearGradient>
+            </magic:GradientView.GradientSource>
+        </magic:GradientView>
+
+        <Label  Text="Bienvenido a" HorizontalOptions="Center" Margin="0,70,0,0" FontAttributes="Italic" FontSize="17" />
+        <Image Source="logoc.png" VerticalOptions="Start" HorizontalOptions="Center" Margin="20,100,20,0"/>
+        <Image Source="fondo.png" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,0,0,70"/>
+        <Label HorizontalTextAlignment="Center" FontSize="14" VerticalOptions="Center" HorizontalOptions="Center" Margin="20,250,20,0" Text=" ¡Ahora disponible nuestra App, inicia sesion o crea una cuenta y disfruta la experiencia!"/>
+        <Button Text="Regístrate" Margin="0,0,0,160" VerticalOptions="End" WidthRequest="300" CornerRadius="30" FontSize="15" TextColor="White" HorizontalOptions="Center"  BackgroundColor="#667db6" Clicked="Button_Clicked"/>
+        <Button Text="Tengo una cuenta" Margin="0,0,0,100" VerticalOptions="End" WidthRequest="300" CornerRadius="30" FontSize="15" TextColor="White" HorizontalOptions="Center" BackgroundColor="#90667db6" Clicked="Button_Clicked_1"/>
+
+    </Grid>
+</ContentPage>
