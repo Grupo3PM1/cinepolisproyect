@@ -22,6 +22,7 @@ namespace cinepolisproyect.Views
             //await DisplayAlert("Alerta", "Selecciono pelicula 1", "OK");
             Models.pelicula classdata = new Models.pelicula
             {
+                IdPelicula = "1",
                 Pelicula = this.lblpeli1.Text,
                 Imagepeli = "cartelera1.jpg",
                 Fechapeli = this.lbldate1.Text,
@@ -36,6 +37,7 @@ namespace cinepolisproyect.Views
             //await DisplayAlert("Alerta", "Selecciono pelicula 2", "OK");
             Models.pelicula classdata = new Models.pelicula
             {
+                IdPelicula = "2",
                 Pelicula = this.lblpeli2.Text,
                 Imagepeli = "cartelera2.jpg",
                 Fechapeli = this.lbldate2.Text,
@@ -50,6 +52,7 @@ namespace cinepolisproyect.Views
             //await DisplayAlert("Alerta", "Selecciono pelicula 3", "OK");
             Models.pelicula classdata = new Models.pelicula
             {
+                IdPelicula = "3",
                 Pelicula = this.lblpeli3.Text,
                 Imagepeli = "cartelera3.jpg",
                 Fechapeli = this.lbldate3.Text,

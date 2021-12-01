@@ -4,14 +4,28 @@ using System.Text;
 
 namespace cinepolisproyect.Models
 {
-    public class pelihorario
+    public static class UrlApi
     {
-        public string idpeli { get; set; }
-        public string idhorario { get; set; }
+        public static string ip = "cinepolishn.000webhostapp.com";
+        public static string web = "Cinepolis";
+
+
+        //Apis clase sitios
+        public static string getEndPoint = "listabutaca.php"; //GET
+        //public static string postEndPoint = "crear.php"; //POST
+        //public static string updateEndPoint = "actualizarsitio.php"; //UPDATE
+        //public static string deleteEndPoint = "eliminarsitio.php"; //DELETE
     }
-    public class butacadata
+    public static class ApiButaca
     {
-        public int idbutaca { get; set; }
+        public static string GETButacaList = string.Format("http://{0}/{1}/{2}", UrlApi.ip, UrlApi.web, UrlApi.getEndPoint);
+        //public static string POSTSitioList = string.Format("http://{0}/{1}/{2}", UrlApi.ip, UrlApi.web, UrlApi.postEndPoint);
+        //public static string UPDATESitioList = string.Format("http://{0}/{1}/{2}", UrlApi.ip, UrlApi.web, UrlApi.updateEndPoint);
+        //public static string DELETESitioList = string.Format("http://{0}/{1}/{2}", UrlApi.ip, UrlApi.web, UrlApi.deleteEndPoint);
+    }
+    public class Butaca
+    {
+        public string idbutaca { get; set; }
         public string a1 { get; set; }
         public string a2 { get; set; }
         public string a3 { get; set; }
@@ -52,5 +66,9 @@ namespace cinepolisproyect.Models
         public string f3 { get; set; }
         public string f4 { get; set; }
         public string f5 { get; set; }
+    }
+    public class ButacaRoot
+    {
+        public IList<Butaca> butaca { get; set; }
     }
 }

@@ -14,268 +14,347 @@ namespace cinepolisproyect.Views
     public partial class ButacaPage : ContentPage
     {
         Button btn;
-        public Models.butaca butacadata;
+        public Models.pelihorario butacadata;
+        public Models.Butaca listabutaca;
         public ButacaPage(/*Ticket ticket*/)
         {
             
             InitializeComponent();
-            butacadata = new Models.butaca 
-            {
-                a1 = "1",
-                a2 = "0",
-                a3 = "0",
-                a4 = "0",
-                a5 = "0",
-                a6 = "0",
-                a7 = "0",
-                b1 = "0",
-                b2 = "1",
-                b3 = "0",
-                b4 = "0",
-                b5 = "0",
-                b6 = "0",
-                b7 = "0",
-                c1 = "0",
-                c2 = "0",
-                c3 = "1",
-                c4 = "0",
-                c5 = "0",
-                c6 = "0",
-                c7 = "1",
-                d1 = "0",
-                d2 = "0",
-                d3 = "0",
-                d4 = "1",
-                d5 = "0",
-                d6 = "1",
-                d7 = "0",
-                e1 = "0",
-                e2 = "0",
-                e3 = "0",
-                e4 = "0",
-                e5 = "1",
-                e6 = "0",
-                e7 = "0",
-                f1 = "1",
-                f2 = "0",
-                f3 = "1",
-                f4 = "0",
-                f5 = "1",
-            };
-
-            #region Fila A
-            if (butacadata.a1 == "1")
-                this.seat1.BackgroundColor = Color.FromHex("#FFA500");
-            else
-                this.seat1.BackgroundColor = Color.Transparent;
-
-            if (butacadata.a2 == "1")
-                this.seat2.BackgroundColor = Color.FromHex("#FFA500");
-            else
-                this.seat2.BackgroundColor = Color.Transparent;
-
-            if (butacadata.a3 == "1")
-                this.seat3.BackgroundColor = Color.FromHex("#FFA500");
-            else
-                this.seat3.BackgroundColor = Color.Transparent;
-
-            if (butacadata.a4 == "1")
-                this.seat4.BackgroundColor = Color.FromHex("#FFA500");
-            else
-                this.seat4.BackgroundColor = Color.Transparent;
-
-            if (butacadata.a5 == "1")
-                this.seat5.BackgroundColor = Color.FromHex("#FFA500");
-            else
-                this.seat5.BackgroundColor = Color.Transparent;
-
-            if (butacadata.a6 == "1")
-                this.seat6.BackgroundColor = Color.FromHex("#FFA500");
-            else
-                this.seat6.BackgroundColor = Color.Transparent;
-
-            if (butacadata.a7 == "1")
-                this.seat7.BackgroundColor = Color.FromHex("#FFA500");
-            else
-                this.seat7.BackgroundColor = Color.Transparent;
-            #endregion
-            #region Fila B
-            if (butacadata.b1 == "1")
-                this.seat8.BackgroundColor = Color.FromHex("#FFA500");
-            else
-                this.seat8.BackgroundColor = Color.Transparent;
-
-            if (butacadata.b2 == "1")
-                this.seat9.BackgroundColor = Color.FromHex("#FFA500");
-            else
-                this.seat9.BackgroundColor = Color.Transparent;
-
-            if (butacadata.b3 == "1")
-                this.seat10.BackgroundColor = Color.FromHex("#FFA500");
-            else
-                this.seat10.BackgroundColor = Color.Transparent;
-
-            if (butacadata.b4 == "1")
-                this.seat11.BackgroundColor = Color.FromHex("#FFA500");
-            else
-                this.seat11.BackgroundColor = Color.Transparent;
-
-            if (butacadata.b5 == "1")
-                this.seat12.BackgroundColor = Color.FromHex("#FFA500");
-            else
-                this.seat12.BackgroundColor = Color.Transparent;
-
-            if (butacadata.b6 == "1")
-                this.seat13.BackgroundColor = Color.FromHex("#FFA500");
-            else
-                this.seat13.BackgroundColor = Color.Transparent;
-
-            if (butacadata.b7 == "1")
-                this.seat14.BackgroundColor = Color.FromHex("#FFA500");
-            else
-                this.seat14.BackgroundColor = Color.Transparent;
-            #endregion
-            #region Fila C
-            if (butacadata.c1 == "1")
-                this.seat15.BackgroundColor = Color.FromHex("#FFA500");
-            else
-                this.seat15.BackgroundColor = Color.Transparent;
-
-            if (butacadata.c2 == "1")
-                this.seat16.BackgroundColor = Color.FromHex("#FFA500");
-            else
-                this.seat16.BackgroundColor = Color.Transparent;
-
-            if (butacadata.c3 == "1")
-                this.seat17.BackgroundColor = Color.FromHex("#FFA500");
-            else
-                this.seat17.BackgroundColor = Color.Transparent;
-
-            if (butacadata.c4 == "1")
-                this.seat18.BackgroundColor = Color.FromHex("#FFA500");
-            else
-                this.seat18.BackgroundColor = Color.Transparent;
-
-            if (butacadata.c5 == "1")
-                this.seat19.BackgroundColor = Color.FromHex("#FFA500");
-            else
-                this.seat19.BackgroundColor = Color.Transparent;
-
-            if (butacadata.c6 == "1")
-                this.seat20.BackgroundColor = Color.FromHex("#FFA500");
-            else
-                this.seat20.BackgroundColor = Color.Transparent;
-
-            if (butacadata.c7 == "1")
-                this.seat21.BackgroundColor = Color.FromHex("#FFA500");
-            else
-                this.seat21.BackgroundColor = Color.Transparent;
-            #endregion
-            #region Fila D
-            if (butacadata.d1 == "1")
-                this.seat22.BackgroundColor = Color.FromHex("#FFA500");
-            else
-                this.seat22.BackgroundColor = Color.Transparent;
-
-            if (butacadata.d2 == "1")
-                this.seat23.BackgroundColor = Color.FromHex("#FFA500");
-            else
-                this.seat23.BackgroundColor = Color.Transparent;
-
-            if (butacadata.d3 == "1")
-                this.seat24.BackgroundColor = Color.FromHex("#FFA500");
-            else
-                this.seat24.BackgroundColor = Color.Transparent;
-
-            if (butacadata.d4 == "1")
-                this.seat25.BackgroundColor = Color.FromHex("#FFA500");
-            else
-                this.seat25.BackgroundColor = Color.Transparent;
-
-            if (butacadata.d5 == "1")
-                this.seat26.BackgroundColor = Color.FromHex("#FFA500");
-            else
-                this.seat26.BackgroundColor = Color.Transparent;
-
-            if (butacadata.d6 == "1")
-                this.seat27.BackgroundColor = Color.FromHex("#FFA500");
-            else
-                this.seat27.BackgroundColor = Color.Transparent;
-
-            if (butacadata.d7 == "1")
-                this.seat28.BackgroundColor = Color.FromHex("#FFA500");
-            else
-                this.seat28.BackgroundColor = Color.Transparent;
-            #endregion
-            #region Fila E
-            if (butacadata.e1 == "1")
-                this.seat29.BackgroundColor = Color.FromHex("#FFA500");
-            else
-                this.seat29.BackgroundColor = Color.Transparent;
-
-            if (butacadata.e2 == "1")
-                this.seat30.BackgroundColor = Color.FromHex("#FFA500");
-            else
-                this.seat30.BackgroundColor = Color.Transparent;
-
-            if (butacadata.e3 == "1")
-                this.seat31.BackgroundColor = Color.FromHex("#FFA500");
-            else
-                this.seat31.BackgroundColor = Color.Transparent;
-
-            if (butacadata.e4 == "1")
-                this.seat32.BackgroundColor = Color.FromHex("#FFA500");
-            else
-                this.seat32.BackgroundColor = Color.Transparent;
-
-            if (butacadata.e5 == "1")
-                this.seat33.BackgroundColor = Color.FromHex("#FFA500");
-            else
-                this.seat33.BackgroundColor = Color.Transparent;
-
-            if (butacadata.e6 == "1")
-                this.seat34.BackgroundColor = Color.FromHex("#FFA500");
-            else
-                this.seat34.BackgroundColor = Color.Transparent;
-
-            if (butacadata.e7 == "1")
-                this.seat35.BackgroundColor = Color.FromHex("#FFA500");
-            else
-                this.seat35.BackgroundColor = Color.Transparent;
-            #endregion
-            #region Fila F
-            if (butacadata.f1 == "1")
-                this.seat36.BackgroundColor = Color.FromHex("#FFA500");
-            else
-                this.seat36.BackgroundColor = Color.Transparent;
-
-            if (butacadata.f2 == "1")
-                this.seat37.BackgroundColor = Color.FromHex("#FFA500");
-            else
-                this.seat37.BackgroundColor = Color.Transparent;
-
-            if (butacadata.f3 == "1")
-                this.seat38.BackgroundColor = Color.FromHex("#FFA500");
-            else
-                this.seat38.BackgroundColor = Color.Transparent;
-
-            if (butacadata.f4 == "1")
-                this.seat39.BackgroundColor = Color.FromHex("#FFA500");
-            else
-                this.seat39.BackgroundColor = Color.Transparent;
-
-            if (butacadata.f5 == "1")
-                this.seat40.BackgroundColor = Color.FromHex("#FFA500");
-            else
-                this.seat40.BackgroundColor = Color.Transparent;
-            #endregion
             
+            
+
+
             /*SelectedTicket = ticket;
             Init();
             this.BindingContext = this;*/
 
         }
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            refresh();
 
+        }
+        public async void refresh()
+        {
+            butacadata = new Models.pelihorario
+            {
+                idpeli = this.txtidpeli.Text,
+                idhorario = this.txtidhorario.Text
+            };
+            List<Models.Butaca> listbutacas = await cinepolisproyect.Controllers.ButacasController.GetListButaca();
+            ListView lstbtc = new ListView();
+            lstbtc.ItemsSource = listbutacas;
+            Models.Butaca btc;
+            if (txtidpeli.Text == "1")
+            {
+                //peli 1
+                if(txtidhorario.Text == "1")
+                {
+                    //horario 1
+                    btc = listbutacas[0];
+                }
+                else if(txtidhorario.Text == "2")
+                {
+                    //horario 2
+                    btc = listbutacas[1];
+                }
+                else
+                {
+                    //horario 3
+                    btc = listbutacas[2];
+                }
+            }
+            else if(txtidpeli.Text == "2")
+            {
+                //peli 2
+                if (txtidhorario.Text == "1")
+                {
+                    //horario 1
+                    btc = listbutacas[3];
+                }
+                else if (txtidhorario.Text == "2")
+                {
+                    //horario 2
+                    btc = listbutacas[4];
+                }
+                else
+                {
+                    //horario 3
+                    btc = listbutacas[5];
+                }
+            }
+            else
+            {
+                //peli 3
+                if (txtidhorario.Text == "1")
+                {
+                    //horario 1
+                    btc = listbutacas[6];
+                }
+                else if (txtidhorario.Text == "2")
+                {
+                    //horario 2
+                    btc = listbutacas[7];
+                }
+                else
+                {
+                    //horario 3
+                    btc = listbutacas[8];
+                }
+            }
+            
+            listabutaca = new Models.Butaca
+            {
+                a1 = btc.a1,
+                a2 = btc.a2,
+                a3 = btc.a3,
+                a4 = btc.a4,
+                a5 = btc.a5,
+                a6 = btc.a6,
+                a7 = btc.a7,
+                b1 = btc.b1,
+                b2 = btc.b2,
+                b3 = btc.b3,
+                b4 = btc.b4,
+                b5 = btc.b5,
+                b6 = btc.b6,
+                b7 = btc.b7,
+                c1 = btc.c1,
+                c2 = btc.c2,
+                c3 = btc.c3,
+                c4 = btc.c4,
+                c5 = btc.c5,
+                c6 = btc.c6,
+                c7 = btc.c7,
+                d1 = btc.d1,
+                d2 = btc.d2,
+                d3 = btc.d3,
+                d4 = btc.d4,
+                d5 = btc.d5,
+                d6 = btc.d6,
+                d7 = btc.d7,
+                e1 = btc.e1,
+                e2 = btc.e2,
+                e3 = btc.e3,
+                e4 = btc.e4,
+                e5 = btc.e5,
+                e6 = btc.e6,
+                e7 = btc.e7,
+                f1 = btc.f1,
+                f2 = btc.f2,
+                f3 = btc.f3,
+                f4 = btc.f4,
+                f5 = btc.f5,
+            };
+
+            #region Fila A
+            if (listabutaca.a1 == "1")
+                this.seat1.BackgroundColor = Color.FromHex("#FFA500");
+            else
+                this.seat1.BackgroundColor = Color.Transparent;
+
+            if (listabutaca.a2 == "1")
+                this.seat2.BackgroundColor = Color.FromHex("#FFA500");
+            else
+                this.seat2.BackgroundColor = Color.Transparent;
+
+            if (listabutaca.a3 == "1")
+                this.seat3.BackgroundColor = Color.FromHex("#FFA500");
+            else
+                this.seat3.BackgroundColor = Color.Transparent;
+
+            if (listabutaca.a4 == "1")
+                this.seat4.BackgroundColor = Color.FromHex("#FFA500");
+            else
+                this.seat4.BackgroundColor = Color.Transparent;
+
+            if (listabutaca.a5 == "1")
+                this.seat5.BackgroundColor = Color.FromHex("#FFA500");
+            else
+                this.seat5.BackgroundColor = Color.Transparent;
+
+            if (listabutaca.a6 == "1")
+                this.seat6.BackgroundColor = Color.FromHex("#FFA500");
+            else
+                this.seat6.BackgroundColor = Color.Transparent;
+
+            if (listabutaca.a7 == "1")
+                this.seat7.BackgroundColor = Color.FromHex("#FFA500");
+            else
+                this.seat7.BackgroundColor = Color.Transparent;
+            #endregion
+            #region Fila B
+            if (listabutaca.b1 == "1")
+                this.seat8.BackgroundColor = Color.FromHex("#FFA500");
+            else
+                this.seat8.BackgroundColor = Color.Transparent;
+
+            if (listabutaca.b2 == "1")
+                this.seat9.BackgroundColor = Color.FromHex("#FFA500");
+            else
+                this.seat9.BackgroundColor = Color.Transparent;
+
+            if (listabutaca.b3 == "1")
+                this.seat10.BackgroundColor = Color.FromHex("#FFA500");
+            else
+                this.seat10.BackgroundColor = Color.Transparent;
+
+            if (listabutaca.b4 == "1")
+                this.seat11.BackgroundColor = Color.FromHex("#FFA500");
+            else
+                this.seat11.BackgroundColor = Color.Transparent;
+
+            if (listabutaca.b5 == "1")
+                this.seat12.BackgroundColor = Color.FromHex("#FFA500");
+            else
+                this.seat12.BackgroundColor = Color.Transparent;
+
+            if (listabutaca.b6 == "1")
+                this.seat13.BackgroundColor = Color.FromHex("#FFA500");
+            else
+                this.seat13.BackgroundColor = Color.Transparent;
+
+            if (listabutaca.b7 == "1")
+                this.seat14.BackgroundColor = Color.FromHex("#FFA500");
+            else
+                this.seat14.BackgroundColor = Color.Transparent;
+            #endregion
+            #region Fila C
+            if (listabutaca.c1 == "1")
+                this.seat15.BackgroundColor = Color.FromHex("#FFA500");
+            else
+                this.seat15.BackgroundColor = Color.Transparent;
+
+            if (listabutaca.c2 == "1")
+                this.seat16.BackgroundColor = Color.FromHex("#FFA500");
+            else
+                this.seat16.BackgroundColor = Color.Transparent;
+
+            if (listabutaca.c3 == "1")
+                this.seat17.BackgroundColor = Color.FromHex("#FFA500");
+            else
+                this.seat17.BackgroundColor = Color.Transparent;
+
+            if (listabutaca.c4 == "1")
+                this.seat18.BackgroundColor = Color.FromHex("#FFA500");
+            else
+                this.seat18.BackgroundColor = Color.Transparent;
+
+            if (listabutaca.c5 == "1")
+                this.seat19.BackgroundColor = Color.FromHex("#FFA500");
+            else
+                this.seat19.BackgroundColor = Color.Transparent;
+
+            if (listabutaca.c6 == "1")
+                this.seat20.BackgroundColor = Color.FromHex("#FFA500");
+            else
+                this.seat20.BackgroundColor = Color.Transparent;
+
+            if (listabutaca.c7 == "1")
+                this.seat21.BackgroundColor = Color.FromHex("#FFA500");
+            else
+                this.seat21.BackgroundColor = Color.Transparent;
+            #endregion
+            #region Fila D
+            if (listabutaca.d1 == "1")
+                this.seat22.BackgroundColor = Color.FromHex("#FFA500");
+            else
+                this.seat22.BackgroundColor = Color.Transparent;
+
+            if (listabutaca.d2 == "1")
+                this.seat23.BackgroundColor = Color.FromHex("#FFA500");
+            else
+                this.seat23.BackgroundColor = Color.Transparent;
+
+            if (listabutaca.d3 == "1")
+                this.seat24.BackgroundColor = Color.FromHex("#FFA500");
+            else
+                this.seat24.BackgroundColor = Color.Transparent;
+
+            if (listabutaca.d4 == "1")
+                this.seat25.BackgroundColor = Color.FromHex("#FFA500");
+            else
+                this.seat25.BackgroundColor = Color.Transparent;
+
+            if (listabutaca.d5 == "1")
+                this.seat26.BackgroundColor = Color.FromHex("#FFA500");
+            else
+                this.seat26.BackgroundColor = Color.Transparent;
+
+            if (listabutaca.d6 == "1")
+                this.seat27.BackgroundColor = Color.FromHex("#FFA500");
+            else
+                this.seat27.BackgroundColor = Color.Transparent;
+
+            if (listabutaca.d7 == "1")
+                this.seat28.BackgroundColor = Color.FromHex("#FFA500");
+            else
+                this.seat28.BackgroundColor = Color.Transparent;
+            #endregion
+            #region Fila E
+            if (listabutaca.e1 == "1")
+                this.seat29.BackgroundColor = Color.FromHex("#FFA500");
+            else
+                this.seat29.BackgroundColor = Color.Transparent;
+
+            if (listabutaca.e2 == "1")
+                this.seat30.BackgroundColor = Color.FromHex("#FFA500");
+            else
+                this.seat30.BackgroundColor = Color.Transparent;
+
+            if (listabutaca.e3 == "1")
+                this.seat31.BackgroundColor = Color.FromHex("#FFA500");
+            else
+                this.seat31.BackgroundColor = Color.Transparent;
+
+            if (listabutaca.e4 == "1")
+                this.seat32.BackgroundColor = Color.FromHex("#FFA500");
+            else
+                this.seat32.BackgroundColor = Color.Transparent;
+
+            if (listabutaca.e5 == "1")
+                this.seat33.BackgroundColor = Color.FromHex("#FFA500");
+            else
+                this.seat33.BackgroundColor = Color.Transparent;
+
+            if (listabutaca.e6 == "1")
+                this.seat34.BackgroundColor = Color.FromHex("#FFA500");
+            else
+                this.seat34.BackgroundColor = Color.Transparent;
+
+            if (listabutaca.e7 == "1")
+                this.seat35.BackgroundColor = Color.FromHex("#FFA500");
+            else
+                this.seat35.BackgroundColor = Color.Transparent;
+            #endregion
+            #region Fila F
+            if (listabutaca.f1 == "1")
+                this.seat36.BackgroundColor = Color.FromHex("#FFA500");
+            else
+                this.seat36.BackgroundColor = Color.Transparent;
+
+            if (listabutaca.f2 == "1")
+                this.seat37.BackgroundColor = Color.FromHex("#FFA500");
+            else
+                this.seat37.BackgroundColor = Color.Transparent;
+
+            if (listabutaca.f3 == "1")
+                this.seat38.BackgroundColor = Color.FromHex("#FFA500");
+            else
+                this.seat38.BackgroundColor = Color.Transparent;
+
+            if (listabutaca.f4 == "1")
+                this.seat39.BackgroundColor = Color.FromHex("#FFA500");
+            else
+                this.seat39.BackgroundColor = Color.Transparent;
+
+            if (listabutaca.f5 == "1")
+                this.seat40.BackgroundColor = Color.FromHex("#FFA500");
+            else
+                this.seat40.BackgroundColor = Color.Transparent;
+            #endregion
+        }
 
 
         private async void btncomprar_Clicked(object sender, EventArgs e)
@@ -285,7 +364,7 @@ namespace cinepolisproyect.Views
 
         private void seat1_Clicked(object sender, EventArgs e)
         {
-            if (butacadata.a1 == "1")
+            if (listabutaca.a1 == "1")
                 DisplayAlert("Advertencia", "El asiento ya esta ocupado", "Ok");
             else
             {
@@ -293,7 +372,7 @@ namespace cinepolisproyect.Views
                 if (btn.BackgroundColor.Equals(Color.Transparent))
                 { 
                     btn.BackgroundColor = Color.FromHex("#FFFF00");
-                    butacadata.a1 = "1";
+                    listabutaca.a1 = "1";
                 }
                 else
                     btn.BackgroundColor = Color.Transparent;

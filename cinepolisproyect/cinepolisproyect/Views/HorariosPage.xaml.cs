@@ -21,9 +21,11 @@ namespace cinepolisproyect.Views
         {
             Models.pelicula classdata = new Models.pelicula
             {
+                IdPelicula = this.txtidpeli.Text,
                 Pelicula = this.txtpeli.Text,
                 Imagepeli = this.txtimage.Text,
                 Fechapeli = this.txtdate.Text,
+                IdHorario = "1",
                 Horario = this.lblhorap1.Text,
             };
             var page = new Views.ButacaPage();
@@ -35,9 +37,11 @@ namespace cinepolisproyect.Views
         {
             Models.pelicula classdata = new Models.pelicula
             {
+                IdPelicula = this.txtidpeli.Text,
                 Pelicula = this.txtpeli.Text,
                 Imagepeli = this.txtimage.Text,
                 Fechapeli = this.txtdate.Text,
+                IdHorario = "2",
                 Horario = this.lblhorap2.Text,
             };
             var page = new Views.ButacaPage();
@@ -49,9 +53,11 @@ namespace cinepolisproyect.Views
         {
             Models.pelicula classdata = new Models.pelicula
             {
+                IdPelicula = this.txtidpeli.Text,
                 Pelicula = this.txtpeli.Text,
                 Imagepeli = this.txtimage.Text,
                 Fechapeli = this.txtdate.Text,
+                IdHorario = "3",
                 Horario = this.lblhorap3.Text,
             };
             var page = new Views.ButacaPage();
