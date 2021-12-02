@@ -16,6 +16,7 @@ namespace cinepolisproyect.Views
         Button btn;
         public Models.pelihorario butacadata;
         public Models.Butaca listabutaca;
+        public Models.Butaca listabutacas;
         public ButacaPage(/*Ticket ticket*/)
         {
             
@@ -46,6 +47,8 @@ namespace cinepolisproyect.Views
             ListView lstbtc = new ListView();
             lstbtc.ItemsSource = listbutacas;
             Models.Butaca btc;
+
+            #region
             if (txtidpeli.Text == "1")
             {
                 //peli 1
@@ -103,9 +106,10 @@ namespace cinepolisproyect.Views
                     btc = listbutacas[8];
                 }
             }
-            
+            #endregion
             listabutaca = new Models.Butaca
             {
+                idbutaca = btc.idbutaca,
                 a1 = btc.a1,
                 a2 = btc.a2,
                 a3 = btc.a3,
@@ -147,6 +151,10 @@ namespace cinepolisproyect.Views
                 f4 = btc.f4,
                 f5 = btc.f5,
             };
+
+            listabutacas = listabutaca;
+
+            this.txtidbutaca.Text = btc.idbutaca;
 
             #region Fila A
             if (listabutaca.a1 == "1")
@@ -356,9 +364,56 @@ namespace cinepolisproyect.Views
             #endregion
         }
 
-
+        #region
         private async void btncomprar_Clicked(object sender, EventArgs e)
         {
+            var but = new Models.Butaca
+            {   
+                idbutaca = this.txtidbutaca.Text,
+                a1 = listabutacas.a1,
+                a2 = listabutacas.a2,
+                a3 = listabutacas.a3,
+                a4 = listabutacas.a4,
+                a5 = listabutacas.a5,
+                a6 = listabutacas.a6,
+                a7 = listabutacas.a7,
+                b1 = listabutacas.b1,
+                b2 = listabutacas.b2,
+                b3 = listabutacas.b3,
+                b4 = listabutacas.b4,
+                b5 = listabutacas.b5,
+                b6 = listabutacas.b6,
+                b7 = listabutacas.b7,
+                c1 = listabutacas.c1,
+                c2 = listabutacas.c2,
+                c3 = listabutacas.c3,
+                c4 = listabutacas.c4,
+                c5 = listabutacas.c5,
+                c6 = listabutacas.c6,
+                c7 = listabutacas.c7,
+                d1 = listabutacas.d1,
+                d2 = listabutacas.d2,
+                d3 = listabutacas.d3,
+                d4 = listabutacas.d4,
+                d5 = listabutacas.d5,
+                d6 = listabutacas.d6,
+                d7 = listabutacas.d7,
+                e1 = listabutacas.e1,
+                e2 = listabutacas.e2,
+                e3 = listabutacas.e3,
+                e4 = listabutacas.e4,
+                e5 = listabutacas.e5,
+                e6 = listabutacas.e6,
+                e7 = listabutacas.e7,
+                f1 = listabutacas.f1,
+                f2 = listabutacas.f2,
+                f3 = listabutacas.f3,
+                f4 = listabutacas.f4,
+                f5 = listabutacas.f5,
+            };
+
+            await Controllers.ButacasController.UpdateSitio(but);
+            await DisplayAlert("Logrado", "Actualizado Exitosamente", "Ok");
             await Navigation.PushAsync(new Views.TiendaPage());
         } 
 
@@ -372,7 +427,7 @@ namespace cinepolisproyect.Views
                 if (btn.BackgroundColor.Equals(Color.Transparent))
                 { 
                     btn.BackgroundColor = Color.FromHex("#FFFF00");
-                    listabutaca.a1 = "1";
+                    listabutacas.a1 = "1";
                 }
                 else
                     btn.BackgroundColor = Color.Transparent;
@@ -733,4 +788,5 @@ namespace cinepolisproyect.Views
                 btn.BackgroundColor = Color.Transparent;
         }
     }
+    #endregion //botones
 }

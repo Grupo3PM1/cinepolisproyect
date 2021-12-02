@@ -13,14 +13,14 @@ namespace cinepolisproyect.Models
         //Apis clase sitios
         public static string getEndPoint = "listabutaca.php"; //GET
         //public static string postEndPoint = "crear.php"; //POST
-        //public static string updateEndPoint = "actualizarsitio.php"; //UPDATE
+        public static string updateEndPoint = "actualizarbutaca.php"; //UPDATE
         //public static string deleteEndPoint = "eliminarsitio.php"; //DELETE
     }
     public static class ApiButaca
     {
         public static string GETButacaList = string.Format("http://{0}/{1}/{2}", UrlApi.ip, UrlApi.web, UrlApi.getEndPoint);
         //public static string POSTSitioList = string.Format("http://{0}/{1}/{2}", UrlApi.ip, UrlApi.web, UrlApi.postEndPoint);
-        //public static string UPDATESitioList = string.Format("http://{0}/{1}/{2}", UrlApi.ip, UrlApi.web, UrlApi.updateEndPoint);
+        public static string UPDATEButacaList = string.Format("http://{0}/{1}/{2}", UrlApi.ip, UrlApi.web, UrlApi.updateEndPoint);
         //public static string DELETESitioList = string.Format("http://{0}/{1}/{2}", UrlApi.ip, UrlApi.web, UrlApi.deleteEndPoint);
     }
     public class Butaca

@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,7 +33,7 @@ namespace cinepolisproyect.Controllers
             }
             return listbutaca;
         }
-            
+
         ////METODO GET
 
         //public async static Task<List<Models.butaca>> GetListSitios()
@@ -51,5 +52,27 @@ namespace cinepolisproyect.Controllers
         //    }
         //    return listsitio;
         //}
+
+        //METODO UPDATE
+        public async static Task UpdateSitio(Models.Butaca butaca)
+        {
+            String JsonContent = JsonConvert.SerializeObject(butaca);
+            StringContent contenido = new StringContent(JsonContent, Encoding.UTF8, "application/json");
+            HttpResponseMessage response = null;
+            using (HttpClient client = new HttpClient())
+            {
+                response = await client.PostAsync(Models.ApiButaca.UPDATEButacaList, contenido);
+            }
+            if (response.IsSuccessStatusCode)
+            {
+                var respuesta = response.Content.ReadAsStringAsync().Result;
+                Debug.WriteLine("Butaca Actulizada");
+            }
+            else
+            {
+                Debug.WriteLine("ERROR");
+            }
+        }
+
     }
 }
