@@ -81,10 +81,10 @@ namespace cinepolisproyect.Views
                     //Se navega hacia la pagina DashboardPage()
                     await Navigation.PushAsync(new DashboardPage());
                 }
-                    else
-                    {
-                        await DisplayAlert("Error de Autenticacion", "Contraseña o correo invalido", "Ok");
-                    }
+                else
+                {
+                        await DisplayAlert("Error de Autenticacion", "Contraseña o correo no existen, o la direccion de correo electronico no ha sido verificada. ", "Ok");
+                }
                
             }
         }
