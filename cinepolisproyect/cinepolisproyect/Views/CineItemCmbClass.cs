@@ -5,6 +5,7 @@ using Xamarin.Forms;
 
 namespace cinepolisproyect.Views
 {
+    //Esta clase permite llenar el Combobox de PeliculasPage y obtener que seleccion hicieron
     public class CineItemCmbClass
     {
         public string name { get; set; }

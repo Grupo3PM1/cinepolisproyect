@@ -6,19 +6,20 @@
              Icon="outline_home_black_24dp.png"
              BackgroundImage="fondodashboard.png">
     <StackLayout>
-        <Frame Padding="8" CornerRadius="0">
-            <FlexLayout>
-                <Image Source="Cinepolislogo.png" HeightRequest="40" HorizontalOptions="Start"/>
-                <Label Text="CINEPOLIS" HorizontalOptions="Center" FontSize="24"/>
-            </FlexLayout>
-        </Frame>
-        <Label Text="Cine:" FontSize="18"/>
-        <Frame BorderColor="#6D66E8" BackgroundColor="Transparent" Padding="0" Margin="10">
-            <Picker x:Name="CmbCine" SelectedIndexChanged="CmbCine_SelectedIndexChanged"/>
-        </Frame>
-        <Label Text="Estrenos" HorizontalOptions="Center" FontSize="24"/>
-        <Image Source="img1.jpg" WidthRequest="350" HorizontalOptions="Center"/>
-        <Image Source="img2.jpg" WidthRequest="350" HorizontalOptions="Center"/>
-        <BoxView x:Name="CmbOptions" VerticalOptions="Center"/>
+        <ScrollView>
+            <StackLayout>
+                <Frame Padding="8" CornerRadius="0">
+                <FlexLayout>
+                    <Image Source="Cinepolislogo.png" HeightRequest="40" HorizontalOptions="Start"/>
+                    <Label Text="CINEPOLIS" HorizontalOptions="Center" FontSize="24"/>
+                </FlexLayout>
+                </Frame>
+                <Label Text="Proximamente" HorizontalOptions="Center" FontSize="24"/>
+                <Image Source="img1.jpg" WidthRequest="350" HorizontalOptions="Center"/>
+                <Image Source="img2.jpg" WidthRequest="350" HorizontalOptions="Center"/>
+                <Image Source="img3.jpg" WidthRequest="350" HorizontalOptions="Center"/>
+                <Image Source="img4.jpg" WidthRequest="350" HorizontalOptions="Center"/>
+            </StackLayout>
+        </ScrollView>
     </StackLayout>
 </ContentPage>

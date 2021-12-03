@@ -71,5 +71,12 @@
                 </StackLayout>
             </StackLayout>
         </StackLayout>
+        <FlexLayout>
+            <Label x:Name="txtidcine" Text="{Binding IdButaca}" TextColor="Transparent"/>
+            <Label x:Name="txtidpeli" Text="{Binding ContButaca}" TextColor="Transparent"/>
+            <Label x:Name="txtpeli" Text="{Binding Pelicula}" TextColor="Transparent"/>
+            <Label x:Name="txtimage" Text="{Binding Imagepeli}" TextColor="Transparent"/>
+            <Label x:Name="txtdate" Text="{Binding Fechapeli}" TextColor="Transparent"/>
+        </FlexLayout>
     </StackLayout>
 </ContentPage>

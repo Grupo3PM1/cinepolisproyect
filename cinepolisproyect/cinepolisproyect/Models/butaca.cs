@@ -4,11 +4,17 @@ using System.Text;
 
 namespace cinepolisproyect.Models
 {
+    /// <summary>
+    /// Esta clase permite conocer el ID de la Pelicula y el ID del horario
+    /// </summary>
     public class pelihorario
     {
         public string idpeli { get; set; }
         public string idhorario { get; set; }
     }
+    /// <summary>
+    /// Esta clase permite manejar los datos traidos desde la BD mediante el Json
+    /// </summary>
     public class butacadata
     {
         public int idbutaca { get; set; }

@@ -4,7 +4,8 @@
              x:Class="cinepolisproyect.Views.PeliculasPage"
              Title="Peliculas"
              Icon="baseline_movie_black_24dp.png"
-             BackgroundColor="#6D66E8">
+             BackgroundColor="#6D66E8"
+             NavigationPage.HasNavigationBar="False">
     
     <StackLayout Orientation="Vertical">
         <Frame Padding="8" CornerRadius="0">
@@ -13,6 +14,12 @@
                 <Label Text="CINEPOLIS" HorizontalOptions="Center" FontSize="24"/>
             </FlexLayout>
         </Frame>
+        <ScrollView>
+            <StackLayout>
+        <StackLayout>
+            <Label Text="Seleccione su cine:"></Label>
+            <Picker x:Name="CmbCine" SelectedIndexChanged="CmbCine_SelectedIndexChanged"/>
+        </StackLayout>
         <StackLayout Orientation="Horizontal" Margin="15" BackgroundColor="#2DD9EA">
             <StackLayout.GestureRecognizers>
                 <TapGestureRecognizer  x:Name="StackPeli1"
@@ -82,5 +89,11 @@
                 </StackLayout>
             </StackLayout>
         </StackLayout>
+        <FlexLayout>
+            <Label x:Name="txtidcine" Text="" TextColor="Transparent"/>
+        </FlexLayout>
+            </StackLayout>
+        </ScrollView>
     </StackLayout>
+
 </ContentPage>

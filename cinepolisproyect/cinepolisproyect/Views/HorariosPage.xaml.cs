@@ -16,11 +16,13 @@ namespace cinepolisproyect.Views
         {
             InitializeComponent();
         }
-
+        //Este evento Clicked es cuando seleccionan el primer horario de las 3 00pm
         private async void btntrespm_Clicked(object sender, EventArgs e)
         {
+            //aqui cargamos los datos que se enviaran al sigueinte ContentPage que es ButacaPage
             Models.pelicula classdata = new Models.pelicula
             {
+                IdCine = this.txtidcine.Text,
                 IdPelicula = this.txtidpeli.Text,
                 Pelicula = this.txtpeli.Text,
                 Imagepeli = this.txtimage.Text,
@@ -28,15 +30,20 @@ namespace cinepolisproyect.Views
                 IdHorario = "1",
                 Horario = this.lblhorap1.Text,
             };
+            //Creamos una variable page para referenciar a ButacaPage
             var page = new Views.ButacaPage();
+            //Mediante BindingContext enviamos la clase classdata hacia a ButacaPage mediante la variable page
             page.BindingContext = classdata;
+            //Por ultimo enviamos la variable Page referenciado a ButacaPage con los datos de la clase mediante un Navigation.PushAsync
             await Navigation.PushAsync(new NavigationPage(page));
         }
-
+        //Este evento Clicked es cuando seleccionan el segundo horario de las 5 00pm
         private async void btncincopm_Clicked(object sender, EventArgs e)
         {
+            //aqui cargamos los datos que se enviaran al sigueinte ContentPage que es ButacaPage
             Models.pelicula classdata = new Models.pelicula
             {
+                IdCine = this.txtidcine.Text,
                 IdPelicula = this.txtidpeli.Text,
                 Pelicula = this.txtpeli.Text,
                 Imagepeli = this.txtimage.Text,
@@ -44,15 +51,20 @@ namespace cinepolisproyect.Views
                 IdHorario = "2",
                 Horario = this.lblhorap2.Text,
             };
+            //Creamos una variable page para referenciar a ButacaPage
             var page = new Views.ButacaPage();
+            //Mediante BindingContext enviamos la clase classdata hacia a ButacaPage mediante la variable page
             page.BindingContext = classdata;
+            //Por ultimo enviamos la variable Page referenciado a ButacaPage con los datos de la clase mediante un Navigation.PushAsync
             await Navigation.PushAsync(new NavigationPage(page));
         }
-
+        //Este evento Clicked es cuando seleccionan el tercer horario de las 7 00pm
         private async void btnsietepm_Clicked(object sender, EventArgs e)
         {
+            //aqui cargamos los datos que se enviaran al sigueinte ContentPage que es ButacaPage
             Models.pelicula classdata = new Models.pelicula
             {
+                IdCine = this.txtidcine.Text,
                 IdPelicula = this.txtidpeli.Text,
                 Pelicula = this.txtpeli.Text,
                 Imagepeli = this.txtimage.Text,
@@ -60,8 +72,11 @@ namespace cinepolisproyect.Views
                 IdHorario = "3",
                 Horario = this.lblhorap3.Text,
             };
+            //Creamos una variable page para referenciar a ButacaPage
             var page = new Views.ButacaPage();
+            //Mediante BindingContext enviamos la clase classdata hacia a ButacaPage mediante la variable page
             page.BindingContext = classdata;
+            //Por ultimo enviamos la variable Page referenciado a ButacaPage con los datos de la clase mediante un Navigation.PushAsync
             await Navigation.PushAsync(new NavigationPage(page));
         }
     }

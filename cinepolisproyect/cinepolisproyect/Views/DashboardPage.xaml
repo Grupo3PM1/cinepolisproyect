@@ -4,10 +4,9 @@
             xmlns:local1="clr-namespace:cinepolisproyect.Views"
              x:Class="cinepolisproyect.Views.DashboardPage"
             android:TabbedPage.ToolbarPlacement="Bottom"
+             NavigationPage.HasNavigationBar="False"
             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core">
     <local1:HomePage/>
     <local1:HistorialPage/>
     <local1:PeliculasPage/>
-    
-    
 </TabbedPage>

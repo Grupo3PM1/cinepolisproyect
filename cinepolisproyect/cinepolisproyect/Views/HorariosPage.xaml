@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="cinepolisproyect.Views.HorariosPage"
-             BackgroundImage="fondotienda.png">
+             BackgroundImage="fondotienda.png"
+             NavigationPage.HasNavigationBar="False">
     <StackLayout>
         <Frame Padding="8" CornerRadius="0">
             <FlexLayout>
@@ -27,6 +28,7 @@
             <Label  x:Name="lblhorap3"  Text=" 7 00pm" FontSize="36"/>
         </FlexLayout>
         <FlexLayout>
+            <Label x:Name="txtidcine" Text="{Binding IdCine}" TextColor="Transparent"/>
             <Label x:Name="txtidpeli" Text="{Binding IdPelicula}" TextColor="Transparent"/>
             <Label x:Name="txtpeli" Text="{Binding Pelicula}" TextColor="Transparent"/>
             <Label x:Name="txtimage" Text="{Binding Imagepeli}" TextColor="Transparent"/>
