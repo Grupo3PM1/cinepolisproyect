@@ -24,6 +24,7 @@
                            x:Name="ttname" 
                            FontSize="15" 
                            Placeholder="Nombre" 
+                           TextColor="Black"
                            HorizontalOptions="FillAndExpand" 
                            PlaceholderColor="Black" 
                            Keyboard="Text" />
@@ -35,6 +36,7 @@
                            x:Name="ttlastname" 
                            FontSize="15" 
                            Placeholder="Apellido" 
+                           TextColor="Black"
                            PlaceholderColor="Black" 
                            HorizontalOptions="FillAndExpand" 
                            Keyboard="Text"/>
@@ -47,6 +49,7 @@
                             x:Name="ttemail" 
                             Placeholder="Correo Electrónico"  
                             FontSize="15" 
+                            TextColor="Black"
                             PlaceholderColor="Black" 
                             Keyboard="Email" 
                             HorizontalOptions="FillAndExpand"/>
@@ -59,6 +62,7 @@
                             x:Name="ttpassword" Placeholder="Contraseña"  
                             FontSize="15" 
                             IsPassword="True" 
+                            TextColor="Black"
                             PlaceholderColor="Black" 
                             FontAttributes="None" 
                             HorizontalOptions="FillAndExpand"/>
