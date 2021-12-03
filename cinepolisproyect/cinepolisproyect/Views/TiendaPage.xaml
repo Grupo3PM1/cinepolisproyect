@@ -81,7 +81,6 @@
             <Label x:Name="txtidcine" Text="{Binding IdCine}" TextColor="Transparent"/>
             <Label x:Name="txtidpeli" Text="{Binding IdPelicula}" TextColor="Transparent"/>
             <Label x:Name="txtidhorario" Text="{Binding IdHorario}" TextColor="Transparent"/>
-            <Label x:Name="txtidcombo" Text="{Binding IdCombo}" TextColor="Transparent"/>
             <Label x:Name="txtcontbutaca" Text="{Binding ContButaca}" TextColor="Transparent"/>
         </FlexLayout>
     </StackLayout>
