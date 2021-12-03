@@ -16,11 +16,11 @@
         </Frame>
         <ScrollView>
             <StackLayout>
-                <StackLayout Margin="10 15 0 15" BackgroundColor="#2DD9EA">
+                <StackLayout Margin="10,15,0,15" BackgroundColor="#2DD9EA">
                     <Label HorizontalOptions="Center" Text="Seleccione su cine:" FontSize="26"></Label>
                     <Picker x:Name="CmbCine" SelectedIndexChanged="CmbCine_SelectedIndexChanged"/>
                 </StackLayout>
-        <StackLayout Orientation="Horizontal" Margin="10 15 0 15" BackgroundColor="#2DD9EA">
+        <StackLayout Orientation="Horizontal" Margin="10,15,0,15" BackgroundColor="#2DD9EA">
             <StackLayout.GestureRecognizers>
                 <TapGestureRecognizer  x:Name="StackPeli1"
                     NumberOfTapsRequired="1"
@@ -43,7 +43,7 @@
                 </StackLayout>
             </StackLayout>
         </StackLayout>
-        <StackLayout Orientation="Horizontal" Margin="10 15 0 15" BackgroundColor="#2DD9EA">
+        <StackLayout Orientation="Horizontal" Margin="10,15,0,15" BackgroundColor="#2DD9EA">
             <StackLayout.GestureRecognizers>
                 <TapGestureRecognizer  x:Name="StackPeli2"
                     NumberOfTapsRequired="1"
@@ -66,7 +66,7 @@
                 </StackLayout>
             </StackLayout>
         </StackLayout>
-        <StackLayout Orientation="Horizontal" Margin="10 15 0 15" BackgroundColor="#2DD9EA">
+        <StackLayout Orientation="Horizontal" Margin="10,15,0,15" BackgroundColor="#2DD9EA">
             <StackLayout.GestureRecognizers>
                 <TapGestureRecognizer  x:Name="StackPeli3"
                     NumberOfTapsRequired="1"
