@@ -1,12 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="#7384E9"
              x:Class="cinepolisproyect.Views.TicketPage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+
+        <StackLayout x:Name="stkQR" >
+            
+            <Label Text="PELICULA" HorizontalOptions="Center" FontSize="30" Margin="20" TextColor="#FFFFFAF0" />
+            <Image Source="img1.jpg" WidthRequest="350" HorizontalOptions="Center"/>
+            <Label Text="Ticket" HorizontalOptions="Center" FontSize="25" Margin="20" TextColor="#FFFFFAF0" />
+            <Button x:Name="btngenerarcodigo" Text="Generar QR" Clicked="btngenerarcodigo_Clicked" ></Button>
+
+
         </StackLayout>
-    </ContentPage.Content>
+
+
 </ContentPage>
