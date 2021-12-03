@@ -36,11 +36,21 @@ namespace cinepolisproyect.Droid
             {
                 //creamos una variable que mandara a llamar una instancia en Firebase con Instance y dada una instancia
                 //llamaremos el metodo SignInWithEmailAndPasswordAsync para iniciar sesión con la dirección de correo electrónico y la contraseña proporcionadas.
-                var newUser = await FirebaseAuth.Instance.SignInWithEmailAndPasswordAsync(email, password);
+
+                await FirebaseAuth.Instance.SignInWithEmailAndPasswordAsync(email, password);
+                var user = Firebase.Auth.FirebaseAuth.Instance.CurrentUser;
+                var update = user.IsEmailVerified;
+                if (update == true)
+                {
+                     await FirebaseAuth.Instance.SignInWithEmailAndPasswordAsync(email, password);
+                }
+                else
+                {
+                    return string.Empty;
+                }
 
                 //Obtener token que es un identificador unico para cada usuario y que se obtiene una vez que se ha iniciado sesion
-                var token = newUser.User.GetIdToken(false);
-                
+                var token = user.GetIdToken(false);
                 return (string)token;
             }
             catch (FirebaseAuthInvalidUserException e)
@@ -84,7 +94,6 @@ namespace cinepolisproyect.Droid
         public async Task<string> SignUpWithEmailAndPassword(string email, string password)
         {
             try
-
             {
                 //Se crea una variable llamada newUser para invocar una instancia en la plataforma de Firebase
                 //le pasamos el metodo asincrono CreateUserWithEmailAndPasswordAsync con los parametros correspondientes,

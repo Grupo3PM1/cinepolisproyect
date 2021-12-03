@@ -2,8 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="cinepolisproyect.Views.HorariosPage"
-             BackgroundImage="fondotienda.png"
-             NavigationPage.HasNavigationBar="False">
+             NavigationPage.HasNavigationBar="False"
+             BackgroundImage="fondotienda.png">
     <StackLayout>
         <Frame Padding="8" CornerRadius="0">
             <FlexLayout>

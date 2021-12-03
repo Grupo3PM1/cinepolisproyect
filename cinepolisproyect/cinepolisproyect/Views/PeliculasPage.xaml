@@ -2,10 +2,10 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="cinepolisproyect.Views.PeliculasPage"
+             NavigationPage.HasNavigationBar="False"
              Title="Peliculas"
              Icon="baseline_movie_black_24dp.png"
-             BackgroundColor="#6D66E8"
-             NavigationPage.HasNavigationBar="False">
+             BackgroundColor="#6D66E8">
     
     <StackLayout Orientation="Vertical">
         <Frame Padding="8" CornerRadius="0">
@@ -16,11 +16,11 @@
         </Frame>
         <ScrollView>
             <StackLayout>
-        <StackLayout>
-            <Label Text="Seleccione su cine:"></Label>
-            <Picker x:Name="CmbCine" SelectedIndexChanged="CmbCine_SelectedIndexChanged"/>
-        </StackLayout>
-        <StackLayout Orientation="Horizontal" Margin="15" BackgroundColor="#2DD9EA">
+                <StackLayout Margin="10,15,0,15" BackgroundColor="#2DD9EA">
+                    <Label HorizontalOptions="Center" Text="Seleccione su cine:" FontSize="26"></Label>
+                    <Picker x:Name="CmbCine" SelectedIndexChanged="CmbCine_SelectedIndexChanged"/>
+                </StackLayout>
+        <StackLayout Orientation="Horizontal" Margin="10,15,0,15" BackgroundColor="#2DD9EA">
             <StackLayout.GestureRecognizers>
                 <TapGestureRecognizer  x:Name="StackPeli1"
                     NumberOfTapsRequired="1"
@@ -43,7 +43,7 @@
                 </StackLayout>
             </StackLayout>
         </StackLayout>
-        <StackLayout Orientation="Horizontal" Margin="15" BackgroundColor="#2DD9EA">
+        <StackLayout Orientation="Horizontal" Margin="10,15,0,15" BackgroundColor="#2DD9EA">
             <StackLayout.GestureRecognizers>
                 <TapGestureRecognizer  x:Name="StackPeli2"
                     NumberOfTapsRequired="1"
@@ -66,7 +66,7 @@
                 </StackLayout>
             </StackLayout>
         </StackLayout>
-        <StackLayout Orientation="Horizontal" Margin="15" BackgroundColor="#2DD9EA">
+        <StackLayout Orientation="Horizontal" Margin="10,15,0,15" BackgroundColor="#2DD9EA">
             <StackLayout.GestureRecognizers>
                 <TapGestureRecognizer  x:Name="StackPeli3"
                     NumberOfTapsRequired="1"

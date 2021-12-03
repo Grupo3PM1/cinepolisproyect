@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="cinepolisproyect.Views.HomePage"
+             NavigationPage.HasNavigationBar="False"
              Title="Home"
              Icon="outline_home_black_24dp.png"
              BackgroundImage="fondodashboard.png">

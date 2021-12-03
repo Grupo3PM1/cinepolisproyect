@@ -18,20 +18,20 @@
         <Frame x:Name="Frame1"  BackgroundColor="#20667db6" HasShadow="False" HorizontalOptions="Center" VerticalOptions="Start" Margin="0,50,0,0" WidthRequest="300">
 
             <StackLayout>
-                <Label Text="Inicia sesión en la cuenta"  VerticalOptions="Start" HorizontalOptions="Start" Margin="10,0,0,0"  FontSize="25" FontAttributes="Bold"/>
-                <Label Text="Inicia sesión para continuar"  VerticalOptions="Start" HorizontalOptions="Start" Margin="15,0,0,0"  FontSize="14" />
+                <Label Text="Inicia sesión en la cuenta" TextColor="Black" VerticalOptions="Start" HorizontalOptions="Start" Margin="10,0,0,0"  FontSize="25" FontAttributes="Bold"/>
+                <Label Text="Inicia sesión para continuar" TextColor="Black" VerticalOptions="Start" HorizontalOptions="Start" Margin="15,0,0,0"  FontSize="14" />
 
                 <StackLayout Orientation="Horizontal" Margin="0,30,0,10">
-                    <Entry x:Name="ttemail_user"  FontSize="15" Placeholder="Correo electrónico" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,0,0" Keyboard="Email" />
+                    <Entry x:Name="ttemail_user" TextColor="Black" PlaceholderColor="Black" FontSize="15" Placeholder="Correo electrónico" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,0,0" Keyboard="Email" />
                 </StackLayout>
 
                 <StackLayout Orientation="Horizontal" Margin="0,0,0,20">
-                    <Entry x:Name="ttpassword" Placeholder="Contraseña"  FontSize="15" IsPassword="True" FontAttributes="None" HorizontalOptions="FillAndExpand"/>
+                    <Entry x:Name="ttpassword" TextColor="Black" Placeholder="Contraseña" PlaceholderColor="Black"  FontSize="15" IsPassword="True" FontAttributes="None" HorizontalOptions="FillAndExpand"/>
                 </StackLayout>
 
                 <Button Text="Iniciar Sesión" VerticalOptions="EndAndExpand" WidthRequest="250" CornerRadius="30" FontSize="15" TextColor="White" HorizontalOptions="Center" BackgroundColor="#667db6" x:Name="btn_signIn" Clicked="btn_signIn_Clicked"/>
-                <Button Text="¿Olvidaste tu contraseña?" VerticalOptions="End" Margin="0,0,0,0" HorizontalOptions="Center" FontSize="12" TextColor="Gray" BackgroundColor="Transparent" x:Name="btn_contraseña" Clicked="btn_contraseña_Clicked"/>
-                <Button Text="¿No tienes una cuenta? Regístrate Aquí" VerticalOptions="End" Margin="0,0,0,0" HorizontalOptions="Center" FontSize="12" TextColor="Gray" BackgroundColor="Transparent" x:Name="btn_registrate" Clicked="btn_registrate_Clicked"/>
+                <Button Text="¿Olvidaste tu contraseña?" VerticalOptions="End" Margin="0,0,0,0" HorizontalOptions="Center" FontSize="12" TextColor="Black" BackgroundColor="Transparent" x:Name="btn_contraseña" Clicked="btn_contraseña_Clicked"/>
+                <Button Text="¿No tienes una cuenta? Regístrate Aquí" VerticalOptions="End" Margin="0,0,0,0" HorizontalOptions="Center" FontSize="12" TextColor="Black" BackgroundColor="Transparent" x:Name="btn_registrate" Clicked="btn_registrate_Clicked"/>
 
             </StackLayout>
 

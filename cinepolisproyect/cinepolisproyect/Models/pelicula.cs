@@ -18,7 +18,7 @@ namespace cinepolisproyect.Models
         public string Horario { get; set; }
         public string IdButaca { get; set; }
         public string ContButaca { get; set; }
-        public int IdCombo { get; set; }
-        public int RefrescoExtra { get; set; }
+        public string IdCombo { get; set; }
+        public string RefrescoExtra { get; set; }
     }
 }

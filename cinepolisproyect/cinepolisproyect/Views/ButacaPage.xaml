@@ -2,10 +2,12 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
              x:Class="cinepolisproyect.Views.ButacaPage"
-             NavigationPage.HasNavigationBar="False"
+             
              BackgroundColor="#7384E9">
     <StackLayout>
     <FlexLayout>
+        <Label x:Name="txtcantas" Text="" TextColor="Transparent" />
+        <Label x:Name="txtidcine" Text="{Binding IdCine}" TextColor="Transparent" />
         <Label x:Name="txtidpeli" Text="{Binding IdPelicula}" TextColor="Transparent" />
         <Label x:Name="txtpeli" Text="{Binding Pelicula}" TextColor="Transparent"/>
         <Label x:Name="txtimage" Text="{Binding Imagepeli}" TextColor="Transparent"/>
@@ -27,13 +29,13 @@
 
                     <StackLayout Orientation="Horizontal" Spacing="15">
                         <Image Source="calendar.png" HeightRequest="15" WidthRequest="15"/>
-                        <Label Text="{Binding Fechapeli}" TextColor="white" FontSize="12" VerticalOptions="Center" />
-                    </StackLayout>
+                            <Label Text="{Binding Fechapeli}" TextColor="white" FontSize="12" VerticalOptions="Center" />
+                        </StackLayout>
 
                     <StackLayout Orientation="Horizontal" Spacing="15">
                         <Image Source="Time.png" HeightRequest="15" WidthRequest="15"/>
-                        <Label Text="{Binding Horario}" TextColor="white" FontSize="12" VerticalOptions="Center" />
-                    </StackLayout>
+                            <Label Text="{Binding Horario}" TextColor="white" FontSize="12" VerticalOptions="Center" />
+                        </StackLayout>
 
                 </StackLayout>
             </StackLayout>
@@ -412,8 +414,8 @@
 
             <Button Grid.Row="2" x:Name="btncomprar" Clicked="btncomprar_Clicked" Text="Comprar boletos"  TextColor="#7384E9" WidthRequest="220" HeightRequest="40" 
                     CornerRadius="20" BackgroundColor="Yellow" HorizontalOptions="Center" VerticalOptions="End"/>
-            
-        </Grid>
+
+            </Grid>
     </ScrollView>
     </StackLayout>
 </ContentPage>

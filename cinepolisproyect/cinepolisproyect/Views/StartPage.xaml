@@ -15,11 +15,11 @@
             </magic:GradientView.GradientSource>
         </magic:GradientView>
 
-        <Label  Text="Bienvenido a" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,0,0,370" FontAttributes="Italic" FontSize="17" />
+        <Label  Text="Bienvenido a" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,0,0,370" FontAttributes="Italic" FontSize="17" />
         <Image Source="logoc.png" VerticalOptions="Center" HorizontalOptions="Center" Margin="20,0,20,200"/>
-        <Label HorizontalTextAlignment="Center" FontSize="14" VerticalOptions="Center" HorizontalOptions="Center" Margin="20,0,20,50" Text=" ¡Ahora disponible nuestra App, inicia sesion o crea una cuenta y disfruta la experiencia!"/>
+        <Label HorizontalTextAlignment="Center" FontSize="14" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Center" Margin="20,0,20,50" Text=" ¡Ahora disponible nuestra App, inicia sesion o crea una cuenta y disfruta la experiencia!"/>
         <Button Text="Regístrate" Margin="0,150,0,0" VerticalOptions="Center" WidthRequest="300" CornerRadius="30" FontSize="15" TextColor="White" HorizontalOptions="Center"  BackgroundColor="#667db6" Clicked="Button_Clicked"/>
-        <Button Text="Tengo una cuenta" Margin="0,270,0,0" VerticalOptions="Center" WidthRequest="300" CornerRadius="30" FontSize="15" TextColor="White" HorizontalOptions="Center" BackgroundColor="#90667db6" Clicked="Button_Clicked_1"/>
+        <Button Text="Tengo una cuenta" Margin="0,270,0,0" VerticalOptions="Center" WidthRequest="300" CornerRadius="30" FontSize="15" TextColor="White" HorizontalOptions="Center" BackgroundColor="#667db6" Clicked="Button_Clicked_1"/>
 
     </Grid>
 </ContentPage>

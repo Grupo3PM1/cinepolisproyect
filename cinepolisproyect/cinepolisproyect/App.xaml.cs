@@ -7,6 +7,7 @@ namespace cinepolisproyect
 {
     public partial class App : Application
     {
+        
         public App()
         {
             InitializeComponent();
@@ -15,6 +16,7 @@ namespace cinepolisproyect
 
         protected override void OnStart()
         {
+           
         }
 
         protected override void OnSleep()
