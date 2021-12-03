@@ -56,7 +56,8 @@ namespace cinepolisproyect.Controllers
         //METODO UPDATE
         public async static Task UpdateSitio(Models.Butaca butaca)
         {
-            String JsonContent = JsonConvert.SerializeObject(butaca);
+            String JsonContent2 = JsonConvert.SerializeObject(butaca);
+            String JsonContent = "{\"butaca\":[" + JsonContent2 + "]}";
             StringContent contenido = new StringContent(JsonContent, Encoding.UTF8, "application/json");
             HttpResponseMessage response = null;
             using (HttpClient client = new HttpClient())
