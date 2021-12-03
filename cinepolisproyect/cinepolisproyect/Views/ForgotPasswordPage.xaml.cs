@@ -49,16 +49,24 @@ namespace cinepolisproyect.Views
             //Confirma que los campos esten validados
             if (await validarFormulario())
             {
-                //Ya validados los campos, se invoca al task ResetPassword y el contenido del entry
-                //del email. 
-                await authentication.ResetPassword(ttemail_user_recu.Text);
+                var user = await authentication.ResetPassword(ttemail_user_recu.Text);
+                if (user != string.Empty)
+                {
+                    //Ya validados los campos, se invoca al task ResetPassword y el contenido del entry
+                    //del email. 
+                    await authentication.ResetPassword(ttemail_user_recu.Text);
 
-                //Un alert para indicarle que se ha enviado un enlace al correo proporcionado
-                await this.DisplayAlert("Advertencia", "Hemos enviado un enlace a tu direccion de correo electronico para que puedas restablecer tu contraseña", "OK");
-                ClearScreen();
+                    //Un alert para indicarle que se ha enviado un enlace al correo proporcionado
+                    await this.DisplayAlert("Alerta", "Hemos enviado un enlace a tu direccion de correo electronico para que puedas restablecer tu contraseña", "OK");
+                    ClearScreen();
 
-                //Navegacion hacia la pagina del LoginPage()
-                await Navigation.PushAsync(new LoginPage());
+                    //Navegacion hacia la pagina del LoginPage()
+                    await Navigation.PushAsync(new LoginPage());
+                }
+                else
+                {
+                    await this.DisplayAlert("Error", "El correo electronico que proporcionaste no corresponde a ninguna cuenta de usuario. Vuelve a intentarlo. ", "OK");
+                }
 
             }
         }

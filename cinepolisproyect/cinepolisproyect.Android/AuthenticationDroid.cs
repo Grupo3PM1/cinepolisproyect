@@ -56,15 +56,13 @@ namespace cinepolisproyect.Droid
         }
 
         //Restablecer contraseña con un correo electronico
-        public async Task ResetPassword(string email)
-        {
-            //Primero debemos de mandar a llamar una instancia de Firebase
-            //para saber si el correo electronico que se proporciona tiene una sesion activa en la plataforma
-            //luego le pasamos el metodo SendPasswordResetEmailAsync que enviara un enlace al email proporcionado.  
-            await FirebaseAuth.Instance.SendPasswordResetEmailAsync(email);
-        }
+        //public async Task ResetPassword(string email)
+        //{
+            
+        //}
 
-    
+
+
         //Cierre de sesion 
         public bool SignOut()
         {
@@ -117,6 +115,40 @@ namespace cinepolisproyect.Droid
                 e.PrintStackTrace();
                 return string.Empty;
             }
+        }
+
+        public async Task<string> ResetPassword(string email)
+        {
+            //Primero debemos de mandar a llamar una instancia de Firebase
+            //para saber si el correo electronico que se proporciona tiene una sesion activa en la plataforma
+            //luego le pasamos el metodo SendPasswordResetEmailAsync que enviara un enlace al email proporcionado.
+            try
+            {
+                var user = Firebase.Auth.FirebaseAuth.Instance.CurrentUser;
+                if (user != null)
+                {
+                    await FirebaseAuth.Instance.SendPasswordResetEmailAsync(email);
+                }
+                else
+                {
+                    return string.Empty;
+                }
+
+                var token = user.GetIdToken(false);
+                return (string)token;
+
+            }
+            catch (FirebaseAuthInvalidUserException e)
+            {
+                e.PrintStackTrace();
+                return string.Empty;
+            }
+            catch (FirebaseAuthInvalidCredentialsException e)
+            {
+                e.PrintStackTrace();
+                return string.Empty;
+            }
+
         }
     }
 }
