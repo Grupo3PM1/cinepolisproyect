@@ -18,6 +18,7 @@ namespace cinepolisproyect.Views
         public LoginPage()
         {
             InitializeComponent();
+            
             //Se invoca la funcionalidad de la interfaz nativa desde el código compartido.
             authentication = DependencyService.Get<Authentication>();
         }
@@ -76,10 +77,14 @@ namespace cinepolisproyect.Views
                 //Si token es distinto de string.Empty, significa que no hubo errores en el proceso
                 if (token != string.Empty)
                     {
-                    //Se vacian los campos 
+
+                        //Se vacian los campos 
                         ClearScreen();
-                    //Se navega hacia la pagina DashboardPage()
-                    await Navigation.PushAsync(new DashboardPage());
+
+                        //Se navega hacia la pagina DashboardPage()
+                        await Navigation.PushAsync(new DashboardPage());
+             
+                  
                 }
                 else
                 {

@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-              xmlns:magic="clr-namespace:MagicGradients;assembly=MagicGradients"
+             xmlns:magic="clr-namespace:MagicGradients;assembly=MagicGradients"
+             xmlns:local="clr-namespace:cinepolisproyect"
              x:Class="cinepolisproyect.Views.LoginPage">
 
 
@@ -26,7 +27,25 @@
                 </StackLayout>
 
                 <StackLayout Orientation="Horizontal" Margin="0,0,0,20">
-                    <Entry x:Name="ttpassword" TextColor="Black" Placeholder="Contraseña" PlaceholderColor="Black"  FontSize="15" IsPassword="True" FontAttributes="None" HorizontalOptions="FillAndExpand"/>
+                    <Grid>
+                        <Entry x:Name="ttpassword" WidthRequest="300" TextColor="Black" Placeholder="Contraseña" PlaceholderColor="Black"  FontSize="15"  IsPassword="{Binding Source={x:Reference ShowPasswordActualTrigger}, Path=HidePassword}"  FontAttributes="None" HorizontalOptions="FillAndExpand"/>
+                        <ImageButton VerticalOptions="Center"
+                                 BackgroundColor="Transparent"
+                               
+                                 WidthRequest="20"
+                                 HorizontalOptions="End"
+                                 Source="hide.png">
+                            <ImageButton.Triggers>
+                                <EventTrigger
+                                Event="Clicked">
+                                    <local:ShowHidePassword ShowIcon="show.png" 
+                                                        HideIcon="hide.png"
+                                                        x:Name="ShowPasswordActualTrigger"/>
+                                </EventTrigger>
+                            </ImageButton.Triggers>
+
+                        </ImageButton>
+                    </Grid>
                 </StackLayout>
 
                 <Button Text="Iniciar Sesión" VerticalOptions="EndAndExpand" WidthRequest="250" CornerRadius="30" FontSize="15" TextColor="White" HorizontalOptions="Center" BackgroundColor="#667db6" x:Name="btn_signIn" Clicked="btn_signIn_Clicked"/>

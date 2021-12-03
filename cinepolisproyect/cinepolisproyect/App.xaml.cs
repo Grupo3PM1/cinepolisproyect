@@ -5,13 +5,24 @@ using Xamarin.Forms.Xaml;
 
 namespace cinepolisproyect
 {
+   
     public partial class App : Application
     {
-        
+        Authentication authentication;
         public App()
         {
             InitializeComponent();
-            MainPage = new NavigationPage(new StartPage());
+            authentication = DependencyService.Get<Authentication>();
+
+            if (authentication.IsSignIn())
+            {
+                MainPage = new NavigationPage(new DashboardPage());
+            }
+            else
+            {
+                MainPage = new NavigationPage(new StartPage());
+            }
+           
         }
 
         protected override void OnStart()
