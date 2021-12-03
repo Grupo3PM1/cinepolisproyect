@@ -19,10 +19,10 @@ namespace cinepolisproyect.Views
         public Models.Butaca listabutacas;
         public ButacaPage(/*Ticket ticket*/)
         {
-            
+
             InitializeComponent();
-            
-            
+
+
 
 
             /*SelectedTicket = ticket;
@@ -52,12 +52,12 @@ namespace cinepolisproyect.Views
             if (txtidpeli.Text == "1")
             {
                 //peli 1
-                if(txtidhorario.Text == "1")
+                if (txtidhorario.Text == "1")
                 {
                     //horario 1
                     btc = listbutacas[0];
                 }
-                else if(txtidhorario.Text == "2")
+                else if (txtidhorario.Text == "2")
                 {
                     //horario 2
                     btc = listbutacas[1];
@@ -68,7 +68,7 @@ namespace cinepolisproyect.Views
                     btc = listbutacas[2];
                 }
             }
-            else if(txtidpeli.Text == "2")
+            else if (txtidpeli.Text == "2")
             {
                 //peli 2
                 if (txtidhorario.Text == "1")
@@ -152,7 +152,49 @@ namespace cinepolisproyect.Views
                 f5 = btc.f5,
             };
 
-            listabutacas = listabutaca;
+            listabutacas = new Models.Butaca
+            {
+                a1 = "",
+                a2 = "",
+                a3 = "",
+                a4 = "",
+                a5 = "",
+                a6 = "",
+                a7 = "",
+                b1 = "",
+                b2 = "",
+                b3 = "",
+                b4 = "",
+                b5 = "",
+                b6 = "",
+                b7 = "",
+                c1 = "",
+                c2 = "",
+                c3 = "",
+                c4 = "",
+                c5 = "",
+                c6 = "",
+                c7 = "",
+                d1 = "",
+                d2 = "",
+                d3 = "",
+                d4 = "",
+                d5 = "",
+                d6 = "",
+                d7 = "",
+                e1 = "",
+                e2 = "",
+                e3 = "",
+                e4 = "",
+                e5 = "",
+                e6 = "",
+                e7 = "",
+                f1 = "",
+                f2 = "",
+                f3 = "",
+                f4 = "",
+                f5 = "",
+            };
 
             this.txtidbutaca.Text = btc.idbutaca;
 
@@ -368,7 +410,7 @@ namespace cinepolisproyect.Views
         private async void btncomprar_Clicked(object sender, EventArgs e)
         {
             var but = new Models.Butaca
-            {   
+            {
                 idbutaca = this.txtidbutaca.Text,
                 a1 = listabutacas.a1,
                 a2 = listabutacas.a2,
@@ -415,7 +457,7 @@ namespace cinepolisproyect.Views
             await Controllers.ButacasController.UpdateSitio(but);
             await DisplayAlert("Logrado", "Actualizado Exitosamente", "Ok");
             await Navigation.PushAsync(new Views.TiendaPage());
-        } 
+        }
 
         private void seat1_Clicked(object sender, EventArgs e)
         {
@@ -425,7 +467,7 @@ namespace cinepolisproyect.Views
             {
                 btn = (Button)sender;
                 if (btn.BackgroundColor.Equals(Color.Transparent))
-                { 
+                {
                     btn.BackgroundColor = Color.FromHex("#FFFF00");
                     listabutacas.a1 = "1";
                 }
@@ -436,356 +478,668 @@ namespace cinepolisproyect.Views
 
         private void seat2_Clicked(object sender, EventArgs e)
         {
-            btn = (Button)sender;
-            if (btn.BackgroundColor.Equals(Color.Transparent))
-                btn.BackgroundColor = Color.FromHex("#FFFF00");
+            if (listabutaca.a2 == "1")
+                DisplayAlert("Advertencia", "El asiento ya esta ocupado", "Ok");
             else
-                btn.BackgroundColor = Color.Transparent;
+            {
+                btn = (Button)sender;
+                if (btn.BackgroundColor.Equals(Color.Transparent))
+                {
+                    btn.BackgroundColor = Color.FromHex("#FFFF00");
+                    listabutacas.a2 = "1";
+                }
+                else
+                    btn.BackgroundColor = Color.Transparent;
+            }
 
         }
 
         private void seat3_Clicked(object sender, EventArgs e)
         {
-            btn = (Button)sender;
-            if (btn.BackgroundColor.Equals(Color.Transparent))
-                btn.BackgroundColor = Color.FromHex("#FFFF00");
+            if (listabutaca.a3 == "1")
+                DisplayAlert("Advertencia", "El asiento ya esta ocupado", "Ok");
             else
-                btn.BackgroundColor = Color.Transparent;
+            {
+                btn = (Button)sender;
+                if (btn.BackgroundColor.Equals(Color.Transparent))
+                {
+                    btn.BackgroundColor = Color.FromHex("#FFFF00");
+                    listabutacas.a3 = "1";
+                }
+                else
+                    btn.BackgroundColor = Color.Transparent;
+            }
         }
 
         private void seat4_Clicked(object sender, EventArgs e)
         {
-            btn = (Button)sender;
-            if (btn.BackgroundColor.Equals(Color.Transparent))
-                btn.BackgroundColor = Color.FromHex("#FFFF00");
+            if (listabutaca.a4 == "1")
+                DisplayAlert("Advertencia", "El asiento ya esta ocupado", "Ok");
             else
-                btn.BackgroundColor = Color.Transparent;
+            {
+                btn = (Button)sender;
+                if (btn.BackgroundColor.Equals(Color.Transparent))
+                {
+                    btn.BackgroundColor = Color.FromHex("#FFFF00");
+                    listabutacas.a4 = "1";
+                }
+                else
+                    btn.BackgroundColor = Color.Transparent;
+            }
         }
 
         private void seat5_Clicked(object sender, EventArgs e)
         {
-            btn = (Button)sender;
-            if (btn.BackgroundColor.Equals(Color.Transparent))
-                btn.BackgroundColor = Color.FromHex("#FFFF00");
+            if (listabutaca.a5 == "1")
+                DisplayAlert("Advertencia", "El asiento ya esta ocupado", "Ok");
             else
-                btn.BackgroundColor = Color.Transparent;
+            {
+                btn = (Button)sender;
+                if (btn.BackgroundColor.Equals(Color.Transparent))
+                {
+                    btn.BackgroundColor = Color.FromHex("#FFFF00");
+                    listabutacas.a5 = "1";
+                }
+                else
+                    btn.BackgroundColor = Color.Transparent;
+            }
         }
 
         private void seat6_Clicked(object sender, EventArgs e)
         {
-            btn = (Button)sender;
-            if (btn.BackgroundColor.Equals(Color.Transparent))
-                btn.BackgroundColor = Color.FromHex("#FFFF00");
+            if (listabutaca.a6 == "1")
+                DisplayAlert("Advertencia", "El asiento ya esta ocupado", "Ok");
             else
-                btn.BackgroundColor = Color.Transparent;
+            {
+                btn = (Button)sender;
+                if (btn.BackgroundColor.Equals(Color.Transparent))
+                {
+                    btn.BackgroundColor = Color.FromHex("#FFFF00");
+                    listabutacas.a6 = "1";
+                }
+                else
+                    btn.BackgroundColor = Color.Transparent;
+            }
 
         }
 
         private void seat7_Clicked(object sender, EventArgs e)
         {
-            btn = (Button)sender;
-            if (btn.BackgroundColor.Equals(Color.Transparent))
-                btn.BackgroundColor = Color.FromHex("#FFFF00");
+            if (listabutaca.a7 == "1")
+                DisplayAlert("Advertencia", "El asiento ya esta ocupado", "Ok");
             else
-                btn.BackgroundColor = Color.Transparent;
+            {
+                btn = (Button)sender;
+                if (btn.BackgroundColor.Equals(Color.Transparent))
+                {
+                    btn.BackgroundColor = Color.FromHex("#FFFF00");
+                    listabutacas.a7 = "1";
+                }
+                else
+                    btn.BackgroundColor = Color.Transparent;
+            }
 
         }
 
         private void seat8_Clicked(object sender, EventArgs e)
         {
-            btn = (Button)sender;
-            if (btn.BackgroundColor.Equals(Color.Transparent))
-                btn.BackgroundColor = Color.FromHex("#FFFF00");
+            if (listabutaca.b1 == "1")
+                DisplayAlert("Advertencia", "El asiento ya esta ocupado", "Ok");
             else
-                btn.BackgroundColor = Color.Transparent;
+            {
+                btn = (Button)sender;
+                if (btn.BackgroundColor.Equals(Color.Transparent))
+                {
+                    btn.BackgroundColor = Color.FromHex("#FFFF00");
+                    listabutacas.b1 = "1";
+                }
+                else
+                    btn.BackgroundColor = Color.Transparent;
+            }
         }
 
         private void seat9_Clicked(object sender, EventArgs e)
         {
-            btn = (Button)sender;
-            if (btn.BackgroundColor.Equals(Color.Transparent))
-                btn.BackgroundColor = Color.FromHex("#FFFF00");
+            if (listabutaca.b2 == "1")
+                DisplayAlert("Advertencia", "El asiento ya esta ocupado", "Ok");
             else
-                btn.BackgroundColor = Color.Transparent;
+            {
+                btn = (Button)sender;
+                if (btn.BackgroundColor.Equals(Color.Transparent))
+                {
+                    btn.BackgroundColor = Color.FromHex("#FFFF00");
+                    listabutacas.b2 = "1";
+                }
+                else
+                    btn.BackgroundColor = Color.Transparent;
+            }
         }
 
         private void seat10_Clicked(object sender, EventArgs e)
         {
-            btn = (Button)sender;
-            if (btn.BackgroundColor.Equals(Color.Transparent))
-                btn.BackgroundColor = Color.FromHex("#FFFF00");
+            if (listabutaca.b3 == "1")
+                DisplayAlert("Advertencia", "El asiento ya esta ocupado", "Ok");
             else
-                btn.BackgroundColor = Color.Transparent;
+            {
+                btn = (Button)sender;
+                if (btn.BackgroundColor.Equals(Color.Transparent))
+                {
+                    btn.BackgroundColor = Color.FromHex("#FFFF00");
+                    listabutacas.b3 = "1";
+                }
+                else
+                    btn.BackgroundColor = Color.Transparent;
+            }
         }
 
         private void seat11_Clicked(object sender, EventArgs e)
         {
-            btn = (Button)sender;
-            if (btn.BackgroundColor.Equals(Color.Transparent))
-                btn.BackgroundColor = Color.FromHex("#FFFF00");
+            if (listabutaca.b4 == "1")
+                DisplayAlert("Advertencia", "El asiento ya esta ocupado", "Ok");
             else
-                btn.BackgroundColor = Color.Transparent;
+            {
+                btn = (Button)sender;
+                if (btn.BackgroundColor.Equals(Color.Transparent))
+                {
+                    btn.BackgroundColor = Color.FromHex("#FFFF00");
+                    listabutacas.b4 = "1";
+                }
+                else
+                    btn.BackgroundColor = Color.Transparent;
+            }
         }
 
         private void seat12_Clicked(object sender, EventArgs e)
         {
-            btn = (Button)sender;
-            if (btn.BackgroundColor.Equals(Color.Transparent))
-                btn.BackgroundColor = Color.FromHex("#FFFF00");
+            if (listabutaca.b5 == "1")
+                DisplayAlert("Advertencia", "El asiento ya esta ocupado", "Ok");
             else
-                btn.BackgroundColor = Color.Transparent;
+            {
+                btn = (Button)sender;
+                if (btn.BackgroundColor.Equals(Color.Transparent))
+                {
+                    btn.BackgroundColor = Color.FromHex("#FFFF00");
+                    listabutacas.b5 = "1";
+                }
+                else
+                    btn.BackgroundColor = Color.Transparent;
+            }
         }
 
         private void seat13_Clicked(object sender, EventArgs e)
         {
-            btn = (Button)sender;
-            if (btn.BackgroundColor.Equals(Color.Transparent))
-                btn.BackgroundColor = Color.FromHex("#FFFF00");
+            if (listabutaca.b6 == "1")
+                DisplayAlert("Advertencia", "El asiento ya esta ocupado", "Ok");
             else
-                btn.BackgroundColor = Color.Transparent;
+            {
+                btn = (Button)sender;
+                if (btn.BackgroundColor.Equals(Color.Transparent))
+                {
+                    btn.BackgroundColor = Color.FromHex("#FFFF00");
+                    listabutacas.b6 = "1";
+                }
+                else
+                    btn.BackgroundColor = Color.Transparent;
+            }
         }
 
         private void seat14_Clicked(object sender, EventArgs e)
         {
-            btn = (Button)sender;
-            if (btn.BackgroundColor.Equals(Color.Transparent))
-                btn.BackgroundColor = Color.FromHex("#FFFF00");
+            if (listabutaca.b7 == "1")
+                DisplayAlert("Advertencia", "El asiento ya esta ocupado", "Ok");
             else
-                btn.BackgroundColor = Color.Transparent;
+            {
+                btn = (Button)sender;
+                if (btn.BackgroundColor.Equals(Color.Transparent))
+                {
+                    btn.BackgroundColor = Color.FromHex("#FFFF00");
+                    listabutacas.b7 = "1";
+                }
+                else
+                    btn.BackgroundColor = Color.Transparent;
+            }
         }
 
         private void seat15_Clicked(object sender, EventArgs e)
         {
-            btn = (Button)sender;
-            if (btn.BackgroundColor.Equals(Color.Transparent))
-                btn.BackgroundColor = Color.FromHex("#FFFF00");
+            if (listabutaca.c1 == "1")
+                DisplayAlert("Advertencia", "El asiento ya esta ocupado", "Ok");
             else
-                btn.BackgroundColor = Color.Transparent;
+            {
+                btn = (Button)sender;
+                if (btn.BackgroundColor.Equals(Color.Transparent))
+                {
+                    btn.BackgroundColor = Color.FromHex("#FFFF00");
+                    listabutacas.c1 = "1";
+                }
+                else
+                    btn.BackgroundColor = Color.Transparent;
+            }
         }
 
         private void seat16_Clicked(object sender, EventArgs e)
         {
-            btn = (Button)sender;
-            if (btn.BackgroundColor.Equals(Color.Transparent))
-                btn.BackgroundColor = Color.FromHex("#FFFF00");
+            if (listabutaca.c2 == "1")
+                DisplayAlert("Advertencia", "El asiento ya esta ocupado", "Ok");
             else
-                btn.BackgroundColor = Color.Transparent;
+            {
+                btn = (Button)sender;
+                if (btn.BackgroundColor.Equals(Color.Transparent))
+                {
+                    btn.BackgroundColor = Color.FromHex("#FFFF00");
+                    listabutacas.c2 = "1";
+                }
+                else
+                    btn.BackgroundColor = Color.Transparent;
+            }
         }
 
         private void seat17_Clicked(object sender, EventArgs e)
         {
-            btn = (Button)sender;
-            if (btn.BackgroundColor.Equals(Color.Transparent))
-                btn.BackgroundColor = Color.FromHex("#FFFF00");
+            if (listabutaca.c3 == "1")
+                DisplayAlert("Advertencia", "El asiento ya esta ocupado", "Ok");
             else
-                btn.BackgroundColor = Color.Transparent;
+            {
+                btn = (Button)sender;
+                if (btn.BackgroundColor.Equals(Color.Transparent))
+                {
+                    btn.BackgroundColor = Color.FromHex("#FFFF00");
+                    listabutacas.c3 = "1";
+                }
+                else
+                    btn.BackgroundColor = Color.Transparent;
+            }
         }
 
         private void seat18_Clicked(object sender, EventArgs e)
         {
-            btn = (Button)sender;
-            if (btn.BackgroundColor.Equals(Color.Transparent))
-                btn.BackgroundColor = Color.FromHex("#FFFF00");
+            if (listabutaca.c4 == "1")
+                DisplayAlert("Advertencia", "El asiento ya esta ocupado", "Ok");
             else
-                btn.BackgroundColor = Color.Transparent;
+            {
+                btn = (Button)sender;
+                if (btn.BackgroundColor.Equals(Color.Transparent))
+                {
+                    btn.BackgroundColor = Color.FromHex("#FFFF00");
+                    listabutacas.c4 = "1";
+                }
+                else
+                    btn.BackgroundColor = Color.Transparent;
+            }
         }
 
         private void seat19_Clicked(object sender, EventArgs e)
         {
-            btn = (Button)sender;
-            if (btn.BackgroundColor.Equals(Color.Transparent))
-                btn.BackgroundColor = Color.FromHex("#FFFF00");
+            if (listabutaca.c5 == "1")
+                DisplayAlert("Advertencia", "El asiento ya esta ocupado", "Ok");
             else
-                btn.BackgroundColor = Color.Transparent;
+            {
+                btn = (Button)sender;
+                if (btn.BackgroundColor.Equals(Color.Transparent))
+                {
+                    btn.BackgroundColor = Color.FromHex("#FFFF00");
+                    listabutacas.c5 = "1";
+                }
+                else
+                    btn.BackgroundColor = Color.Transparent;
+            }
         }
 
         private void seat20_Clicked(object sender, EventArgs e)
         {
-            btn = (Button)sender;
-            if (btn.BackgroundColor.Equals(Color.Transparent))
-                btn.BackgroundColor = Color.FromHex("#FFFF00");
+            if (listabutaca.c6 == "1")
+                DisplayAlert("Advertencia", "El asiento ya esta ocupado", "Ok");
             else
-                btn.BackgroundColor = Color.Transparent;
+            {
+                btn = (Button)sender;
+                if (btn.BackgroundColor.Equals(Color.Transparent))
+                {
+                    btn.BackgroundColor = Color.FromHex("#FFFF00");
+                    listabutacas.c6 = "1";
+                }
+                else
+                    btn.BackgroundColor = Color.Transparent;
+            }
         }
 
         private void seat21_Clicked(object sender, EventArgs e)
         {
-            btn = (Button)sender;
-            if (btn.BackgroundColor.Equals(Color.Transparent))
-                btn.BackgroundColor = Color.FromHex("#FFFF00");
+            if (listabutaca.c7 == "1")
+                DisplayAlert("Advertencia", "El asiento ya esta ocupado", "Ok");
             else
-                btn.BackgroundColor = Color.Transparent;
+            {
+                btn = (Button)sender;
+                if (btn.BackgroundColor.Equals(Color.Transparent))
+                {
+                    btn.BackgroundColor = Color.FromHex("#FFFF00");
+                    listabutacas.c7 = "1";
+                }
+                else
+                    btn.BackgroundColor = Color.Transparent;
+            }
         }
 
         private void seat22_Clicked(object sender, EventArgs e)
         {
-            btn = (Button)sender;
-            if (btn.BackgroundColor.Equals(Color.Transparent))
-                btn.BackgroundColor = Color.FromHex("#FFFF00");
+            if (listabutaca.d1 == "1")
+                DisplayAlert("Advertencia", "El asiento ya esta ocupado", "Ok");
             else
-                btn.BackgroundColor = Color.Transparent;
+            {
+                btn = (Button)sender;
+                if (btn.BackgroundColor.Equals(Color.Transparent))
+                {
+                    btn.BackgroundColor = Color.FromHex("#FFFF00");
+                    listabutacas.d1 = "1";
+                }
+                else
+                    btn.BackgroundColor = Color.Transparent;
+            }
         }
 
         private void seat23_Clicked(object sender, EventArgs e)
         {
-            btn = (Button)sender;
-            if (btn.BackgroundColor.Equals(Color.Transparent))
-                btn.BackgroundColor = Color.FromHex("#FFFF00");
+            if (listabutaca.d2 == "1")
+                DisplayAlert("Advertencia", "El asiento ya esta ocupado", "Ok");
             else
-                btn.BackgroundColor = Color.Transparent;
+            {
+                btn = (Button)sender;
+                if (btn.BackgroundColor.Equals(Color.Transparent))
+                {
+                    btn.BackgroundColor = Color.FromHex("#FFFF00");
+                    listabutacas.d2 = "1";
+                }
+                else
+                    btn.BackgroundColor = Color.Transparent;
+            }
         }
 
         private void seat24_Clicked(object sender, EventArgs e)
         {
-            btn = (Button)sender;
-            if (btn.BackgroundColor.Equals(Color.Transparent))
-                btn.BackgroundColor = Color.FromHex("#FFFF00");
+            if (listabutaca.d3 == "1")
+                DisplayAlert("Advertencia", "El asiento ya esta ocupado", "Ok");
             else
-                btn.BackgroundColor = Color.Transparent;
+            {
+                btn = (Button)sender;
+                if (btn.BackgroundColor.Equals(Color.Transparent))
+                {
+                    btn.BackgroundColor = Color.FromHex("#FFFF00");
+                    listabutacas.d3 = "1";
+                }
+                else
+                    btn.BackgroundColor = Color.Transparent;
+            }
         }
 
         private void seat25_Clicked(object sender, EventArgs e)
         {
-            btn = (Button)sender;
-            if (btn.BackgroundColor.Equals(Color.Transparent))
-                btn.BackgroundColor = Color.FromHex("#FFFF00");
+            if (listabutaca.d4 == "1")
+                DisplayAlert("Advertencia", "El asiento ya esta ocupado", "Ok");
             else
-                btn.BackgroundColor = Color.Transparent;
+            {
+                btn = (Button)sender;
+                if (btn.BackgroundColor.Equals(Color.Transparent))
+                {
+                    btn.BackgroundColor = Color.FromHex("#FFFF00");
+                    listabutacas.d4 = "1";
+                }
+                else
+                    btn.BackgroundColor = Color.Transparent;
+            }
         }
 
         private void seat26_Clicked(object sender, EventArgs e)
         {
-            btn = (Button)sender;
-            if (btn.BackgroundColor.Equals(Color.Transparent))
-                btn.BackgroundColor = Color.FromHex("#FFFF00");
+            if (listabutaca.d5 == "1")
+                DisplayAlert("Advertencia", "El asiento ya esta ocupado", "Ok");
             else
-                btn.BackgroundColor = Color.Transparent;
+            {
+                btn = (Button)sender;
+                if (btn.BackgroundColor.Equals(Color.Transparent))
+                {
+                    btn.BackgroundColor = Color.FromHex("#FFFF00");
+                    listabutacas.d5 = "1";
+                }
+                else
+                    btn.BackgroundColor = Color.Transparent;
+            }
         }
 
         private void seat27_Clicked(object sender, EventArgs e)
         {
-            btn = (Button)sender;
-            if (btn.BackgroundColor.Equals(Color.Transparent))
-                btn.BackgroundColor = Color.FromHex("#FFFF00");
+            if (listabutaca.d6 == "1")
+                DisplayAlert("Advertencia", "El asiento ya esta ocupado", "Ok");
             else
-                btn.BackgroundColor = Color.Transparent;
+            {
+                btn = (Button)sender;
+                if (btn.BackgroundColor.Equals(Color.Transparent))
+                {
+                    btn.BackgroundColor = Color.FromHex("#FFFF00");
+                    listabutacas.d6 = "1";
+                }
+                else
+                    btn.BackgroundColor = Color.Transparent;
+            }
         }
 
         private void seat28_Clicked(object sender, EventArgs e)
         {
-            btn = (Button)sender;
-            if (btn.BackgroundColor.Equals(Color.Transparent))
-                btn.BackgroundColor = Color.FromHex("#FFFF00");
+            if (listabutaca.d7 == "1")
+                DisplayAlert("Advertencia", "El asiento ya esta ocupado", "Ok");
             else
-                btn.BackgroundColor = Color.Transparent;
+            {
+                btn = (Button)sender;
+                if (btn.BackgroundColor.Equals(Color.Transparent))
+                {
+                    btn.BackgroundColor = Color.FromHex("#FFFF00");
+                    listabutacas.d7 = "1";
+                }
+                else
+                    btn.BackgroundColor = Color.Transparent;
+            }
         }
 
         private void seat29_Clicked(object sender, EventArgs e)
         {
-            btn = (Button)sender;
-            if (btn.BackgroundColor.Equals(Color.Transparent))
-                btn.BackgroundColor = Color.FromHex("#FFFF00");
+            if (listabutaca.e1 == "1")
+                DisplayAlert("Advertencia", "El asiento ya esta ocupado", "Ok");
             else
-                btn.BackgroundColor = Color.Transparent;
+            {
+                btn = (Button)sender;
+                if (btn.BackgroundColor.Equals(Color.Transparent))
+                {
+                    btn.BackgroundColor = Color.FromHex("#FFFF00");
+                    listabutacas.e1 = "1";
+                }
+                else
+                    btn.BackgroundColor = Color.Transparent;
+            }
         }
 
         private void seat30_Clicked(object sender, EventArgs e)
         {
-            btn = (Button)sender;
-            if (btn.BackgroundColor.Equals(Color.Transparent))
-                btn.BackgroundColor = Color.FromHex("#FFFF00");
+            if (listabutaca.e2 == "1")
+                DisplayAlert("Advertencia", "El asiento ya esta ocupado", "Ok");
             else
-                btn.BackgroundColor = Color.Transparent;
+            {
+                btn = (Button)sender;
+                if (btn.BackgroundColor.Equals(Color.Transparent))
+                {
+                    btn.BackgroundColor = Color.FromHex("#FFFF00");
+                    listabutacas.e2 = "1";
+                }
+                else
+                    btn.BackgroundColor = Color.Transparent;
+            }
         }
 
         private void seat31_Clicked(object sender, EventArgs e)
         {
-            btn = (Button)sender;
-            if (btn.BackgroundColor.Equals(Color.Transparent))
-                btn.BackgroundColor = Color.FromHex("#FFFF00");
+            if (listabutaca.e3 == "1")
+                DisplayAlert("Advertencia", "El asiento ya esta ocupado", "Ok");
             else
-                btn.BackgroundColor = Color.Transparent;
+            {
+                btn = (Button)sender;
+                if (btn.BackgroundColor.Equals(Color.Transparent))
+                {
+                    btn.BackgroundColor = Color.FromHex("#FFFF00");
+                    listabutacas.e3 = "1";
+                }
+                else
+                    btn.BackgroundColor = Color.Transparent;
+            }
         }
 
         private void seat32_Clicked(object sender, EventArgs e)
         {
-            btn = (Button)sender;
-            if (btn.BackgroundColor.Equals(Color.Transparent))
-                btn.BackgroundColor = Color.FromHex("#FFFF00");
+            if (listabutaca.e4 == "1")
+                DisplayAlert("Advertencia", "El asiento ya esta ocupado", "Ok");
             else
-                btn.BackgroundColor = Color.Transparent;
+            {
+                btn = (Button)sender;
+                if (btn.BackgroundColor.Equals(Color.Transparent))
+                {
+                    btn.BackgroundColor = Color.FromHex("#FFFF00");
+                    listabutacas.e4 = "1";
+                }
+                else
+                    btn.BackgroundColor = Color.Transparent;
+            }
         }
 
         private void seat33_Clicked(object sender, EventArgs e)
         {
-            btn = (Button)sender;
-            if (btn.BackgroundColor.Equals(Color.Transparent))
-                btn.BackgroundColor = Color.FromHex("#FFFF00");
+            if (listabutaca.e5 == "1")
+                DisplayAlert("Advertencia", "El asiento ya esta ocupado", "Ok");
             else
-                btn.BackgroundColor = Color.Transparent;
+            {
+                btn = (Button)sender;
+                if (btn.BackgroundColor.Equals(Color.Transparent))
+                {
+                    btn.BackgroundColor = Color.FromHex("#FFFF00");
+                    listabutacas.e5 = "1";
+                }
+                else
+                    btn.BackgroundColor = Color.Transparent;
+            }
         }
 
         private void seat34_Clicked(object sender, EventArgs e)
         {
-            btn = (Button)sender;
-            if (btn.BackgroundColor.Equals(Color.Transparent))
-                btn.BackgroundColor = Color.FromHex("#FFFF00");
+            if (listabutaca.e6 == "1")
+                DisplayAlert("Advertencia", "El asiento ya esta ocupado", "Ok");
             else
-                btn.BackgroundColor = Color.Transparent;
+            {
+                btn = (Button)sender;
+                if (btn.BackgroundColor.Equals(Color.Transparent))
+                {
+                    btn.BackgroundColor = Color.FromHex("#FFFF00");
+                    listabutacas.e6 = "1";
+                }
+                else
+                    btn.BackgroundColor = Color.Transparent;
+            }
         }
 
         private void seat35_Clicked(object sender, EventArgs e)
         {
-            btn = (Button)sender;
-            if (btn.BackgroundColor.Equals(Color.Transparent))
-                btn.BackgroundColor = Color.FromHex("#FFFF00");
+            if (listabutaca.e7 == "1")
+                DisplayAlert("Advertencia", "El asiento ya esta ocupado", "Ok");
             else
-                btn.BackgroundColor = Color.Transparent;
+            {
+                btn = (Button)sender;
+                if (btn.BackgroundColor.Equals(Color.Transparent))
+                {
+                    btn.BackgroundColor = Color.FromHex("#FFFF00");
+                    listabutacas.e7 = "1";
+                }
+                else
+                    btn.BackgroundColor = Color.Transparent;
+            }
         }
 
         private void seat36_Clicked(object sender, EventArgs e)
         {
-            btn = (Button)sender;
-            if (btn.BackgroundColor.Equals(Color.Transparent))
-                btn.BackgroundColor = Color.FromHex("#FFFF00");
+            if (listabutaca.f1 == "1")
+                DisplayAlert("Advertencia", "El asiento ya esta ocupado", "Ok");
             else
-                btn.BackgroundColor = Color.Transparent;
+            {
+                btn = (Button)sender;
+                if (btn.BackgroundColor.Equals(Color.Transparent))
+                {
+                    btn.BackgroundColor = Color.FromHex("#FFFF00");
+                    listabutacas.f1 = "1";
+                }
+                else
+                    btn.BackgroundColor = Color.Transparent;
+            }
         }
 
         private void seat37_Clicked(object sender, EventArgs e)
         {
-            btn = (Button)sender;
-            if (btn.BackgroundColor.Equals(Color.Transparent))
-                btn.BackgroundColor = Color.FromHex("#FFFF00");
+            if (listabutaca.f2 == "1")
+                DisplayAlert("Advertencia", "El asiento ya esta ocupado", "Ok");
             else
-                btn.BackgroundColor = Color.Transparent;
+            {
+                btn = (Button)sender;
+                if (btn.BackgroundColor.Equals(Color.Transparent))
+                {
+                    btn.BackgroundColor = Color.FromHex("#FFFF00");
+                    listabutacas.f2 = "1";
+                }
+                else
+                    btn.BackgroundColor = Color.Transparent;
+            }
         }
 
         private void seat38_Clicked(object sender, EventArgs e)
         {
-            btn = (Button)sender;
-            if (btn.BackgroundColor.Equals(Color.Transparent))
-                btn.BackgroundColor = Color.FromHex("#FFFF00");
+            if (listabutaca.f3 == "1")
+                DisplayAlert("Advertencia", "El asiento ya esta ocupado", "Ok");
             else
-                btn.BackgroundColor = Color.Transparent;
+            {
+                btn = (Button)sender;
+                if (btn.BackgroundColor.Equals(Color.Transparent))
+                {
+                    btn.BackgroundColor = Color.FromHex("#FFFF00");
+                    listabutacas.f3 = "1";
+                }
+                else
+                    btn.BackgroundColor = Color.Transparent;
+            }
         }
 
         private void seat39_Clicked(object sender, EventArgs e)
         {
-            btn = (Button)sender;
-            if (btn.BackgroundColor.Equals(Color.Transparent))
-                btn.BackgroundColor = Color.FromHex("#FFFF00");
+            if (listabutaca.f4 == "1")
+                DisplayAlert("Advertencia", "El asiento ya esta ocupado", "Ok");
             else
-                btn.BackgroundColor = Color.Transparent;
+            {
+                btn = (Button)sender;
+                if (btn.BackgroundColor.Equals(Color.Transparent))
+                {
+                    btn.BackgroundColor = Color.FromHex("#FFFF00");
+                    listabutacas.f4 = "1";
+                }
+                else
+                    btn.BackgroundColor = Color.Transparent;
+            }
         }
 
         private void seat40_Clicked(object sender, EventArgs e)
         {
-            btn = (Button)sender;
-            if (btn.BackgroundColor.Equals(Color.Transparent))
-                btn.BackgroundColor = Color.FromHex("#FFFF00");
+            if (listabutaca.f5 == "1")
+                DisplayAlert("Advertencia", "El asiento ya esta ocupado", "Ok");
             else
-                btn.BackgroundColor = Color.Transparent;
+            {
+                btn = (Button)sender;
+                if (btn.BackgroundColor.Equals(Color.Transparent))
+                {
+                    btn.BackgroundColor = Color.FromHex("#FFFF00");
+                    listabutacas.f5 = "1";
+                }
+                else
+                    btn.BackgroundColor = Color.Transparent;
+            }
         }
     }
     #endregion //botones
