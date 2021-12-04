@@ -26,8 +26,8 @@ namespace cinepolisproyect.Views
         private void InitApp()
         {
             nombre = new List<CineItemCmbClass>();
-            nombre.Add(new CineItemCmbClass { name = " Tegucigalpa" });
-            nombre.Add(new CineItemCmbClass { name = " SPS" });
+            nombre.Add(new CineItemCmbClass { name = "Tegucigalpa" });
+            nombre.Add(new CineItemCmbClass { name = "SPS" });
             foreach (var cinevar in nombre) { CmbCine.Items.Add(cinevar.name); }
         }
         //este evento Selected es cuando seleccionamos una de las dos opciones del Combobox

@@ -12,8 +12,8 @@
                 <Frame Padding="8,8,0,0" CornerRadius="0">
                 <FlexLayout>
                         <Image Source="Cinepolislogo.png" HeightRequest="40" HorizontalOptions="Start"/>
-                        <Label Text="CINEPOLIS" Padding="5" HorizontalOptions="Center" FontSize="24"/>
-                        <Button Text="salir" Margin="90,0,0,0"  BackgroundColor="Transparent" x:Name="btn_signOut" Clicked="btn_signOut_Clicked"/>
+                        <Label Text="CINEPOLIS" TextColor="Gray" Padding="5" HorizontalOptions="Center" FontSize="24"/>
+                        <Button Text="salir" Margin="90,0,0,0" TextColor="Gray" BackgroundColor="Transparent" x:Name="btn_signOut" Clicked="btn_signOut_Clicked"/>
                     </FlexLayout>
                 </Frame>
                 <Label Text="Proximamente" HorizontalOptions="Center" FontSize="24"/>

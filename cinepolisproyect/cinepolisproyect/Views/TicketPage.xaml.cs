@@ -20,7 +20,16 @@ namespace cinepolisproyect.Views
             InitializeComponent();
         }
 
-        private async void btngenerarcodigo_Clicked(object sender, EventArgs e)
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+
+            generarQR();
+
+
+        }
+        public  void generarQR()
         {
             qr = new ZXingBarcodeImageView
             {
@@ -35,7 +44,9 @@ namespace cinepolisproyect.Views
             String IdCombo = txtIdCombo.Text;
             String RefrescoExtra = txtRefrescoExtra.Text;
             String ContButaca = txtcontbutaca.Text;
-    
+
+            String Url = "https://cinepolishn.000webhostapp.com/Cinepolis/Ticket.php/?IdCine=" + IdCine + "&IdPelicula=" + IdPelicula + "&IdHorario=" + IdHorario + "&ContButaca=" + ContButaca + "&IdCombo=" + IdCombo + "&RefrescoExtra=" + RefrescoExtra;
+
             //generar tipo de codigo que sera el QR_CODE 
             qr.BarcodeFormat = ZXing.BarcodeFormat.QR_CODE;
             //propiedad de ancho del QR
@@ -43,12 +54,13 @@ namespace cinepolisproyect.Views
             //propiedad de alto del QR
             qr.BarcodeOptions.Height = 300;
             //valor que va recibir el codigo QR para direccionar
-            qr.BarcodeValue = "https://cinepolishn.000webhostapp.com/Cinepolis/Ticket.php/?IdCine=" + IdCine + "&IdPelicula=" + IdPelicula + "&IdHorario=" + IdHorario + "&ContButaca=" + ContButaca + "&IdCombo=" + IdCombo + "&RefrescoExtra=" + RefrescoExtra;
-          
+            qr.BarcodeValue = Url;
             //colocamos el nombre al StackLayout y le damos el valor
             //qr del objeto creado que es
             stkQR.Children.Add(qr);
-
         }
+
+
+           
     }
 }
