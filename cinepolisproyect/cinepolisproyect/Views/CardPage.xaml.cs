@@ -12,12 +12,42 @@ namespace cinepolisproyect.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CardPage : ContentPage
     {
+        public Models.ApiUsuario usuariosdata;
+        Authentication authentication;
         public string user = "1";
         public CardPage()
         {
             InitializeComponent();
+            authentication = DependencyService.Get<Authentication>();
 
             this.BindingContext = new Models.CardPageViewModel();
+        }
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            traerID();
+
+        }
+        public async void traerID()
+        {
+            string userUid = await authentication.Uid();
+            List<Models.ApiUsuario> listclientes = await cinepolisproyect.Controllers.UsuariosController.GetListUsuarios();
+            int sent = 1;
+            int cont = 0;
+            while (sent == 1)
+            {
+                if (listclientes[cont].us_uid == userUid)
+                {
+                    usuariosdata = listclientes[cont];
+                    sent = 0;
+                }
+                else
+                {
+                    cont += 1;
+                }
+
+            }
+            user = usuariosdata.us_id;
         }
 
         //Validar los campos de los formularios
