@@ -8,23 +8,23 @@ using System.Threading.Tasks;
 
 namespace cinepolisproyect.Controllers
 {
-    public class UsuariosController
+    public class CardController
     {
 
-        //METODO POST USUARIOS
-        public async static Task CrearUsuario(Models.ApiUsuario postusuario)
+        //METODO POST TARJETA
+        public async static Task CrearTarjeta(Models.ApiCard postcard)
         {
-            String json = JsonConvert.SerializeObject(postusuario);
+            String json = JsonConvert.SerializeObject(postcard);
             StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
             HttpResponseMessage response = null;
             using (HttpClient cliente = new HttpClient())
             {
-                response = await cliente.PostAsync(Models.UrlApiUsusario.POSTUsuarioList, content);
+                response = await cliente.PostAsync(Models.UrlApiCard.POSTCardList, content);
             }
             if (response.IsSuccessStatusCode)
             {
                 var respuesta = response.Content.ReadAsStringAsync().Result;
-                Debug.WriteLine("Usuario Guardado");
+                Debug.WriteLine("Tarjeta Guardada");
             }
             else
             {

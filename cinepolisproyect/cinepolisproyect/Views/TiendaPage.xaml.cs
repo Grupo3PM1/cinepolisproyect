@@ -30,7 +30,7 @@ namespace cinepolisproyect.Views
                 ContButaca = this.txtcontbutaca.Text,
             };
             //Creamos una variable page para referenciar a HorariosPage
-            var page = new Views.TicketPage();
+            var page = new Views.CardPage();
             //Mediante BindingContext enviamos la clase classdata hacia a HorariosPage mediante la variable page
             page.BindingContext = classdata;
             //Por ultimo enviamos la variable Page referenciado a HorariosPage con los datos de la clase mediante un Navigation.PushAsync
@@ -50,7 +50,7 @@ namespace cinepolisproyect.Views
                 ContButaca = this.txtcontbutaca.Text,
             };
             //Creamos una variable page para referenciar a HorariosPage
-            var page = new Views.TicketPage();
+            var page = new Views.CardPage();
             //Mediante BindingContext enviamos la clase classdata hacia a HorariosPage mediante la variable page
             page.BindingContext = classdata;
             //Por ultimo enviamos la variable Page referenciado a HorariosPage con los datos de la clase mediante un Navigation.PushAsync
@@ -70,7 +70,7 @@ namespace cinepolisproyect.Views
                 ContButaca = this.txtcontbutaca.Text,
             };
             //Creamos una variable page para referenciar a HorariosPage
-            var page = new Views.TicketPage();
+            var page = new Views.CardPage();
             //Mediante BindingContext enviamos la clase classdata hacia a HorariosPage mediante la variable page
             page.BindingContext = classdata;
             //Por ultimo enviamos la variable Page referenciado a HorariosPage con los datos de la clase mediante un Navigation.PushAsync
