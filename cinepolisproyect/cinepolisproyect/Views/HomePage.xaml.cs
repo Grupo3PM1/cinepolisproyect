@@ -13,10 +13,12 @@ namespace cinepolisproyect.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class HomePage : ContentPage
     {
+
         // creamos una variable que invoque a toda la interfaz de Authentication
         Authentication authentication;
         public HomePage()
         {
+            NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
             //Se invoca la funcionalidad de la interfaz nativa desde el código compartido.
             authentication = DependencyService.Get<Authentication>();

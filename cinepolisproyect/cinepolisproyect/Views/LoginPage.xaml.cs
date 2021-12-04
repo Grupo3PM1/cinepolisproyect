@@ -82,7 +82,7 @@ namespace cinepolisproyect.Views
                         ClearScreen();
 
                         //Se navega hacia la pagina DashboardPage()
-                        await Navigation.PushAsync(new DashboardPage());
+                        Application.Current.MainPage = new NavigationPage(new DashboardPage());
              
                   
                 }
