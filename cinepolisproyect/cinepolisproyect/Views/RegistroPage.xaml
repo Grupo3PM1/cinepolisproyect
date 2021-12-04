@@ -13,7 +13,7 @@
             </magic:GradientView.GradientSource>
         </magic:GradientView>
 
-        <Frame x:Name="Frame1" BackgroundColor="#20667db6" HasShadow="False" HorizontalOptions="Center" VerticalOptions="Start" Margin="0,20,0,0" WidthRequest="300">
+        <Frame x:Name="Frame1" BackgroundColor="#86A8E7" HasShadow="False" HorizontalOptions="Center" VerticalOptions="Start" Margin="0,20,0,0" WidthRequest="300">
 
             <StackLayout>
                 <Label Text="Crea una cuenta" TextColor="Black" VerticalOptions="Start" HorizontalOptions="Start" Margin="10,0,0,0" Padding="0,10,0,0" FontSize="25" FontAttributes="Bold"/>

@@ -36,7 +36,7 @@ namespace cinepolisproyect.Views
 
                 if (signOut)
                 {
-                    await Navigation.PushAsync(new LoginPage());
+                    Application.Current.MainPage = new NavigationPage(new StartPage());
                 }
             }
             

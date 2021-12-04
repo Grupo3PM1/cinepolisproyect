@@ -77,14 +77,11 @@ namespace cinepolisproyect.Views
                 //Si token es distinto de string.Empty, significa que no hubo errores en el proceso
                 if (token != string.Empty)
                     {
-
                         //Se vacian los campos 
                         ClearScreen();
 
                         //Se navega hacia la pagina DashboardPage()
-                        Application.Current.MainPage = new NavigationPage(new DashboardPage());
-             
-                  
+                        Application.Current.MainPage = new NavigationPage(new DashboardPage()); 
                 }
                 else
                 {
