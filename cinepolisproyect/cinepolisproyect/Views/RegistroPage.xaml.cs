@@ -90,7 +90,7 @@ namespace cinepolisproyect.Views
                 {
                     //Ya validados los campos, se crea una variable user donde se invoca al task SignUpWithEmailAndPassword y el contenido de los entry
                     //del email y password, requeridos para crear la cuenta de usuario
-                    var user = await authentication.SignUpWithEmailAndPassword(ttemail.Text, ttpassword.Text);
+                    var user = await authentication.SignUpWithEmailAndPassword(ttname.Text, ttlastname.Text, ttemail.Text, ttpassword.Text);
                     if (user != string.Empty)
                     {
                         //Si la variable user es distinto de nulo, es porque en efecto se creo el usuario

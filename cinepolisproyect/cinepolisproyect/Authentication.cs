@@ -14,7 +14,7 @@ namespace cinepolisproyect
 
         //Creamos una tarea de tipo string, llamada SignUpWithEmailAndPassword que tendra dos parametros de tipo string,
         //el email y la contraseña para crear una cuenta de usuario. 
-        Task<string> SignUpWithEmailAndPassword(string email, string password);
+        Task<string> SignUpWithEmailAndPassword(string nombre, string apellido, string email, string password);
 
 
         //Creamos una tarea llamada ResetPassword que tendra un unico parametro de tipo string,

@@ -92,7 +92,7 @@ namespace cinepolisproyect.Droid
 
 
         //Crear una cuenta en firebase con un email y un password
-        public async Task<string> SignUpWithEmailAndPassword(string email, string password)
+        public async Task<string> SignUpWithEmailAndPassword(string nombre, string apellido, string email, string password)
         {
             try
             {
@@ -105,6 +105,21 @@ namespace cinepolisproyect.Droid
                 //igual a la variable que obtiene la instancia y la creacion del usuario newUser y le indicamos que queremos acceder
                 //al usuario creado con User. 
                 var user = newUser.User;
+
+
+                // Obtenemos el UID del usuario creado para almacenarlo en MySQL
+                var uid = FirebaseAuth.Instance.CurrentUser.Uid;
+
+                // Enviamos todos los datos necesarios para la tabla usuario
+                var postususario = new Models.ApiUsuario
+                {
+                    us_uid = uid,
+                    us_nombre = nombre,
+                    us_apellido = apellido,
+                    us_email = email
+                };
+
+                await Controllers.UsuariosController.CrearUsuario(postususario); // Envia a UsuariosController
 
                 // Una vez que obtenemos el usuario le asignamos el metodo SendEmailVerification que sera el encargado de enviar
                 //un enlace de verificar al correo de dicho usuario. 
