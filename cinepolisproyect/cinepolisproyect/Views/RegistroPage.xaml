@@ -2,18 +2,21 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:magic="clr-namespace:MagicGradients;assembly=MagicGradients"
+             NavigationPage.HasNavigationBar="False"
              xmlns:local="clr-namespace:cinepolisproyect"
              x:Class="cinepolisproyect.Views.RegistroPage">
     <Grid>
         <magic:GradientView VerticalOptions="FillAndExpand">
             <magic:GradientView.GradientSource>
                 <magic:LinearGradient Angle="333">
-                    <magic:GradientStop Color="#FFFFFF" Offset="0"/>
+                    <magic:GradientStop Color="#9086A8E7" Offset=".45"/>
+                    <magic:GradientStop Color="#000082C8" Offset=".100"/>
+                    <magic:GradientStop Color="#0091EAE4" Offset=".45"/>
                 </magic:LinearGradient>
             </magic:GradientView.GradientSource>
         </magic:GradientView>
 
-        <Frame x:Name="Frame1" BackgroundColor="#86A8E7" HasShadow="False" HorizontalOptions="Center" VerticalOptions="Start" Margin="0,20,0,0" WidthRequest="300">
+        <Frame x:Name="Frame1" BackgroundColor="#FFFFFF"  HasShadow="True" HorizontalOptions="Center" VerticalOptions="Center"  WidthRequest="300">
 
             <StackLayout>
                 <Label Text="Crea una cuenta" TextColor="Black" VerticalOptions="Start" HorizontalOptions="Start" Margin="10,0,0,0" Padding="0,10,0,0" FontSize="25" FontAttributes="Bold"/>
@@ -91,9 +94,9 @@
 
 
                 </StackLayout>
-                
 
-                <Button Text="Crear Cuenta" Margin="0,30,0,20" VerticalOptions="EndAndExpand" WidthRequest="250" CornerRadius="30" FontSize="15" TextColor="White" HorizontalOptions="Center" BackgroundColor="#667db6" x:Name="btn_registrar" Clicked="btn_registrar_Clicked"/>
+
+                <Button Text="Crear Cuenta" Margin="0,30,0,20" VerticalOptions="EndAndExpand" WidthRequest="250" CornerRadius="30" FontSize="15" TextColor="White" HorizontalOptions="Center" BackgroundColor="#86A8E7" x:Name="btn_registrar" Clicked="btn_registrar_Clicked"/>
                 <Button Text="¿Ya tienes una cuenta? Entra Aquí."  VerticalOptions="End" Margin="0,0,0,0" HorizontalOptions="Center" FontSize="12" x:Name="btn_enviologin" BackgroundColor="Transparent" TextColor="Black" Clicked="btn_enviologin_Clicked"/>
 
             </StackLayout>
