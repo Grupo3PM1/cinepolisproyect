@@ -25,7 +25,8 @@ namespace cinepolisproyect.Droid
             //obtener una instancia de esta clase llamando Instance, por ultimo llamamos CurrentUser para obtener un FirebaseUser objeto,
             //que contiene información sobre el usuario que inició sesión. Y retornara esta informacion si el user es distinto de nulo. 
             var user = Firebase.Auth.FirebaseAuth.Instance.CurrentUser;
-            return user != null;
+            var signedIn = user != null;
+            return signedIn;
 
         }
 

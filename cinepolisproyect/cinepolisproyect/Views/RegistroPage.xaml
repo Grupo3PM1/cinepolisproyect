@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-              xmlns:magic="clr-namespace:MagicGradients;assembly=MagicGradients"
+             xmlns:magic="clr-namespace:MagicGradients;assembly=MagicGradients"
+             xmlns:local="clr-namespace:cinepolisproyect"
              x:Class="cinepolisproyect.Views.RegistroPage">
     <Grid>
         <magic:GradientView VerticalOptions="FillAndExpand">
@@ -58,16 +59,39 @@
 
 
                 <StackLayout Orientation="Horizontal">
-                    <Entry
+
+                    <Grid>
+                        <Entry
                             x:Name="ttpassword" Placeholder="Contraseña"  
                             FontSize="15" 
-                            IsPassword="True" 
+                            IsPassword="{Binding Source={x:Reference ShowPasswordActualTrigger}, Path=HidePassword}" 
                             TextColor="Black"
+                            WidthRequest="300"
                             PlaceholderColor="Black" 
                             FontAttributes="None" 
-                            HorizontalOptions="FillAndExpand"/>
-                </StackLayout>
+                            HorizontalOptions="FillAndExpand">
+                        </Entry>
 
+                        <ImageButton VerticalOptions="Center"
+                                 BackgroundColor="Transparent"
+                                 WidthRequest="20"
+                                 HorizontalOptions="End"
+                                 Source="hide.png">
+                            <ImageButton.Triggers>
+                                <EventTrigger
+                                Event="Clicked">
+                                    <local:ShowHidePassword ShowIcon="show.png"
+                                                        HideIcon="hide.png"
+                                                        x:Name="ShowPasswordActualTrigger"/>
+                                </EventTrigger>
+                            </ImageButton.Triggers>
+
+                        </ImageButton>
+                    </Grid>
+
+
+                </StackLayout>
+                
 
                 <Button Text="Crear Cuenta" Margin="0,30,0,20" VerticalOptions="EndAndExpand" WidthRequest="250" CornerRadius="30" FontSize="15" TextColor="White" HorizontalOptions="Center" BackgroundColor="#667db6" x:Name="btn_registrar" Clicked="btn_registrar_Clicked"/>
                 <Button Text="¿Ya tienes una cuenta? Entra Aquí."  VerticalOptions="End" Margin="0,0,0,0" HorizontalOptions="Center" FontSize="12" x:Name="btn_enviologin" BackgroundColor="Transparent" TextColor="Black" Clicked="btn_enviologin_Clicked"/>

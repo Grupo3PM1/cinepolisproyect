@@ -96,17 +96,14 @@ namespace cinepolisproyect.Views
                         //Si la variable user es distinto de nulo, es porque en efecto se creo el usuario
                         //le salta un alerta al usuario de lo que ha sucedido. 
                         await DisplayAlert("Exito", "Usuario creado correctamente", "Ok");
-                        var signOut = authentication.SignOut();
+                        await Navigation.PushAsync(new LoginPage());
+                     
 
                         //Se le indica que en la task SignUpWithEmailAndPassword se ha disparado el metodo SendEmailVerification.
                         await this.DisplayAlert("Alerta", "Hemos enviado un enlace a tu direccion de correo electronico para verificar tu cuenta. ", "OK");
                         ClearScreen();
 
-                        //cerrar sesion, navega hacia el LoginPage()
-                        if (signOut)
-                        {
-                           await Navigation.PushAsync(new LoginPage());
-                        }
+                      
                     }
                    
 
