@@ -12,5 +12,8 @@
                 <Label Text="CINEPOLIS" TextColor="Gray" HorizontalOptions="Center" FontSize="24"/>
             </FlexLayout>
         </Frame>
+        <StackLayout>
+            <Label x:Name="txtID" Text=""/>
+        </StackLayout>
     </StackLayout>
 </ContentPage>
