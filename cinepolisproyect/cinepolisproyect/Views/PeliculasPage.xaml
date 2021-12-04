@@ -11,7 +11,7 @@
         <Frame Padding="8" CornerRadius="0">
             <FlexLayout>
                 <Image Source="Cinepolislogo.png" HeightRequest="40" HorizontalOptions="Start"/>
-                <Label Text="CINEPOLIS" HorizontalOptions="Center" FontSize="24"/>
+                <Label Text="CINEPOLIS" TextColor="Gray"  HorizontalOptions="Center" FontSize="24"/>
             </FlexLayout>
         </Frame>
         <ScrollView>

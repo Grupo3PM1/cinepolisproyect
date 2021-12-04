@@ -21,6 +21,7 @@ namespace cinepolisproyect
             else
             {
                 MainPage = new NavigationPage(new StartPage());
+
             }
            
         }
