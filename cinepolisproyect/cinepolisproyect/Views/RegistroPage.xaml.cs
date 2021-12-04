@@ -93,6 +93,7 @@ namespace cinepolisproyect.Views
                     var user = await authentication.SignUpWithEmailAndPassword(ttname.Text, ttlastname.Text, ttemail.Text, ttpassword.Text);
                     if (user != string.Empty)
                     {
+                        string userUid = await authentication.Uid();
                         //Si la variable user es distinto de nulo, es porque en efecto se creo el usuario
                         //le salta un alerta al usuario de lo que ha sucedido. 
                         await DisplayAlert("Exito", "Usuario creado correctamente", "Ok");
@@ -107,9 +108,7 @@ namespace cinepolisproyect.Views
 
                         //Se le indica que en la task SignUpWithEmailAndPassword se ha disparado el metodo SendEmailVerification.
                         await this.DisplayAlert("Alerta", "Hemos enviado un enlace a tu direccion de correo electronico para verificar tu cuenta. ", "OK");
-                        ClearScreen();
-
-                      
+                        ClearScreen();                      
                     }
                    
 

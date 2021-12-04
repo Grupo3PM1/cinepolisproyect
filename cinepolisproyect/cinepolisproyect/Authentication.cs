@@ -21,6 +21,9 @@ namespace cinepolisproyect
         //el email para enviar un enlace por correo electronico para restablecer contraseña. 
         Task<string> ResetPassword(string email);
 
+        //Obtener el Uid del usuario
+        Task<string> Uid();
+
         //Una funcion de tipo booleano para cerrar sesion
         bool SignOut();
 

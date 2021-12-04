@@ -22,6 +22,7 @@
         <Frame x:Name="Frame1"  BackgroundColor="#FFFFFF" HasShadow="True" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="300">
 
             <StackLayout>
+                <Label x:Name="labelUid"/>
                 <Label Text="Inicio de sesión" TextColor="Black" VerticalOptions="Start" HorizontalOptions="Start" Margin="10,10,0,0"  FontSize="25" FontAttributes="Bold"/>
                 <Label Text="Inicia sesión para continuar" TextColor="Black" VerticalOptions="Start" HorizontalOptions="Start" Margin="15,0,0,0"  FontSize="14" />
 

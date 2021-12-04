@@ -40,6 +40,8 @@ namespace cinepolisproyect.Droid
 
                 await FirebaseAuth.Instance.SignInWithEmailAndPasswordAsync(email, password);
                 var user = Firebase.Auth.FirebaseAuth.Instance.CurrentUser;
+
+                //creamos una variable que obtendrá el el usuario actual en firebase y le preguntamos si el correo ha sido verificado 
                 var update = user.IsEmailVerified;
                 if (update == true)
                 {
@@ -173,6 +175,14 @@ namespace cinepolisproyect.Droid
                 e.PrintStackTrace();
                 return string.Empty;
             }
+
+        }
+
+        public async Task<string> Uid()
+        {
+            var user = FirebaseAuth.Instance.CurrentUser;
+            string userUid = user.Uid;
+            return (string)userUid;
 
         }
     }

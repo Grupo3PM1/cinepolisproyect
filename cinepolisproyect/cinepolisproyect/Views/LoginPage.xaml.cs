@@ -21,6 +21,7 @@ namespace cinepolisproyect.Views
             
             //Se invoca la funcionalidad de la interfaz nativa desde el código compartido.
             authentication = DependencyService.Get<Authentication>();
+            
         }
 
         private async Task<bool> validarFormulario()
@@ -79,9 +80,10 @@ namespace cinepolisproyect.Views
                     {
                         //Se vacian los campos 
                         ClearScreen();
+                   
 
-                        //Se navega hacia la pagina DashboardPage()
-                        Application.Current.MainPage = new NavigationPage(new DashboardPage()); 
+                    //Se navega hacia la pagina DashboardPage()
+                    Application.Current.MainPage = new NavigationPage(new DashboardPage()); 
                 }
                 else
                 {
