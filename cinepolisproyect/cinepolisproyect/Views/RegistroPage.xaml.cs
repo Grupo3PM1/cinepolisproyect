@@ -123,11 +123,12 @@ namespace cinepolisproyect.Views
                 {
                     if (exception.Message.Contains("EMAIL_EXISTS"))
                     {
-                        await DisplayAlert("Advertencia", "La direccion de correo electronico ya esta siendo usada por otra cuenta. ", "Ok");
+                        await DisplayAlert("Error", exception.Message, "Ok");
                     }
                     else
                     {
-                        await DisplayAlert("Error", exception.Message, "Ok");
+                        await DisplayAlert("Alerta", "La direccion de correo electronico ya esta siendo usada por otra cuenta. Intente usando otro correo electrónico. ", "Ok");
+
                     }
                 }
                
