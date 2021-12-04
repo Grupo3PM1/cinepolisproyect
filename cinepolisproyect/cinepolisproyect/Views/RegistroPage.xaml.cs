@@ -93,7 +93,7 @@ namespace cinepolisproyect.Views
                     var user = await authentication.SignUpWithEmailAndPassword(ttname.Text, ttlastname.Text, ttemail.Text, ttpassword.Text);
                     if (user != string.Empty)
                     {
-                        string userUid = await authentication.Uid();
+                        
                         //Si la variable user es distinto de nulo, es porque en efecto se creo el usuario
                         //le salta un alerta al usuario de lo que ha sucedido. 
                         await DisplayAlert("Exito", "Usuario creado correctamente", "Ok");
