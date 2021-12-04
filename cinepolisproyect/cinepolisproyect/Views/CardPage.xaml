@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:cinepolisproyect"
              xmlns:fastEntry="clr-namespace:XamarinFastEntrySample.FastEntry;assembly=XamarinFastEntry.Behaviors"
+             NavigationPage.HasNavigationBar="False"
              x:Class="cinepolisproyect.Views.CardPage">
     <Page.Resources>
         <ResourceDictionary>
@@ -12,6 +13,14 @@
                                               NotRecognized="nocard.png"/>
         </ResourceDictionary>
     </Page.Resources>
+    <StackLayout>
+        <Frame Padding="8" CornerRadius="0">
+            <FlexLayout>
+                <Image Source="Cinepolislogo.png" HeightRequest="40" HorizontalOptions="Start"/>
+                <Label Text="CINEPOLIS" HorizontalOptions="Center" FontSize="24"/>
+            </FlexLayout>
+        </Frame>
+    
     <Grid Padding="5">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -70,5 +79,5 @@
             <Label x:Name="txtRefrescoExtra" Text="{Binding RefrescoExtra}" TextColor="Transparent"/>
             <Label x:Name="txtcontbutaca" Text="{Binding ContButaca}" TextColor="Transparent"/>
     </Grid>
-    
+    </StackLayout>
 </ContentPage> 

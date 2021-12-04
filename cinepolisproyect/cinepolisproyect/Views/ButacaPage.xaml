@@ -2,9 +2,15 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
              x:Class="cinepolisproyect.Views.ButacaPage"
-             
+             NavigationPage.HasNavigationBar="False"
              BackgroundColor="#7384E9">
     <StackLayout>
+        <Frame Padding="8" CornerRadius="0">
+            <FlexLayout>
+                <Image Source="Cinepolislogo.png" HeightRequest="40" HorizontalOptions="Start"/>
+                <Label Text="CINEPOLIS" HorizontalOptions="Center" FontSize="24"/>
+            </FlexLayout>
+        </Frame>
     <FlexLayout>
         <Label x:Name="txtcantas" Text="" TextColor="Transparent" />
         <Label x:Name="txtidcine" Text="{Binding IdCine}" TextColor="Transparent" />

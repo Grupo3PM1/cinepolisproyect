@@ -34,7 +34,7 @@ namespace cinepolisproyect.Views
             //Mediante BindingContext enviamos la clase classdata hacia a HorariosPage mediante la variable page
             page.BindingContext = classdata;
             //Por ultimo enviamos la variable Page referenciado a HorariosPage con los datos de la clase mediante un Navigation.PushAsync
-            await Navigation.PushAsync(new NavigationPage(page));
+            await Navigation.PushAsync(page);
         }
 
         private async void StackCombo2_Tapped(object sender, EventArgs e)
@@ -54,7 +54,7 @@ namespace cinepolisproyect.Views
             //Mediante BindingContext enviamos la clase classdata hacia a HorariosPage mediante la variable page
             page.BindingContext = classdata;
             //Por ultimo enviamos la variable Page referenciado a HorariosPage con los datos de la clase mediante un Navigation.PushAsync
-            await Navigation.PushAsync(new NavigationPage(page));
+            await Navigation.PushAsync(page);
         }
 
         private async void StackCombo3_Tapped(object sender, EventArgs e)
@@ -74,7 +74,7 @@ namespace cinepolisproyect.Views
             //Mediante BindingContext enviamos la clase classdata hacia a HorariosPage mediante la variable page
             page.BindingContext = classdata;
             //Por ultimo enviamos la variable Page referenciado a HorariosPage con los datos de la clase mediante un Navigation.PushAsync
-            await Navigation.PushAsync(new NavigationPage(page));
+            await Navigation.PushAsync(page);
         }
     }
 }

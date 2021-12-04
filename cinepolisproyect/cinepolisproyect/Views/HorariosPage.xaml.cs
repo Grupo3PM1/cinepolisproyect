@@ -35,7 +35,7 @@ namespace cinepolisproyect.Views
             //Mediante BindingContext enviamos la clase classdata hacia a ButacaPage mediante la variable page
             page.BindingContext = classdata;
             //Por ultimo enviamos la variable Page referenciado a ButacaPage con los datos de la clase mediante un Navigation.PushAsync
-            await Navigation.PushAsync(new NavigationPage(page));
+            await Navigation.PushAsync(page);
         }
         //Este evento Clicked es cuando seleccionan el segundo horario de las 5 00pm
         private async void btncincopm_Clicked(object sender, EventArgs e)
@@ -56,7 +56,7 @@ namespace cinepolisproyect.Views
             //Mediante BindingContext enviamos la clase classdata hacia a ButacaPage mediante la variable page
             page.BindingContext = classdata;
             //Por ultimo enviamos la variable Page referenciado a ButacaPage con los datos de la clase mediante un Navigation.PushAsync
-            await Navigation.PushAsync(new NavigationPage(page));
+            await Navigation.PushAsync(page);
         }
         //Este evento Clicked es cuando seleccionan el tercer horario de las 7 00pm
         private async void btnsietepm_Clicked(object sender, EventArgs e)
@@ -77,7 +77,7 @@ namespace cinepolisproyect.Views
             //Mediante BindingContext enviamos la clase classdata hacia a ButacaPage mediante la variable page
             page.BindingContext = classdata;
             //Por ultimo enviamos la variable Page referenciado a ButacaPage con los datos de la clase mediante un Navigation.PushAsync
-            await Navigation.PushAsync(new NavigationPage(page));
+            await Navigation.PushAsync(page);
         }
     }
 }

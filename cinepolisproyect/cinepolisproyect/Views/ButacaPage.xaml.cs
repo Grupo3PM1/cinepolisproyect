@@ -533,7 +533,7 @@ namespace cinepolisproyect.Views
             };
             var page = new Views.TiendaPage();
             page.BindingContext = classdata;
-            await Navigation.PushAsync(new NavigationPage(page));
+            await Navigation.PushAsync(page);
         }
 
         private void seat1_Clicked(object sender, EventArgs e)
