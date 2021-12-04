@@ -40,7 +40,7 @@
                                                      MaxLength="19"/>
             </Entry.Behaviors>
         </Entry>
-        <Image Grid.Row="2" Grid.Column="2" Source="visa.jpg"/>
+        <Image Grid.Row="2" Grid.Column="2" Source="tarjeta.png"/>
 
         <Label Text="Expire at" Grid.Row="3" Grid.Column="0" VerticalOptions="Center"/>
         <Entry Text="{Binding Expiration, Mode=TwoWay}" x:Name="txtexpcard" Keyboard="Numeric"

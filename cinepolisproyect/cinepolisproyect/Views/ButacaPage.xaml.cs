@@ -51,61 +51,126 @@ namespace cinepolisproyect.Views
             Models.Butaca btc;
 
             #region
-            if (txtidpeli.Text == "1")
+            //                                              Tegus
+            if(txtidcine.Text== "Tegucigalpa")
             {
-                //peli 1
-                if (txtidhorario.Text == "1")
+                if (txtidpeli.Text == "1")
                 {
-                    //horario 1
-                    btc = listbutacas[0];
+                    //peli 1
+                    if (txtidhorario.Text == "1")
+                    {
+                        //horario 1
+                        btc = listbutacas[0];
+                    }
+                    else if (txtidhorario.Text == "2")
+                    {
+                        //horario 2
+                        btc = listbutacas[1];
+                    }
+                    else
+                    {
+                        //horario 3
+                        btc = listbutacas[2];
+                    }
                 }
-                else if (txtidhorario.Text == "2")
+                else if (txtidpeli.Text == "2")
                 {
-                    //horario 2
-                    btc = listbutacas[1];
+                    //peli 2
+                    if (txtidhorario.Text == "1")
+                    {
+                        //horario 1
+                        btc = listbutacas[3];
+                    }
+                    else if (txtidhorario.Text == "2")
+                    {
+                        //horario 2
+                        btc = listbutacas[4];
+                    }
+                    else
+                    {
+                        //horario 3
+                        btc = listbutacas[5];
+                    }
                 }
                 else
                 {
-                    //horario 3
-                    btc = listbutacas[2];
+                    //peli 3
+                    if (txtidhorario.Text == "1")
+                    {
+                        //horario 1
+                        btc = listbutacas[6];
+                    }
+                    else if (txtidhorario.Text == "2")
+                    {
+                        //horario 2
+                        btc = listbutacas[7];
+                    }
+                    else
+                    {
+                        //horario 3
+                        btc = listbutacas[8];
+                    }
                 }
             }
-            else if (txtidpeli.Text == "2")
-            {
-                //peli 2
-                if (txtidhorario.Text == "1")
-                {
-                    //horario 1
-                    btc = listbutacas[3];
-                }
-                else if (txtidhorario.Text == "2")
-                {
-                    //horario 2
-                    btc = listbutacas[4];
-                }
-                else
-                {
-                    //horario 3
-                    btc = listbutacas[5];
-                }
-            }
+            //                                              SPS
             else
             {
-                //peli 3
-                if (txtidhorario.Text == "1")
+                if (txtidpeli.Text == "1")
                 {
-                    //horario 1
-                    btc = listbutacas[6];
+                    //peli 1
+                    if (txtidhorario.Text == "1")
+                    {
+                        //horario 1
+                        btc = listbutacas[9];
+                    }
+                    else if (txtidhorario.Text == "2")
+                    {
+                        //horario 2
+                        btc = listbutacas[10];
+                    }
+                    else
+                    {
+                        //horario 3
+                        btc = listbutacas[11];
+                    }
                 }
-                else if (txtidhorario.Text == "2")
+                else if (txtidpeli.Text == "2")
                 {
-                    //horario 2
-                    btc = listbutacas[7];
+                    //peli 2
+                    if (txtidhorario.Text == "1")
+                    {
+                        //horario 1
+                        btc = listbutacas[12];
+                    }
+                    else if (txtidhorario.Text == "2")
+                    {
+                        //horario 2
+                        btc = listbutacas[13];
+                    }
+                    else
+                    {
+                        //horario 3
+                        btc = listbutacas[14];
+                    }
                 }
                 else
                 {
-                    //horario 3
-                    btc = listbutacas[8];
+                    //peli 3
+                    if (txtidhorario.Text == "1")
+                    {
+                        //horario 1
+                        btc = listbutacas[15];
+                    }
+                    else if (txtidhorario.Text == "2")
+                    {
+                        //horario 2
+                        btc = listbutacas[16];
+                    }
+                    else
+                    {
+                        //horario 3
+                        btc = listbutacas[17];
+                    }
                 }
             }
             #endregion
@@ -156,46 +221,46 @@ namespace cinepolisproyect.Views
 
             listabutacas = new Models.Butaca
             {
-                a1 = "",
-                a2 = "",
-                a3 = "",
-                a4 = "",
-                a5 = "",
-                a6 = "",
-                a7 = "",
-                b1 = "",
-                b2 = "",
-                b3 = "",
-                b4 = "",
-                b5 = "",
-                b6 = "",
-                b7 = "",
-                c1 = "",
-                c2 = "",
-                c3 = "",
-                c4 = "",
-                c5 = "",
-                c6 = "",
-                c7 = "",
-                d1 = "",
-                d2 = "",
-                d3 = "",
-                d4 = "",
-                d5 = "",
-                d6 = "",
-                d7 = "",
-                e1 = "",
-                e2 = "",
-                e3 = "",
-                e4 = "",
-                e5 = "",
-                e6 = "",
-                e7 = "",
-                f1 = "",
-                f2 = "",
-                f3 = "",
-                f4 = "",
-                f5 = "",
+                a1 = listabutaca.a1,
+                a2 = listabutaca.a2,
+                a3 = listabutaca.a3,
+                a4 = listabutaca.a4,
+                a5 = listabutaca.a5,
+                a6 = listabutaca.a6,
+                a7 = listabutaca.a7,
+                b1 = listabutaca.b1,
+                b2 = listabutaca.b2,
+                b3 = listabutaca.b3,
+                b4 = listabutaca.b4,
+                b5 = listabutaca.b5,
+                b6 = listabutaca.b6,
+                b7 = listabutaca.b7,
+                c1 = listabutaca.c1,
+                c2 = listabutaca.c2,
+                c3 = listabutaca.c3,
+                c4 = listabutaca.c4,
+                c5 = listabutaca.c5,
+                c6 = listabutaca.c6,
+                c7 = listabutaca.c7,
+                d1 = listabutaca.d1,
+                d2 = listabutaca.d2,
+                d3 = listabutaca.d3,
+                d4 = listabutaca.d4,
+                d5 = listabutaca.d5,
+                d6 = listabutaca.d6,
+                d7 = listabutaca.d7,
+                e1 = listabutaca.e1,
+                e2 = listabutaca.e2,
+                e3 = listabutaca.e3,
+                e4 = listabutaca.e4,
+                e5 = listabutaca.e5,
+                e6 = listabutaca.e6,
+                e7 = listabutaca.e7,
+                f1 = listabutaca.f1,
+                f2 = listabutaca.f2,
+                f3 = listabutaca.f3,
+                f4 = listabutaca.f4,
+                f5 = listabutaca.f5,
             };
 
             this.txtidbutaca.Text = btc.idbutaca;
