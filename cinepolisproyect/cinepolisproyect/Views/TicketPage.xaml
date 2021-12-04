@@ -19,6 +19,7 @@
             <Label x:Name="txtIdCombo" Text="{Binding IdCombo}" TextColor="Transparent"/>
             <Label x:Name="txtRefrescoExtra" Text="{Binding RefrescoExtra}" TextColor="Transparent"/>
             <Label x:Name="txtcontbutaca" Text="{Binding ContButaca}" TextColor="Transparent"/>
+            <Label x:Name="txtasientosSelected" Text="{Binding asientosSelected}" TextColor="Transparent"/>
         </FlexLayout>
 
             <Label Text="PELICULA" HorizontalOptions="Center" FontSize="30" Margin="20, 0, 20, 0" TextColor="#FFFFFAF0" />

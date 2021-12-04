@@ -88,6 +88,7 @@ namespace cinepolisproyect.Views
                 IdCombo = "1",
                 RefrescoExtra = this.txtRefrescoExtra.Text,
                 ContButaca = this.txtcontbutaca.Text,
+                asientosSelected = this.txtasientosSelected.Text
             };
             //Creamos una variable page para referenciar a HorariosPage
             var page = new Views.TicketPage();

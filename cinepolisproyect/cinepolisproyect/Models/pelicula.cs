@@ -20,5 +20,6 @@ namespace cinepolisproyect.Models
         public string ContButaca { get; set; }
         public string IdCombo { get; set; }
         public string RefrescoExtra { get; set; }
+        public string asientosSelected { get; set; }
     }
 }

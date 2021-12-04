@@ -476,6 +476,169 @@ namespace cinepolisproyect.Views
         #region
         private async void btncomprar_Clicked(object sender, EventArgs e)
         {
+            String asientosSelected="";
+            #region guardar_asientos_seleccionados
+            if (listabutacas.a1 == "1")
+            {
+                asientosSelected = asientosSelected + "A1 ";
+            }
+            if (listabutacas.a2 == "1")
+            {
+                asientosSelected = asientosSelected + "A2 ";
+            }
+            if (listabutacas.a3 == "1")
+            {
+                asientosSelected = asientosSelected + "A3 ";
+            }
+            if (listabutacas.a4 == "1")
+            {
+                asientosSelected = asientosSelected + "A4 ";
+            }
+            if (listabutacas.a5 == "1")
+            {
+                asientosSelected = asientosSelected + "A5 ";
+            }
+            if (listabutacas.a6 == "1")
+            {
+                asientosSelected = asientosSelected + "A6 ";
+            }
+            if (listabutacas.a7 == "1")
+            {
+                asientosSelected = asientosSelected + "A7 ";
+            }
+            if (listabutacas.b1 == "1")
+            {
+                asientosSelected = asientosSelected + "B1 ";
+            }
+            if (listabutacas.b2 == "1")
+            {
+                asientosSelected = asientosSelected + "B2 ";
+            }
+            if (listabutacas.b3 == "1")
+            {
+                asientosSelected = asientosSelected + "B3 ";
+            }
+            if (listabutacas.b4 == "1")
+            {
+                asientosSelected = asientosSelected + "B4 ";
+            }
+            if (listabutacas.b5 == "1")
+            {
+                asientosSelected = asientosSelected + "B5 ";
+            }
+            if (listabutacas.b6 == "1")
+            {
+                asientosSelected = asientosSelected + "B6 ";
+            }
+            if (listabutacas.b7 == "1")
+            {
+                asientosSelected = asientosSelected + "B7 ";
+            }
+            if (listabutacas.c1 == "1")
+            {
+                asientosSelected = asientosSelected + "C1 ";
+            }
+            if (listabutacas.c2 == "1")
+            {
+                asientosSelected = asientosSelected + "C2 ";
+            }
+            if (listabutacas.c3 == "1")
+            {
+                asientosSelected = asientosSelected + "C3 ";
+            }
+            if (listabutacas.c4 == "1")
+            {
+                asientosSelected = asientosSelected + "C4 ";
+            }
+            if (listabutacas.c5 == "1")
+            {
+                asientosSelected = asientosSelected + "C5 ";
+            }
+            if (listabutacas.c6 == "1")
+            {
+                asientosSelected = asientosSelected + "C6 ";
+            }
+            if (listabutacas.c7 == "1")
+            {
+                asientosSelected = asientosSelected + "C7 ";
+            }
+            if (listabutacas.d1 == "1")
+            {
+                asientosSelected = asientosSelected + "D1 ";
+            }
+            if (listabutacas.d2 == "1")
+            {
+                asientosSelected = asientosSelected + "D2 ";
+            }
+            if (listabutacas.d3 == "1")
+            {
+                asientosSelected = asientosSelected + "D3 ";
+            }
+            if (listabutacas.d4 == "1")
+            {
+                asientosSelected = asientosSelected + "D4 ";
+            }
+            if (listabutacas.d5 == "1")
+            {
+                asientosSelected = asientosSelected + "D5 ";
+            }
+            if (listabutacas.d6 == "1")
+            {
+                asientosSelected = asientosSelected + "D6 ";
+            }
+            if (listabutacas.d7 == "1")
+            {
+                asientosSelected = asientosSelected + "D7 ";
+            }
+            if (listabutacas.e1 == "1")
+            {
+                asientosSelected = asientosSelected + "E1 ";
+            }
+            if (listabutacas.e2 == "1")
+            {
+                asientosSelected = asientosSelected + "E2 ";
+            }
+            if (listabutacas.e3 == "1")
+            {
+                asientosSelected = asientosSelected + "E3 ";
+            }
+            if (listabutacas.e4 == "1")
+            {
+                asientosSelected = asientosSelected + "E4 ";
+            }
+            if (listabutacas.e5 == "1")
+            {
+                asientosSelected = asientosSelected + "E5 ";
+            }
+            if (listabutacas.e6 == "1")
+            {
+                asientosSelected = asientosSelected + "E6 ";
+            }
+            if (listabutacas.e7 == "1")
+            {
+                asientosSelected = asientosSelected + "E7 ";
+            }
+            if (listabutacas.f1 == "1")
+            {
+                asientosSelected = asientosSelected + "F1 ";
+            }
+            if (listabutacas.f2 == "1")
+            {
+                asientosSelected = asientosSelected + "F2 ";
+            }
+            if (listabutacas.f3 == "1")
+            {
+                asientosSelected = asientosSelected + "F3 ";
+            }
+            if (listabutacas.f4 == "1")
+            {
+                asientosSelected = asientosSelected + "F4 ";
+            }
+            if (listabutacas.f5 == "1")
+            {
+                asientosSelected = asientosSelected + "F5 ";
+            }
+            #endregion
             var but = new Models.Butaca
             {
                 idbutaca = this.txtidbutaca.Text,
@@ -530,6 +693,7 @@ namespace cinepolisproyect.Views
                 IdPelicula = this.txtidpeli.Text,
                 IdHorario = this.txtidhorario.Text,
                 ContButaca = cantasientos.ToString(),
+                asientosSelected = asientosSelected,
             };
             var page = new Views.TiendaPage();
             page.BindingContext = classdata;

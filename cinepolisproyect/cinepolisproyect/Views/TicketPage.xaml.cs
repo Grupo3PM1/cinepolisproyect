@@ -44,8 +44,9 @@ namespace cinepolisproyect.Views
             String IdCombo = txtIdCombo.Text;
             String RefrescoExtra = txtRefrescoExtra.Text;
             String ContButaca = txtcontbutaca.Text;
+            String asientosSelected = txtasientosSelected.Text;
 
-            String Url = "https://cinepolishn.000webhostapp.com/Cinepolis/Ticket.php/?IdCine=" + IdCine + "&IdPelicula=" + IdPelicula + "&IdHorario=" + IdHorario + "&ContButaca=" + ContButaca + "&IdCombo=" + IdCombo + "&RefrescoExtra=" + RefrescoExtra;
+            String Url = "https://cinepolishn.000webhostapp.com/Cinepolis/Ticket.php/?IdCine=" + IdCine + "&IdPelicula=" + IdPelicula + "&IdHorario=" + IdHorario + "&asientosSelected=" + asientosSelected + "&IdCombo=" + IdCombo + "&RefrescoExtra=" + RefrescoExtra;
 
             //generar tipo de codigo que sera el QR_CODE 
             qr.BarcodeFormat = ZXing.BarcodeFormat.QR_CODE;

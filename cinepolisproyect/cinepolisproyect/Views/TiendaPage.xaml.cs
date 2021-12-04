@@ -28,6 +28,7 @@ namespace cinepolisproyect.Views
                 IdCombo = "1",
                 RefrescoExtra = this.txtrefrescoextra.Text,
                 ContButaca = this.txtcontbutaca.Text,
+                asientosSelected = this.txtasientosSelected.Text
             };
             //Creamos una variable page para referenciar a HorariosPage
             var page = new Views.CardPage();
@@ -48,6 +49,7 @@ namespace cinepolisproyect.Views
                 IdCombo = "2",
                 RefrescoExtra = this.txtrefrescoextra.Text,
                 ContButaca = this.txtcontbutaca.Text,
+                asientosSelected = this.txtasientosSelected.Text
             };
             //Creamos una variable page para referenciar a HorariosPage
             var page = new Views.CardPage();
@@ -68,6 +70,7 @@ namespace cinepolisproyect.Views
                 IdCombo = "3",
                 RefrescoExtra = this.txtrefrescoextra.Text,
                 ContButaca = this.txtcontbutaca.Text,
+                asientosSelected = this.txtasientosSelected.Text
             };
             //Creamos una variable page para referenciar a HorariosPage
             var page = new Views.CardPage();

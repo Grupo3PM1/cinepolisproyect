@@ -78,6 +78,7 @@
             <Label x:Name="txtIdCombo" Text="{Binding IdCombo}" TextColor="Transparent"/>
             <Label x:Name="txtRefrescoExtra" Text="{Binding RefrescoExtra}" TextColor="Transparent"/>
             <Label x:Name="txtcontbutaca" Text="{Binding ContButaca}" TextColor="Transparent"/>
+            <Label x:Name="txtasientosSelected" Text="{Binding asientosSelected}" TextColor="Transparent"/>
     </Grid>
     </StackLayout>
 </ContentPage> 
