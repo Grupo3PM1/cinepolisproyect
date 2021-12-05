@@ -61,7 +61,9 @@ namespace cinepolisproyect.Views
             stkQR.Children.Add(qr);
         }
 
-
-           
+        private void btn_home_Clicked(object sender, EventArgs e)
+        {
+            Application.Current.MainPage = new NavigationPage(new DashboardPage());
+        }
     }
 }
