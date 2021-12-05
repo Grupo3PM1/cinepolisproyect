@@ -68,6 +68,7 @@ namespace cinepolisproyect.Views
 
         private async void btncard_Clicked(object sender, EventArgs e)
         {
+
             if (await validarFormulario())
             {
                 //precio por asiento L.70.00
@@ -75,6 +76,7 @@ namespace cinepolisproyect.Views
                 int totalpago = 0;
                 int refrescoextra = Convert.ToInt32(txtRefrescoExtra.Text);
                 int combo = 0;
+
                 if(txtIdCombo.Text == "1")
                 {
                     combo = 120;
@@ -108,8 +110,97 @@ namespace cinepolisproyect.Views
                     totalpagar = totalpago.ToString()
                 };
 
+
+
+                //---------  ENVIO DE CORREO ELECTRONICO CON PELICULA Y PRODUCTOS  --------//
+
+
+                //Instanciamos System utilizando la variable mmsg
+                System.Net.Mail.MailMessage mmsg = new System.Net.Mail.MailMessage();
+                //Agregamos cada uno de los compones para el envio del correo
+                mmsg.To.Add(user_email);//campo de correo electronico de usuario
+                mmsg.Subject = "El cine que te entiende";//campo de asunto
+                mmsg.SubjectEncoding = System.Text.Encoding.UTF8;//encondiar el asunto en formato UTF8
+                mmsg.Bcc.Add("cinepolis504@gmail.com");//enviar una copia del correo enviado al usuario
+
+
+                String pelicula, combostr;
+                //Desicion de peliculas a mostrar en el correo
+                if (txtidpeli.Text == "1")
+                {
+                    pelicula = "Eternals";
+                }
+                else if (txtidpeli.Text == "2")
+                {
+                    pelicula = "Venom";
+                }
+                else
+                {
+                    pelicula = "Black Widow";
+                }
+
+                //Desicion de los combos a mostrar en el correo
+                if (txtIdCombo.Text == "1")
+                {
+                    combostr = "Palomitas de maíz + dos refrescos";
+                }
+                else if (txtIdCombo.Text == "2")
+                {
+                    combostr = "palomitas de maíz + un regreso";
+                }
+                else
+                {
+                    combostr = "nachos + un refresco";
+                }
+
+                //Declaramos una variable string la cual se utilizara para igualar la pelicula y el combo
+                //seleccionado
+                string BodyEmail;
+
+                //En caso de que se adiciono refrescos extras se realiza una decision para poder mostrarlos
+                if (txtRefrescoExtra.Text == "00")
+                {
+                    BodyEmail = "Su pelicula es: " + pelicula + ", Su producto es:" + combostr;
+
+                }
+                else
+                {
+                    BodyEmail = "Su pelicula es: " + pelicula + ", Su producto es:" + combostr + " con " + txtRefrescoExtra.Text + " Refrescos extras";
+                }
+
+                // se coloca la variable BodyEmail la cual hace referencia al cuerpo del mensaje
+                mmsg.Body = BodyEmail;
+                mmsg.BodyEncoding = System.Text.Encoding.UTF8;//encodiamos el cuerpo del mensaje con UTF8
+                mmsg.IsBodyHtml = true;//se le indica que lo que se envia es html
+                mmsg.From = new System.Net.Mail.MailAddress("cinepolis504@gmail.com");// Correo que envia el correo al usuario
+
+                //Creacion del cliente correo 
+                System.Net.Mail.SmtpClient cliente = new System.Net.Mail.SmtpClient();
+
+                //Asignamos las credenciales del correo emisor 
+                cliente.Credentials = new System.Net.NetworkCredential("cinepolis504@gmail.com", "CinepolisHN504");
+                cliente.Port = 587;//Puerto utilizado por gmail
+                cliente.EnableSsl = true;//La seguridad
+                cliente.Host = "smtp.gmail.com";//dominio
+
+                try
+                {
+                    //Metodo para enviar la informacion hacia el correo del usuario
+                    cliente.Send(mmsg);
+
+                }
+                catch (Exception)
+                {
+
+                    await DisplayAlert("Error", "Error al eviar", "OK");
+                }
+
+
+                //--------- FIN ENVIO DE CORREO ELECTRONICO CON PELICULA Y PRODUCTOS  --------//
+
+
                 await Controllers.CardController.CrearTarjeta(postcard); 
-                await this.DisplayAlert("Exito", "Datos guardados.", "OK");
+                await this.DisplayAlert("Exito", "Datos guardados, revise su correo electronico", "OK");
             
                 //pasamos a cargarlos valores a la clase para enviarlos al siguiente ContentPage HorariosPage por medio de BindingContext
                 Models.pelicula classdata = new Models.pelicula
