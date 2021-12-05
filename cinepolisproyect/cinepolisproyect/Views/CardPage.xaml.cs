@@ -15,6 +15,7 @@ namespace cinepolisproyect.Views
         public Models.ApiUsuario usuariosdata;
         Authentication authentication;
         public string user = "1";
+        public string user_email = "1";
         public CardPage()
         {
             InitializeComponent();
@@ -48,6 +49,7 @@ namespace cinepolisproyect.Views
 
             }
             user = usuariosdata.us_id;
+            user_email = usuariosdata.us_email;
         }
 
         //Validar los campos de los formularios
@@ -68,35 +70,65 @@ namespace cinepolisproyect.Views
         {
             if (await validarFormulario())
             {
+                //precio por asiento L.70.00
+                int cantbutaca = Convert.ToInt32(txtcontbutaca.Text);
+                int totalpago = 0;
+                int refrescoextra = Convert.ToInt32(txtRefrescoExtra.Text);
+                int combo = 0;
+                if(txtIdCombo.Text == "1")
+                {
+                    combo = 120;
+                }
+                else if (txtIdCombo.Text == "2")
+                {
+                    combo = 95;
+                }
+                else if (txtIdCombo.Text == "3")
+                {
+                    combo = 100;
+                }
+                else
+                {
+                    combo = 0;
+                }
+                totalpago = (cantbutaca * 70) + combo + (refrescoextra * 35);
                 var postcard = new Models.ApiCard
                 {
                     trj_ntarjeta = this.txtncard.Text,
                     trj_fchvencimiento = this.txtexpcard.Text,
                     trj_cdgseguridad = this.txtcvccard.Text,
                     us_id = user,
+                    IdCine = this.txtidcine.Text,
+                    IdPelicula = this.txtidpeli.Text,
+                    IdHorario = this.txtidhorario.Text,
+                    IdCombo = "1",
+                    RefrescoExtra = this.txtRefrescoExtra.Text,
+                    ContButaca = this.txtcontbutaca.Text,
+                    asientosSelected = this.txtasientosSelected.Text,
+                    totalpagar = totalpago.ToString()
                 };
 
                 await Controllers.CardController.CrearTarjeta(postcard); 
                 await this.DisplayAlert("Exito", "Datos guardados.", "OK");
+            
+                //pasamos a cargarlos valores a la clase para enviarlos al siguiente ContentPage HorariosPage por medio de BindingContext
+                Models.pelicula classdata = new Models.pelicula
+                {
+                    IdCine = this.txtidcine.Text,
+                    IdPelicula = this.txtidpeli.Text,
+                    IdHorario = this.txtidhorario.Text,
+                    IdCombo = "1",
+                    RefrescoExtra = this.txtRefrescoExtra.Text,
+                    ContButaca = this.txtcontbutaca.Text,
+                    asientosSelected = this.txtasientosSelected.Text
+                };
+                //Creamos una variable page para referenciar a HorariosPage
+                var page = new Views.TicketPage();
+                //Mediante BindingContext enviamos la clase classdata hacia a HorariosPage mediante la variable page
+                page.BindingContext = classdata;
+                //Por ultimo enviamos la variable Page referenciado a HorariosPage con los datos de la clase mediante un Navigation.PushAsync
+                await Navigation.PushAsync(page);
             }
-            //pasamos a cargarlos valores a la clase para enviarlos al siguiente ContentPage HorariosPage por medio de BindingContext
-            Models.pelicula classdata = new Models.pelicula
-            {
-                IdCine = this.txtidcine.Text,
-                IdPelicula = this.txtidpeli.Text,
-                IdHorario = this.txtidhorario.Text,
-                IdCombo = "1",
-                RefrescoExtra = this.txtRefrescoExtra.Text,
-                ContButaca = this.txtcontbutaca.Text,
-                asientosSelected = this.txtasientosSelected.Text
-            };
-            //Creamos una variable page para referenciar a HorariosPage
-            var page = new Views.TicketPage();
-            //Mediante BindingContext enviamos la clase classdata hacia a HorariosPage mediante la variable page
-            page.BindingContext = classdata;
-            //Por ultimo enviamos la variable Page referenciado a HorariosPage con los datos de la clase mediante un Navigation.PushAsync
-            await Navigation.PushAsync(page);
-
 
         }
     }

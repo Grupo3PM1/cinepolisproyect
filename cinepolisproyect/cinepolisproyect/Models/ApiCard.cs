@@ -10,6 +10,14 @@ namespace cinepolisproyect.Models
         public string trj_fchvencimiento { get; set; }
         public string trj_cdgseguridad { get; set; }
         public string us_id { get; set; }
+        public string IdCine { get; set; }
+        public string IdPelicula { get; set; }
+        public string IdHorario { get; set; }
+        public string IdCombo { get; set; }
+        public string RefrescoExtra { get; set; }
+        public string ContButaca { get; set; }
+        public string asientosSelected { get; set; }
+        public string totalpagar { get; set; }
     }
 
     // Clase que contiene los datos HTTP

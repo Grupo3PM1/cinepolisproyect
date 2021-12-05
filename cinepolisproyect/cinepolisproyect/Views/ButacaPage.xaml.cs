@@ -17,6 +17,7 @@ namespace cinepolisproyect.Views
         public Models.pelihorario butacadata;
         public Models.Butaca listabutaca;
         public Models.Butaca listabutacas;
+        public Models.Butaca Selecciono;
         public int cantasientos = 0;
         
         public ButacaPage(/*Ticket ticket*/)
@@ -263,6 +264,50 @@ namespace cinepolisproyect.Views
                 f5 = listabutaca.f5,
             };
 
+            Selecciono = new Models.Butaca
+            {
+                a1 = "",
+                a2 = "",
+                a3 = "",
+                a4 = "",
+                a5 = "",
+                a6 = "",
+                a7 = "",
+                b1 = "",
+                b2 = "",
+                b3 = "",
+                b4 = "",
+                b5 = "",
+                b6 = "",
+                b7 = "",
+                c1 = "",
+                c2 = "",
+                c3 = "",
+                c4 = "",
+                c5 = "",
+                c6 = "",
+                c7 = "",
+                d1 = "",
+                d2 = "",
+                d3 = "",
+                d4 = "",
+                d5 = "",
+                d6 = "",
+                d7 = "",
+                e1 = "",
+                e2 = "",
+                e3 = "",
+                e4 = "",
+                e5 = "",
+                e6 = "",
+                e7 = "",
+                f1 = "",
+                f2 = "",
+                f3 = "",
+                f4 = "",
+                f5 = "",
+            };
+
             this.txtidbutaca.Text = btc.idbutaca;
 
             #region Fila A
@@ -478,163 +523,163 @@ namespace cinepolisproyect.Views
         {
             String asientosSelected="";
             #region guardar_asientos_seleccionados
-            if (listabutacas.a1 == "1")
+            if (Selecciono.a1 == "1")
             {
                 asientosSelected = asientosSelected + "A1 ";
             }
-            if (listabutacas.a2 == "1")
+            if (Selecciono.a2 == "1")
             {
                 asientosSelected = asientosSelected + "A2 ";
             }
-            if (listabutacas.a3 == "1")
+            if (Selecciono.a3 == "1")
             {
                 asientosSelected = asientosSelected + "A3 ";
             }
-            if (listabutacas.a4 == "1")
+            if (Selecciono.a4 == "1")
             {
                 asientosSelected = asientosSelected + "A4 ";
             }
-            if (listabutacas.a5 == "1")
+            if (Selecciono.a5 == "1")
             {
                 asientosSelected = asientosSelected + "A5 ";
             }
-            if (listabutacas.a6 == "1")
+            if (Selecciono.a6 == "1")
             {
                 asientosSelected = asientosSelected + "A6 ";
             }
-            if (listabutacas.a7 == "1")
+            if (Selecciono.a7 == "1")
             {
                 asientosSelected = asientosSelected + "A7 ";
             }
-            if (listabutacas.b1 == "1")
+            if (Selecciono.b1 == "1")
             {
                 asientosSelected = asientosSelected + "B1 ";
             }
-            if (listabutacas.b2 == "1")
+            if (Selecciono.b2 == "1")
             {
                 asientosSelected = asientosSelected + "B2 ";
             }
-            if (listabutacas.b3 == "1")
+            if (Selecciono.b3 == "1")
             {
                 asientosSelected = asientosSelected + "B3 ";
             }
-            if (listabutacas.b4 == "1")
+            if (Selecciono.b4 == "1")
             {
                 asientosSelected = asientosSelected + "B4 ";
             }
-            if (listabutacas.b5 == "1")
+            if (Selecciono.b5 == "1")
             {
                 asientosSelected = asientosSelected + "B5 ";
             }
-            if (listabutacas.b6 == "1")
+            if (Selecciono.b6 == "1")
             {
                 asientosSelected = asientosSelected + "B6 ";
             }
-            if (listabutacas.b7 == "1")
+            if (Selecciono.b7 == "1")
             {
                 asientosSelected = asientosSelected + "B7 ";
             }
-            if (listabutacas.c1 == "1")
+            if (Selecciono.c1 == "1")
             {
                 asientosSelected = asientosSelected + "C1 ";
             }
-            if (listabutacas.c2 == "1")
+            if (Selecciono.c2 == "1")
             {
                 asientosSelected = asientosSelected + "C2 ";
             }
-            if (listabutacas.c3 == "1")
+            if (Selecciono.c3 == "1")
             {
                 asientosSelected = asientosSelected + "C3 ";
             }
-            if (listabutacas.c4 == "1")
+            if (Selecciono.c4 == "1")
             {
                 asientosSelected = asientosSelected + "C4 ";
             }
-            if (listabutacas.c5 == "1")
+            if (Selecciono.c5 == "1")
             {
                 asientosSelected = asientosSelected + "C5 ";
             }
-            if (listabutacas.c6 == "1")
+            if (Selecciono.c6 == "1")
             {
                 asientosSelected = asientosSelected + "C6 ";
             }
-            if (listabutacas.c7 == "1")
+            if (Selecciono.c7 == "1")
             {
                 asientosSelected = asientosSelected + "C7 ";
             }
-            if (listabutacas.d1 == "1")
+            if (Selecciono.d1 == "1")
             {
                 asientosSelected = asientosSelected + "D1 ";
             }
-            if (listabutacas.d2 == "1")
+            if (Selecciono.d2 == "1")
             {
                 asientosSelected = asientosSelected + "D2 ";
             }
-            if (listabutacas.d3 == "1")
+            if (Selecciono.d3 == "1")
             {
                 asientosSelected = asientosSelected + "D3 ";
             }
-            if (listabutacas.d4 == "1")
+            if (Selecciono.d4 == "1")
             {
                 asientosSelected = asientosSelected + "D4 ";
             }
-            if (listabutacas.d5 == "1")
+            if (Selecciono.d5 == "1")
             {
                 asientosSelected = asientosSelected + "D5 ";
             }
-            if (listabutacas.d6 == "1")
+            if (Selecciono.d6 == "1")
             {
                 asientosSelected = asientosSelected + "D6 ";
             }
-            if (listabutacas.d7 == "1")
+            if (Selecciono.d7 == "1")
             {
                 asientosSelected = asientosSelected + "D7 ";
             }
-            if (listabutacas.e1 == "1")
+            if (Selecciono.e1 == "1")
             {
                 asientosSelected = asientosSelected + "E1 ";
             }
-            if (listabutacas.e2 == "1")
+            if (Selecciono.e2 == "1")
             {
                 asientosSelected = asientosSelected + "E2 ";
             }
-            if (listabutacas.e3 == "1")
+            if (Selecciono.e3 == "1")
             {
                 asientosSelected = asientosSelected + "E3 ";
             }
-            if (listabutacas.e4 == "1")
+            if (Selecciono.e4 == "1")
             {
                 asientosSelected = asientosSelected + "E4 ";
             }
-            if (listabutacas.e5 == "1")
+            if (Selecciono.e5 == "1")
             {
                 asientosSelected = asientosSelected + "E5 ";
             }
-            if (listabutacas.e6 == "1")
+            if (Selecciono.e6 == "1")
             {
                 asientosSelected = asientosSelected + "E6 ";
             }
-            if (listabutacas.e7 == "1")
+            if (Selecciono.e7 == "1")
             {
                 asientosSelected = asientosSelected + "E7 ";
             }
-            if (listabutacas.f1 == "1")
+            if (Selecciono.f1 == "1")
             {
                 asientosSelected = asientosSelected + "F1 ";
             }
-            if (listabutacas.f2 == "1")
+            if (Selecciono.f2 == "1")
             {
                 asientosSelected = asientosSelected + "F2 ";
             }
-            if (listabutacas.f3 == "1")
+            if (Selecciono.f3 == "1")
             {
                 asientosSelected = asientosSelected + "F3 ";
             }
-            if (listabutacas.f4 == "1")
+            if (Selecciono.f4 == "1")
             {
                 asientosSelected = asientosSelected + "F4 ";
             }
-            if (listabutacas.f5 == "1")
+            if (Selecciono.f5 == "1")
             {
                 asientosSelected = asientosSelected + "F5 ";
             }
@@ -712,12 +757,14 @@ namespace cinepolisproyect.Views
                     btn.BackgroundColor = Color.FromHex("#FFFF00");
                     listabutacas.a1 = "1";
                     cantasientos += 1;
+                    Selecciono.a1 = "1";
                 }
 
                 else
                 {
                     btn.BackgroundColor = Color.Transparent;
                     cantasientos -= 1;
+                    Selecciono.a1 = "0";
                 }
             }
         }
@@ -734,11 +781,13 @@ namespace cinepolisproyect.Views
                     btn.BackgroundColor = Color.FromHex("#FFFF00");
                     listabutacas.a2 = "1";
                     cantasientos += 1;
+                    Selecciono.a2 = "1";
                 }
                 else
                 {
                     btn.BackgroundColor = Color.Transparent;
                     cantasientos -= 1;
+                    Selecciono.a2 = "0";
                 }
             }
 
@@ -756,11 +805,13 @@ namespace cinepolisproyect.Views
                     btn.BackgroundColor = Color.FromHex("#FFFF00");
                     listabutacas.a3 = "1";
                     cantasientos += 1;
+                    Selecciono.a3 = "1";
                 }
                 else
                 {
                     btn.BackgroundColor = Color.Transparent;
                     cantasientos -= 1;
+                    Selecciono.a3 = "0";
                 }
             }
         }
@@ -777,11 +828,13 @@ namespace cinepolisproyect.Views
                     btn.BackgroundColor = Color.FromHex("#FFFF00");
                     listabutacas.a4 = "1";
                     cantasientos += 1;
+                    Selecciono.a4 = "1";
                 }
                 else
                 {
                     btn.BackgroundColor = Color.Transparent;
                     cantasientos -= 1;
+                    Selecciono.a4 = "0";
                 }
             }
         }
@@ -798,11 +851,13 @@ namespace cinepolisproyect.Views
                     btn.BackgroundColor = Color.FromHex("#FFFF00");
                     listabutacas.a5 = "1";
                     cantasientos += 1;
+                    Selecciono.a5 = "1";
                 }
                 else
                 {
                     btn.BackgroundColor = Color.Transparent;
                     cantasientos -= 1;
+                    Selecciono.a5 = "0";
                 }
             }
         }
@@ -819,11 +874,13 @@ namespace cinepolisproyect.Views
                     btn.BackgroundColor = Color.FromHex("#FFFF00");
                     listabutacas.a6 = "1";
                     cantasientos += 1;
+                    Selecciono.a6 = "1";
                 }
                 else
                 {
                     btn.BackgroundColor = Color.Transparent;
                     cantasientos -= 1;
+                    Selecciono.a6 = "0";
                 }
             }
 
@@ -841,11 +898,13 @@ namespace cinepolisproyect.Views
                     btn.BackgroundColor = Color.FromHex("#FFFF00");
                     listabutacas.a7 = "1";
                     cantasientos += 1;
+                    Selecciono.a7 = "1";
                 }
                 else
                 {
                     btn.BackgroundColor = Color.Transparent;
                     cantasientos -= 1;
+                    Selecciono.a7 = "0";
                 }
             }
 
@@ -863,11 +922,13 @@ namespace cinepolisproyect.Views
                     btn.BackgroundColor = Color.FromHex("#FFFF00");
                     listabutacas.b1 = "1";
                     cantasientos += 1;
+                    Selecciono.b1 = "1";
                 }
                 else
                 {
                     btn.BackgroundColor = Color.Transparent;
                     cantasientos -= 1;
+                    Selecciono.b1 = "0";
                 }
             }
         }
@@ -884,11 +945,13 @@ namespace cinepolisproyect.Views
                     btn.BackgroundColor = Color.FromHex("#FFFF00");
                     listabutacas.b2 = "1";
                     cantasientos += 1;
+                    Selecciono.b2 = "1";
                 }
                 else
                 {
                     btn.BackgroundColor = Color.Transparent;
                     cantasientos -= 1;
+                    Selecciono.b2 = "0";
                 }
             }
         }
@@ -905,11 +968,13 @@ namespace cinepolisproyect.Views
                     btn.BackgroundColor = Color.FromHex("#FFFF00");
                     listabutacas.b3 = "1";
                     cantasientos += 1;
+                    Selecciono.b3 = "1";
                 }
                 else
                 {
                     btn.BackgroundColor = Color.Transparent;
                     cantasientos -= 1;
+                    Selecciono.b3 = "0";
                 }
             }
         }
@@ -926,11 +991,13 @@ namespace cinepolisproyect.Views
                     btn.BackgroundColor = Color.FromHex("#FFFF00");
                     listabutacas.b4 = "1";
                     cantasientos += 1;
+                    Selecciono.b4 = "1";
                 }
                 else
                 {
                     btn.BackgroundColor = Color.Transparent;
                     cantasientos -= 1;
+                    Selecciono.b4 = "0";
                 }
             }
         }
@@ -947,11 +1014,13 @@ namespace cinepolisproyect.Views
                     btn.BackgroundColor = Color.FromHex("#FFFF00");
                     listabutacas.b5 = "1";
                     cantasientos += 1;
+                    Selecciono.b5 = "1";
                 }
                 else
                 {
                     btn.BackgroundColor = Color.Transparent;
                     cantasientos -= 1;
+                    Selecciono.b5 = "0";
                 }
             }
         }
@@ -968,11 +1037,13 @@ namespace cinepolisproyect.Views
                     btn.BackgroundColor = Color.FromHex("#FFFF00");
                     listabutacas.b6 = "1";
                     cantasientos += 1;
+                    Selecciono.b6 = "1";
                 }
                 else
                 {
                     btn.BackgroundColor = Color.Transparent;
                     cantasientos -= 1;
+                    Selecciono.b6 = "0";
                 }
             }
         }
@@ -989,11 +1060,13 @@ namespace cinepolisproyect.Views
                     btn.BackgroundColor = Color.FromHex("#FFFF00");
                     listabutacas.b7 = "1";
                     cantasientos += 1;
+                    Selecciono.b7 = "1";
                 }
                 else
                 {
                     btn.BackgroundColor = Color.Transparent;
                     cantasientos -= 1;
+                    Selecciono.b7 = "0";
                 }
             }
         }
@@ -1010,11 +1083,13 @@ namespace cinepolisproyect.Views
                     btn.BackgroundColor = Color.FromHex("#FFFF00");
                     listabutacas.c1 = "1";
                     cantasientos += 1;
+                    Selecciono.c1 = "1";
                 }
                 else
                 {
                     btn.BackgroundColor = Color.Transparent;
                     cantasientos -= 1;
+                    Selecciono.c1 = "0";
                 }
             }
         }
@@ -1031,11 +1106,13 @@ namespace cinepolisproyect.Views
                     btn.BackgroundColor = Color.FromHex("#FFFF00");
                     listabutacas.c2 = "1";
                     cantasientos += 1;
+                    Selecciono.c2 = "1";
                 }
                 else
                 {
                     btn.BackgroundColor = Color.Transparent;
                     cantasientos -= 1;
+                    Selecciono.c2 = "0";
                 }
             }
         }
@@ -1052,11 +1129,13 @@ namespace cinepolisproyect.Views
                     btn.BackgroundColor = Color.FromHex("#FFFF00");
                     listabutacas.c3 = "1";
                     cantasientos += 1;
+                    Selecciono.c3 = "1";
                 }
                 else
                 {
                     btn.BackgroundColor = Color.Transparent;
                     cantasientos -= 1;
+                    Selecciono.c3 = "0";
                 }
             }
         }
@@ -1073,11 +1152,13 @@ namespace cinepolisproyect.Views
                     btn.BackgroundColor = Color.FromHex("#FFFF00");
                     listabutacas.c4 = "1";
                     cantasientos += 1;
+                    Selecciono.c4 = "1";
                 }
                 else
                 {
                     btn.BackgroundColor = Color.Transparent;
                     cantasientos -= 1;
+                    Selecciono.c4 = "0";
                 }
             }
         }
@@ -1094,11 +1175,13 @@ namespace cinepolisproyect.Views
                     btn.BackgroundColor = Color.FromHex("#FFFF00");
                     listabutacas.c5 = "1";
                     cantasientos += 1;
+                    Selecciono.c5 = "1";
                 }
                 else
                 {
                     btn.BackgroundColor = Color.Transparent;
                     cantasientos -= 1;
+                    Selecciono.c5 = "0";
                 }
             }
         }
@@ -1115,11 +1198,13 @@ namespace cinepolisproyect.Views
                     btn.BackgroundColor = Color.FromHex("#FFFF00");
                     listabutacas.c6 = "1";
                     cantasientos += 1;
+                    Selecciono.c6 = "1";
                 }
                 else
                 {
                     btn.BackgroundColor = Color.Transparent;
                     cantasientos -= 1;
+                    Selecciono.c6 = "0";
                 }
             }
         }
@@ -1136,11 +1221,13 @@ namespace cinepolisproyect.Views
                     btn.BackgroundColor = Color.FromHex("#FFFF00");
                     listabutacas.c7 = "1";
                     cantasientos += 1;
+                    Selecciono.c7 = "1";
                 }
                 else
                 {
                     btn.BackgroundColor = Color.Transparent;
                     cantasientos -= 1;
+                    Selecciono.c7 = "0";
                 }
             }
         }
@@ -1157,11 +1244,13 @@ namespace cinepolisproyect.Views
                     btn.BackgroundColor = Color.FromHex("#FFFF00");
                     listabutacas.d1 = "1";
                     cantasientos += 1;
+                    Selecciono.d1 = "1";
                 }
                 else
                 {
                     btn.BackgroundColor = Color.Transparent;
                     cantasientos -= 1;
+                    Selecciono.d1 = "0";
                 }
             }
         }
@@ -1178,11 +1267,13 @@ namespace cinepolisproyect.Views
                     btn.BackgroundColor = Color.FromHex("#FFFF00");
                     listabutacas.d2 = "1";
                     cantasientos += 1;
+                    Selecciono.d2 = "1";
                 }
                 else
                 {
                     btn.BackgroundColor = Color.Transparent;
                     cantasientos -= 1;
+                    Selecciono.d2 = "0";
                 }
             }
         }
@@ -1199,11 +1290,13 @@ namespace cinepolisproyect.Views
                     btn.BackgroundColor = Color.FromHex("#FFFF00");
                     listabutacas.d3 = "1";
                     cantasientos += 1;
+                    Selecciono.d3 = "1";
                 }
                 else
                 {
                     btn.BackgroundColor = Color.Transparent;
                     cantasientos -= 1;
+                    Selecciono.d3 = "0";
                 }
             }
         }
@@ -1220,11 +1313,13 @@ namespace cinepolisproyect.Views
                     btn.BackgroundColor = Color.FromHex("#FFFF00");
                     listabutacas.d4 = "1";
                     cantasientos += 1;
+                    Selecciono.d4 = "1";
                 }
                 else
                 {
                     btn.BackgroundColor = Color.Transparent;
                     cantasientos -= 1;
+                    Selecciono.d4 = "0";
                 }
             }
         }
@@ -1241,11 +1336,13 @@ namespace cinepolisproyect.Views
                     btn.BackgroundColor = Color.FromHex("#FFFF00");
                     listabutacas.d5 = "1";
                     cantasientos += 1;
+                    Selecciono.d5 = "1";
                 }
                 else
                 {
                     btn.BackgroundColor = Color.Transparent;
                     cantasientos -= 1;
+                    Selecciono.d5 = "0";
                 }
             }
         }
@@ -1262,11 +1359,13 @@ namespace cinepolisproyect.Views
                     btn.BackgroundColor = Color.FromHex("#FFFF00");
                     listabutacas.d6 = "1";
                     cantasientos += 1;
+                    Selecciono.d6 = "1";
                 }
                 else
                 {
                     btn.BackgroundColor = Color.Transparent;
                     cantasientos -= 1;
+                    Selecciono.d6 = "0";
                 }
             }
         }
@@ -1283,11 +1382,13 @@ namespace cinepolisproyect.Views
                     btn.BackgroundColor = Color.FromHex("#FFFF00");
                     listabutacas.d7 = "1";
                     cantasientos += 1;
+                    Selecciono.d7 = "1";
                 }
                 else
                 {
                     btn.BackgroundColor = Color.Transparent;
                     cantasientos -= 1;
+                    Selecciono.d7 = "0";
                 }
             }
         }
@@ -1304,11 +1405,13 @@ namespace cinepolisproyect.Views
                     btn.BackgroundColor = Color.FromHex("#FFFF00");
                     listabutacas.e1 = "1";
                     cantasientos += 1;
+                    Selecciono.e1 = "1";
                 }
                 else
                 {
                     btn.BackgroundColor = Color.Transparent;
                     cantasientos -= 1;
+                    Selecciono.e1 = "0";
                 }
             }
         }
@@ -1325,11 +1428,13 @@ namespace cinepolisproyect.Views
                     btn.BackgroundColor = Color.FromHex("#FFFF00");
                     listabutacas.e2 = "1";
                     cantasientos += 1;
+                    Selecciono.e2 = "1";
                 }
                 else
                 {
                     btn.BackgroundColor = Color.Transparent;
                     cantasientos -= 1;
+                    Selecciono.e2 = "0";
                 }
             }
         }
@@ -1346,11 +1451,13 @@ namespace cinepolisproyect.Views
                     btn.BackgroundColor = Color.FromHex("#FFFF00");
                     listabutacas.e3 = "1";
                     cantasientos += 1;
+                    Selecciono.e3 = "1";
                 }
                 else
                 {
                     btn.BackgroundColor = Color.Transparent;
                     cantasientos -= 1;
+                    Selecciono.e3 = "0";
                 }
             }
         }
@@ -1367,11 +1474,13 @@ namespace cinepolisproyect.Views
                     btn.BackgroundColor = Color.FromHex("#FFFF00");
                     listabutacas.e4 = "1";
                     cantasientos += 1;
+                    Selecciono.e4 = "1";
                 }
                 else
                 {
                     btn.BackgroundColor = Color.Transparent;
                     cantasientos -= 1;
+                    Selecciono.e4 = "0";
                 }
             }
         }
@@ -1388,11 +1497,13 @@ namespace cinepolisproyect.Views
                     btn.BackgroundColor = Color.FromHex("#FFFF00");
                     listabutacas.e5 = "1";
                     cantasientos += 1;
+                    Selecciono.e5 = "1";
                 }
                 else
                 {
                     btn.BackgroundColor = Color.Transparent;
                     cantasientos -= 1;
+                    Selecciono.e5 = "0";
                 }
             }
         }
@@ -1409,11 +1520,13 @@ namespace cinepolisproyect.Views
                     btn.BackgroundColor = Color.FromHex("#FFFF00");
                     listabutacas.e6 = "1";
                     cantasientos += 1;
+                    Selecciono.e6 = "1";
                 }
                 else
                 {
                     btn.BackgroundColor = Color.Transparent;
                     cantasientos -= 1;
+                    Selecciono.e6 = "0";
                 }
             }
         }
@@ -1430,11 +1543,13 @@ namespace cinepolisproyect.Views
                     btn.BackgroundColor = Color.FromHex("#FFFF00");
                     listabutacas.e7 = "1";
                     cantasientos += 1;
+                    Selecciono.e7 = "1";
                 }
                 else
                 {
                     btn.BackgroundColor = Color.Transparent;
                     cantasientos -= 1;
+                    Selecciono.e7 = "0";
                 }
             }
         }
@@ -1451,11 +1566,13 @@ namespace cinepolisproyect.Views
                     btn.BackgroundColor = Color.FromHex("#FFFF00");
                     listabutacas.f1 = "1";
                     cantasientos += 1;
+                    Selecciono.f1 = "1";
                 }
                 else
                 {
                     btn.BackgroundColor = Color.Transparent;
                     cantasientos -= 1;
+                    Selecciono.f1 = "0";
                 }
             }
         }
@@ -1472,11 +1589,13 @@ namespace cinepolisproyect.Views
                     btn.BackgroundColor = Color.FromHex("#FFFF00");
                     listabutacas.f2 = "1";
                     cantasientos += 1;
+                    Selecciono.f2 = "1";
                 }
                 else
                 {
                     btn.BackgroundColor = Color.Transparent;
                     cantasientos -= 1;
+                    Selecciono.f2 = "0";
                 }
             }
         }
@@ -1493,11 +1612,13 @@ namespace cinepolisproyect.Views
                     btn.BackgroundColor = Color.FromHex("#FFFF00");
                     listabutacas.f3 = "1";
                     cantasientos += 1;
+                    Selecciono.f3 = "1";
                 }
                 else
                 {
                     btn.BackgroundColor = Color.Transparent;
                     cantasientos -= 1;
+                    Selecciono.f3 = "0";
                 }
             }
         }
@@ -1514,11 +1635,13 @@ namespace cinepolisproyect.Views
                     btn.BackgroundColor = Color.FromHex("#FFFF00");
                     listabutacas.f4 = "1";
                     cantasientos += 1;
+                    Selecciono.f4 = "1";
                 }
                 else
                 {
                     btn.BackgroundColor = Color.Transparent;
                     cantasientos -= 1;
+                    Selecciono.f4 = "0";
                 }
             }
         }
@@ -1535,11 +1658,13 @@ namespace cinepolisproyect.Views
                     btn.BackgroundColor = Color.FromHex("#FFFF00");
                     listabutacas.f5 = "1";
                     cantasientos += 1;
+                    Selecciono.f5 = "1";
                 }
                 else
                 {
                     btn.BackgroundColor = Color.Transparent;
                     cantasientos -= 1;
+                    Selecciono.f5 = "0";
                 }
             }
         }
