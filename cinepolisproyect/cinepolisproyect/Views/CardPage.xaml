@@ -4,7 +4,8 @@
              xmlns:local="clr-namespace:cinepolisproyect"
              xmlns:fastEntry="clr-namespace:XamarinFastEntrySample.FastEntry;assembly=XamarinFastEntry.Behaviors"
              NavigationPage.HasNavigationBar="False"
-             x:Class="cinepolisproyect.Views.CardPage">
+             x:Class="cinepolisproyect.Views.CardPage"
+             BackgroundColor="#20366b">
     <Page.Resources>
         <ResourceDictionary>
             <local:CardImageConvert x:Key="CardConverter"
@@ -16,7 +17,7 @@
     <StackLayout>
         <Frame Padding="8" CornerRadius="0">
             <FlexLayout>
-                <Image Source="Cinepolislogo.png" HeightRequest="40" HorizontalOptions="Start"/>
+                <Image Source="LogoCinepolis.png" HeightRequest="40" HorizontalOptions="Start"/>
                 <Label Text="CINEPOLIS" HorizontalOptions="Center" FontSize="24"/>
             </FlexLayout>
         </Frame>
@@ -70,7 +71,7 @@
             </Entry.Behaviors>
         </Entry>
         <Button Text="pagar con esta tarjeta" Grid.Row="5" Grid.ColumnSpan="3" x:Name="btncard" Clicked="btncard_Clicked"  CornerRadius="25" 
-                TextColor="White" BackgroundColor="#00AE0C"/>
+                TextColor="#20366b" BackgroundColor="#FFCC01"/>
 
             <Label x:Name="txtidcine" Text="{Binding IdCine}" TextColor="Transparent"/>
             <Label x:Name="txtidpeli" Text="{Binding IdPelicula}" TextColor="Transparent"/>

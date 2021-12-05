@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             BackgroundColor="#7384E9"
+             BackgroundColor="#20366b"
              NavigationPage.HasNavigationBar="False"
              x:Class="cinepolisproyect.Views.TicketPage">
 
         <StackLayout x:Name="stkQR" >
         <Frame Padding="8" CornerRadius="0">
             <FlexLayout>
-                <Image Source="Cinepolislogo.png" HeightRequest="40" HorizontalOptions="Start"/>
+                <Image Source="LogoCinepolis.png" HeightRequest="40" HorizontalOptions="Start"/>
                 <Label Text="CINEPOLIS" HorizontalOptions="Center" FontSize="24"/>
             </FlexLayout>
         </Frame>

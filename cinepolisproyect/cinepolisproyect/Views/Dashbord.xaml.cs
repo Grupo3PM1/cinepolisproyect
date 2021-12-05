@@ -18,7 +18,7 @@ namespace cinepolisproyect.Views
             ToolbarItem item = new ToolbarItem
             {
                 Text = "Example Item",
-                IconImageSource = ImageSource.FromFile("Cinepolislogo.png"),
+                IconImageSource = ImageSource.FromFile("LogoCinepolis.png"),
                 Order = ToolbarItemOrder.Primary,
                 Priority = 0
             };

@@ -3,11 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="cinepolisproyect.Views.HorariosPage"
              NavigationPage.HasNavigationBar="False"
-             BackgroundImage="fondotienda.png">
+             BackgroundColor="#20366b">
     <StackLayout>
         <Frame Padding="8" CornerRadius="0">
             <FlexLayout>
-                <Image Source="Cinepolislogo.png" HeightRequest="40" HorizontalOptions="Start"/>
+                <Image Source="LogoCinepolis.png" HeightRequest="40" HorizontalOptions="Start"/>
                 <Label Text="CINEPOLIS" HorizontalOptions="Center" FontSize="24"/>
             </FlexLayout>
         </Frame>
