@@ -31,5 +31,23 @@ namespace cinepolisproyect.Controllers
                 Debug.WriteLine("ERROR");
             }
         }
+        //METODO GET TARJETA
+        public async static Task<List<Models.ApiCard>> GetListTarjeta()
+        {
+            List<Models.ApiCard> listbutaca = new List<Models.ApiCard>();
+            using (HttpClient cliente = new HttpClient())
+            {
+                var response = await cliente.GetAsync(Models.UrlApiCard.GETCardList);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    var JsonContent = response.Content.ReadAsStringAsync().Result;
+                    var ButacaDes = JsonConvert.DeserializeObject<Models.RootApiCard>(JsonContent);
+                    listbutaca = ButacaDes.tarjeta as List<Models.ApiCard>;
+                    var abc = JsonContent;
+                }
+            }
+            return listbutaca;
+        }
     }
 }
