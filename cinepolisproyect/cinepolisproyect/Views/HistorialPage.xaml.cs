@@ -108,8 +108,17 @@ namespace cinepolisproyect.Views
                 }
                 cont += 1;
             }
-            BindingContext = this;
-            await DisplayAlert("Alerta", "Actualizando...", "OK");
+            if(lsttarjeta.Count < 1)
+            {
+                await DisplayAlert("Alerta", "No tiene ningun Registro", "OK");
+                txtNodata.Text = "--No ha realizado ninguna compra--";
+            }
+            else
+            {
+                BindingContext = this;
+                await DisplayAlert("Alerta", "Actualizando...", "OK");
+            }
+            
         }
 
         private async void btn_Refresh_Clicked(object sender, EventArgs e)

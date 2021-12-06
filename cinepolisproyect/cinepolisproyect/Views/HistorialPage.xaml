@@ -13,6 +13,9 @@
                 <Button Image="refresh.png" TextColor="Gray" Margin="130,0,0,0"  BackgroundColor="Transparent" x:Name="btn_Refresh" Clicked="btn_Refresh_Clicked"/>
             </FlexLayout>
         </Frame>
+        <StackLayout>
+            <Label x:Name="txtNodata" Text="" FontSize="Title" FontAttributes="Bold"/>
+        </StackLayout>
         <ListView ItemsSource="{Binding lsttarjeta}" x:Name="ListViewHistorial" HasUnevenRows="True">
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -53,8 +56,5 @@
                 </DataTemplate>
             </ListView.ItemTemplate>      
         </ListView>
-        <StackLayout>
-            <Label x:Name="txtID" Text=""/>
-        </StackLayout>
     </StackLayout>
 </ContentPage>
