@@ -103,7 +103,7 @@ namespace cinepolisproyect.Views
                     IdCine = this.txtidcine.Text,
                     IdPelicula = this.txtidpeli.Text,
                     IdHorario = this.txtidhorario.Text,
-                    IdCombo = "1",
+                    IdCombo = txtIdCombo.Text,
                     RefrescoExtra = this.txtRefrescoExtra.Text,
                     ContButaca = this.txtcontbutaca.Text,
                     asientosSelected = this.txtasientosSelected.Text,
@@ -208,7 +208,7 @@ namespace cinepolisproyect.Views
                     IdCine = this.txtidcine.Text,
                     IdPelicula = this.txtidpeli.Text,
                     IdHorario = this.txtidhorario.Text,
-                    IdCombo = "1",
+                    IdCombo = txtIdCombo.Text,
                     RefrescoExtra = this.txtRefrescoExtra.Text,
                     ContButaca = this.txtcontbutaca.Text,
                     asientosSelected = this.txtasientosSelected.Text

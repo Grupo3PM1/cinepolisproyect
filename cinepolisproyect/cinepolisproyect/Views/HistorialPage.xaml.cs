@@ -47,6 +47,7 @@ namespace cinepolisproyect.Views
             sent = 1;
             cont = 0;
             int num = 1;
+            int cantlimite = listtarjeta.Count - 1;
             while (sent == 1)
             {
                 if (listtarjeta[cont].us_id == usuariosdata.us_id)
@@ -76,7 +77,10 @@ namespace cinepolisproyect.Views
                     else if (listtarjeta[cont].IdCombo == "3") { varIdCombo = "Combo 3 -> Nachos y Un refresco"; }
                     else { varIdCombo = "Ninguna"; }
 
-                    string varRefrescoExtra = listtarjeta[cont].RefrescoExtra;
+                    string varRefrescoExtra;
+                    if (listtarjeta[cont].RefrescoExtra == "00") { varRefrescoExtra = "Ningun Refresco Extra"; }
+                    else { varRefrescoExtra = listtarjeta[cont].RefrescoExtra; }
+
                     string varContButaca = listtarjeta[cont].ContButaca;
                     string varasientosSelected = listtarjeta[cont].asientosSelected;
                     string vartotalpagar = listtarjeta[cont].totalpagar;
@@ -98,15 +102,19 @@ namespace cinepolisproyect.Views
                         totalpagar = vartotalpagar
                     });
                 }
-                if (cont >= 3)
+                if (cont >= cantlimite)
                 {
                     sent = 0;
                 }
                 cont += 1;
             }
             BindingContext = this;
-            //await DisplayAlert("Alerta", "Hola: "+ usuariosdata.us_nombre+" "+usuariosdata.us_apellido+"Con ID: "+usuariosdata.us_id, "OK");
+            await DisplayAlert("Alerta", "Actualizando...", "OK");
         }
 
+        private async void btn_Refresh_Clicked(object sender, EventArgs e)
+        {
+            traerID();
+        }
     }
 }

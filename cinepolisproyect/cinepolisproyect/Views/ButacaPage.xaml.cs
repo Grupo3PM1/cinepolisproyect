@@ -516,6 +516,7 @@ namespace cinepolisproyect.Views
             else
                 this.seat40.BackgroundColor = Color.Transparent;
             #endregion
+            await DisplayAlert("Alerta", "Cargando Butacas...", "OK");
         }
 
         #region
