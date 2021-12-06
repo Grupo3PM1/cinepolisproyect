@@ -12,6 +12,46 @@
                 <Label Text="CINEPOLIS" TextColor="Gray" HorizontalOptions="Center" FontSize="24"/>
             </FlexLayout>
         </Frame>
+        <ListView ItemsSource="{Binding lsttarjeta}" x:Name="ListViewHistorial" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid  Padding="20, 0, 20, 50">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Row="0" Grid.Column="0" Text="N Facturacion:" FontAttributes="Bold"/>
+                            <Label Grid.Row="0" Grid.Column="1" Text="{Binding trj_ntarjeta}"/>
+                            <Label Grid.Row="1" Grid.Column="0" Text="Cine:" FontAttributes="Bold"/>
+                            <Label Grid.Row="1" Grid.Column="1" Text="{Binding IdCine}"/>
+                            <Label Grid.Row="2" Grid.Column="0" Text="Pelicula:" FontAttributes="Bold"/>
+                            <Label Grid.Row="2" Grid.Column="1" Text="{Binding IdPelicula}"/>
+                            <Label Grid.Row="3" Grid.Column="0" Text="Hora:" FontAttributes="Bold"/>
+                            <Label Grid.Row="3" Grid.Column="1" Text="{Binding IdHorario}"/>
+                            <Label Grid.Row="4" Grid.Column="0" Text="Combo:" FontAttributes="Bold"/>
+                            <Label Grid.Row="4" Grid.Column="1" Text="{Binding IdCombo}"/>
+                            <Label Grid.Row="5" Grid.Column="0" Text="Refrescos Extra:" FontAttributes="Bold"/>
+                            <Label Grid.Row="5" Grid.Column="1" Text="{Binding RefrescoExtra}"/>
+                            <Label Grid.Row="6" Grid.Column="0" Text="Asientos Comprados:" FontAttributes="Bold"/>
+                            <Label Grid.Row="6" Grid.Column="1" Text="{Binding asientosSelected}"/>
+                            <Label Grid.Row="7" Grid.Column="0" Text="Asientos Total Pago:" FontAttributes="Bold"/>
+                            <Label Grid.Row="7" Grid.Column="1" Text="{Binding totalpagar}"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>      
+        </ListView>
         <StackLayout>
             <Label x:Name="txtID" Text=""/>
         </StackLayout>

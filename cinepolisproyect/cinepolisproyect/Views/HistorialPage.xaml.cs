@@ -12,7 +12,7 @@ namespace cinepolisproyect.Views
     public partial class HistorialPage : ContentPage
     {
         public Models.ApiUsuario usuariosdata;
-        public List<Models.ApiCard> lsttarjeta = new List<Models.ApiCard>();
+        public List<Models.ApiCard> lsttarjeta { get; private set; } = new List<Models.ApiCard>();
         Authentication authentication;
         public HistorialPage()
         {
@@ -46,19 +46,36 @@ namespace cinepolisproyect.Views
             List<Models.ApiCard> listtarjeta = await cinepolisproyect.Controllers.CardController.GetListTarjeta();
             sent = 1;
             cont = 0;
+            int num = 1;
             while (sent == 1)
             {
                 if (listtarjeta[cont].us_id == usuariosdata.us_id)
                 {
 
-                    string vartrj_ntarjeta = listtarjeta[cont].trj_ntarjeta;
+                    string vartrj_ntarjeta = num.ToString();
+                    num += 1;
                     string vartrj_fchvencimiento = listtarjeta[cont].trj_fchvencimiento;
                     string vartrj_cdgseguridad = listtarjeta[cont].trj_cdgseguridad;
                     string varus_id = listtarjeta[cont].us_id;
                     string varIdCine = listtarjeta[cont].IdCine;
-                    string varIdPelicula = listtarjeta[cont].IdPelicula;
-                    string varIdHorario = listtarjeta[cont].IdHorario;
-                    string varIdCombo = listtarjeta[cont].IdCombo;
+                    string varIdPelicula;
+                    if (listtarjeta[cont].IdPelicula == "1"){varIdPelicula = "Eternals";}
+                    else if (listtarjeta[cont].IdPelicula == "2"){varIdPelicula = "Venom";}
+                    else if (listtarjeta[cont].IdPelicula == "3"){varIdPelicula = "Black Widow";}
+                    else {varIdPelicula = "Ninguna";}
+                    
+                    string varIdHorario;
+                    if (listtarjeta[cont].IdHorario == "1") { varIdHorario = "3 00PM"; }
+                    else if (listtarjeta[cont].IdHorario == "2") { varIdHorario = "5 00PM"; }
+                    else if (listtarjeta[cont].IdHorario == "3") { varIdHorario = "7 00PM"; }
+                    else { varIdHorario = "Ninguna"; }
+
+                    string varIdCombo;
+                    if (listtarjeta[cont].IdCombo == "1") { varIdCombo = "Combo 1 -> Palomitas de maíz y Dos refrescos"; }
+                    else if (listtarjeta[cont].IdCombo == "2") { varIdCombo = "Combo 2 -> Palomitas de maíz y Un refresco"; }
+                    else if (listtarjeta[cont].IdCombo == "3") { varIdCombo = "Combo 3 -> Nachos y Un refresco"; }
+                    else { varIdCombo = "Ninguna"; }
+
                     string varRefrescoExtra = listtarjeta[cont].RefrescoExtra;
                     string varContButaca = listtarjeta[cont].ContButaca;
                     string varasientosSelected = listtarjeta[cont].asientosSelected;
@@ -87,7 +104,8 @@ namespace cinepolisproyect.Views
                 }
                 cont += 1;
             }
-            await DisplayAlert("Alerta", "Hola: "+ usuariosdata.us_nombre+" "+usuariosdata.us_apellido+"Con ID: "+usuariosdata.us_id, "OK");
+            BindingContext = this;
+            //await DisplayAlert("Alerta", "Hola: "+ usuariosdata.us_nombre+" "+usuariosdata.us_apellido+"Con ID: "+usuariosdata.us_id, "OK");
         }
 
     }
