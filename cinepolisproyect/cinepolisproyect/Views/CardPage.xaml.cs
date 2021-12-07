@@ -77,19 +77,40 @@ namespace cinepolisproyect.Views
             }
             totalpago = (cantbutaca * 70) + combo + (refrescoextra * 35);
 
-            await DisplayAlert("Alerta", "Su Pago total seria: "+ totalpago.ToString(), "OK");
+            await DisplayAlert("Alerta", "Su Pago total seria: " + totalpago.ToString(), "OK");
         }
 
         //Validar los campos de los formularios
         private async Task<bool> validarFormulario()
         {
+            string ncard = txtncard.Text;
+            string expcard = txtexpcard.Text;
+            string cvccard = txtcvccard.Text;
+            int varncard = ncard.Length;
+            int varexpcard = expcard.Length;
+            int varcvccard = cvccard.Length;
+
             //Valida si el valor en los Entry se encuentra vacio o es igual a Null
             if (String.IsNullOrWhiteSpace(this.txtncard.Text) || String.IsNullOrWhiteSpace(this.txtexpcard.Text) || String.IsNullOrWhiteSpace(this.txtcvccard.Text))
             {
                 await this.DisplayAlert("Advertencia", "Todos los campos son obligatorios.", "OK");
                 return false;
             }
-
+            if (varncard < 19)
+            {
+                await this.DisplayAlert("Advertencia", "Ingrese la cantidad requerida de numeros de su tarjeta.", "OK");
+                return false;
+            }
+            if (varexpcard < 5)
+            {
+                await this.DisplayAlert("Advertencia", "Ingrese un formato de fecha aceptable.", "OK");
+                return false;
+            }
+            if (varcvccard < 3)
+            {
+                await this.DisplayAlert("Advertencia", "Ingrese la cantidad requerida de numeros de su CCV.", "OK");
+                return false;
+            }
             return true;
         }
 
@@ -99,7 +120,7 @@ namespace cinepolisproyect.Views
 
             if (await validarFormulario())
             {
-                
+
                 var postcard = new Models.ApiCard
                 {
                     trj_ntarjeta = this.txtncard.Text,
@@ -152,9 +173,9 @@ namespace cinepolisproyect.Views
                 }
                 else if (txtIdCombo.Text == "2")
                 {
-                    combostr = "palomitas de maíz + un regreso";
+                    combostr = "palomitas de maíz + un refresco";
                 }
-                else if(txtIdCombo.Text == "3")
+                else if (txtIdCombo.Text == "3")
                 {
                     combostr = "nachos + un refresco";
                 }
@@ -209,9 +230,9 @@ namespace cinepolisproyect.Views
                 //--------- FIN ENVIO DE CORREO ELECTRONICO CON PELICULA Y PRODUCTOS  --------//
                 string but = txtjsonbutaca.Text;
                 await Controllers.ButacasController.UpdateSitio(but);
-                await Controllers.CardController.CrearTarjeta(postcard); 
+                await Controllers.CardController.CrearTarjeta(postcard);
                 await this.DisplayAlert("Exito", "Datos guardados, revise su correo electronico", "OK");
-            
+
                 //pasamos a cargarlos valores a la clase para enviarlos al siguiente ContentPage HorariosPage por medio de BindingContext
                 Models.pelicula classdata = new Models.pelicula
                 {

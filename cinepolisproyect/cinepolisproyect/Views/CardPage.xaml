@@ -62,14 +62,15 @@
                Placeholder="MM/YY  " Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="1"  >
             <Entry.Behaviors>
                 <fastEntry:XamarinFastEntryBehaviour Mask="##/##" 
-                                                     MaxLength="19"/>
+                                                     MaxLength="5"/>
             </Entry.Behaviors>
         </Entry>
 
             <Label Text="CCV" Grid.Row="5" Margin="5" Grid.Column="0" VerticalOptions="Center"/>
         <Entry Text="{Binding CVC, Mode=TwoWay}" 
                Keyboard="Numeric" x:Name="txtcvccard"
-               Placeholder="CCV" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2">
+               Placeholder="CCV" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2"
+               IsPassword="True">
             <Entry.Behaviors>
                 <fastEntry:XamarinFastEntryBehaviour Mask="###" 
                                                      MaxLength="3"/>
