@@ -31,7 +31,7 @@ namespace cinepolisproyect.Views
             }
             else
             {
-                await DisplayAlert("", "Bienvenido", "Ok");
+                //await DisplayAlert("", "Bienvenido", "Ok");
                 Navigation.PushAsync(new RegistroPage());
             }
         }
@@ -45,7 +45,7 @@ namespace cinepolisproyect.Views
             }
             else
             {
-                await DisplayAlert("", "Bienvenido", "Ok");
+                //await DisplayAlert("", "Bienvenido", "Ok");
                 Navigation.PushAsync(new LoginPage());
             }
             
