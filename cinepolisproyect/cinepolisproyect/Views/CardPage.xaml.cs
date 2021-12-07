@@ -96,6 +96,14 @@ namespace cinepolisproyect.Views
         //Validar los campos de los formularios
         private async Task<bool> validarFormulario()
         {
+           
+            //Valida si el valor en los Entry se encuentra vacio o es igual a Null
+            if (String.IsNullOrWhiteSpace(this.txtncard.Text) || String.IsNullOrWhiteSpace(this.txtexpcard.Text) || String.IsNullOrWhiteSpace(this.txtcvccard.Text))
+            {
+                await this.DisplayAlert("Advertencia", "Todos los campos son obligatorios.", "OK");
+                return false;
+            }
+
             string ncard = txtncard.Text;
             string expcard = txtexpcard.Text;
             string cvccard = txtcvccard.Text;
@@ -103,12 +111,6 @@ namespace cinepolisproyect.Views
             int varexpcard = expcard.Length;
             int varcvccard = cvccard.Length;
 
-            //Valida si el valor en los Entry se encuentra vacio o es igual a Null
-            if (String.IsNullOrWhiteSpace(this.txtncard.Text) || String.IsNullOrWhiteSpace(this.txtexpcard.Text) || String.IsNullOrWhiteSpace(this.txtcvccard.Text))
-            {
-                await this.DisplayAlert("Advertencia", "Todos los campos son obligatorios.", "OK");
-                return false;
-            }
             if (varncard < 19)
             {
                 await this.DisplayAlert("Advertencia", "Ingrese la cantidad requerida de numeros de su tarjeta.", "OK");
@@ -121,7 +123,7 @@ namespace cinepolisproyect.Views
             }
             if (varcvccard < 3)
             {
-                await this.DisplayAlert("Advertencia", "Ingrese la cantidad requerida de numeros de su CCV.", "OK");
+                await this.DisplayAlert("Advertencia", "Ingrese la cantidad requerida de numeros de su CVC.", "OK");
                 return false;
             }
             return true;

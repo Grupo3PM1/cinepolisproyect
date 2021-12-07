@@ -15,6 +15,8 @@ namespace cinepolisproyect.Views
     {
         //Declaracion de variable qr
         ZXingBarcodeImageView qr;
+        public int show = 1;
+
         public TicketPage()
         {
             InitializeComponent();
@@ -41,46 +43,52 @@ namespace cinepolisproyect.Views
         }
         public  void generarQR()
         {
-            qr = new ZXingBarcodeImageView
+            if (show == 1)
             {
-                //Propiedad para generar codigo QR
-                HorizontalOptions = LayoutOptions.FillAndExpand,
-                VerticalOptions = LayoutOptions.FillAndExpand
-            };
 
-            String IdCine = txtidcine.Text;
-            String IdPelicula = txtidpeli.Text;
-            String IdHorario = txtidhorario.Text;
-            String IdCombo = txtIdCombo.Text;
-            String RefrescoExtra = txtRefrescoExtra.Text;
-            String ContButaca = txtcontbutaca.Text;
-            String asientosSelected = txtasientosSelected.Text;
+                qr = new ZXingBarcodeImageView
+                {
+                    //Propiedad para generar codigo QR
+                    HorizontalOptions = LayoutOptions.FillAndExpand,
+                    VerticalOptions = LayoutOptions.FillAndExpand
+                };
 
-            String Url = "https://cinepolishn.000webhostapp.com/Cinepolis/Ticket.php/?IdCine=" + IdCine + "&IdPelicula=" + IdPelicula + "&IdHorario=" + IdHorario + "&asientosSelected=" + asientosSelected + "&IdCombo=" + IdCombo + "&RefrescoExtra=" + RefrescoExtra;
+                String IdCine = txtidcine.Text;
+                String IdPelicula = txtidpeli.Text;
+                String IdHorario = txtidhorario.Text;
+                String IdCombo = txtIdCombo.Text;
+                String RefrescoExtra = txtRefrescoExtra.Text;
+                String ContButaca = txtcontbutaca.Text;
+                String asientosSelected = txtasientosSelected.Text;
 
-            //generar tipo de codigo que sera el QR_CODE 
-            qr.BarcodeFormat = ZXing.BarcodeFormat.QR_CODE;
-            //propiedad de ancho del QR
-            qr.BarcodeOptions.Width = 300;
-            //propiedad de alto del QR
-            qr.BarcodeOptions.Height = 300;
-            //valor que va recibir el codigo QR para direccionar
-            qr.BarcodeValue = Url;
-            //colocamos el nombre al StackLayout y le damos el valor
-            //qr del objeto creado que es
-            stkQR.Children.Add(qr);
+                String Url = "https://cinepolishn.000webhostapp.com/Cinepolis/Ticket.php/?IdCine=" + IdCine + "&IdPelicula=" + IdPelicula + "&IdHorario=" + IdHorario + "&asientosSelected=" + asientosSelected + "&IdCombo=" + IdCombo + "&RefrescoExtra=" + RefrescoExtra;
 
-            if (IdPelicula == "1")
-            {
-                imgpeli.Source = "cartelera1.jpg";
-            }
-            else if (IdPelicula == "2")
-            {
-                imgpeli.Source = "cartelera2.jpg";
-            }
-            else
-            {
-                imgpeli.Source = "cartelera3.jpg";
+                //generar tipo de codigo que sera el QR_CODE 
+                qr.BarcodeFormat = ZXing.BarcodeFormat.QR_CODE;
+                //propiedad de ancho del QR
+                qr.BarcodeOptions.Width = 300;
+                //propiedad de alto del QR
+                qr.BarcodeOptions.Height = 300;
+                //valor que va recibir el codigo QR para direccionar
+                qr.BarcodeValue = Url;
+                //colocamos el nombre al StackLayout y le damos el valor
+                //qr del objeto creado que es
+                stkQR.Children.Add(qr);
+
+                if (IdPelicula == "1")
+                {
+                    imgpeli.Source = "cartelera1.jpg";
+                }
+                else if (IdPelicula == "2")
+                {
+                    imgpeli.Source = "cartelera2.jpg";
+                }
+                else
+                {
+                    imgpeli.Source = "cartelera3.jpg";
+                }
+
+                show = 0;
             }
         }
 
