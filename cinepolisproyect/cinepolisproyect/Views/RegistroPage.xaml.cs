@@ -27,6 +27,13 @@ namespace cinepolisproyect.Views
         //Validar los campos de los formularios
         private async Task<bool> validarFormulario()
         {
+            //Valida conexión a Internet
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                await this.DisplayAlert("Sin Internet", "Se ha perdido la conexion a internet", "Ok");
+                return false;
+            }
+
             //Valida si el valor en los Entry se encuentra vacio o es igual a Null
             if (String.IsNullOrWhiteSpace(ttname.Text) || String.IsNullOrWhiteSpace(ttlastname.Text) || String.IsNullOrWhiteSpace(ttemail.Text) || String.IsNullOrWhiteSpace(ttpassword.Text))
             {
@@ -65,13 +72,6 @@ namespace cinepolisproyect.Views
             if (ttpassword.Text.Length < 8)
             {
                 await this.DisplayAlert("Advertencia", "La contraseña debe ser mayor o igual a 8 dígitos. ", "OK");
-                return false;
-            }
-
-            //Valida conexión a Internet
-            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
-            {
-                await this.DisplayAlert("Sin Internet", "Se ha perdido la conexion a internet", "Ok");
                 return false;
             }
 

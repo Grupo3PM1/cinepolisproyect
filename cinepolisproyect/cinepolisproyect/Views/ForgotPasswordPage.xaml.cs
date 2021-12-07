@@ -22,6 +22,13 @@ namespace cinepolisproyect.Views
 
         private async Task<bool> validarFormulario()
         {
+            //Valida conexión a Internet
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                await this.DisplayAlert("Sin Internet", "Se ha perdido la conexion a internet", "Ok");
+                return false;
+            }
+
             //Valida si el valor en el Entry se encuentra vacio o es igual a Null
             if (String.IsNullOrWhiteSpace(ttemail_user_recu.Text))
             {
@@ -34,13 +41,6 @@ namespace cinepolisproyect.Views
             if (!isEmail)
             {
                 await this.DisplayAlert("Advertencia", "El formato del correo electrónico es incorrecto, revíselo e intente de nuevo.", "OK");
-                return false;
-            }
-
-            //Valida conexión a Internet
-            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
-            {
-                await this.DisplayAlert("Sin Internet", "Se ha perdido la conexion a internet", "Ok");
                 return false;
             }
 
