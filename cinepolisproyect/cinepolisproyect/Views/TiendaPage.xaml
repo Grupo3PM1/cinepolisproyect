@@ -72,10 +72,20 @@
                     <Label Text="L. 100.00" FontSize="18" FontAttributes="Bold"/>
                 </StackLayout>
             </StackLayout>
-        </StackLayout>
+            </StackLayout>
             <StackLayout Orientation="Horizontal" Margin="20" BackgroundColor="Transparent">
                 <Label Text="Digite la cantidad de refresco extra:" FontSize="18" Padding="10"/>
                 <Entry x:Name="txtrefrescoextra" Text="00" MaxLength="2" Keyboard="Numeric" WidthRequest="30"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="8" BackgroundColor="#20368f" Padding="10">
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer  x:Name="StackCombo0"
+                    NumberOfTapsRequired="1"
+                    Tapped="StackCombo0_Tapped"/>
+                </StackLayout.GestureRecognizers>
+                <StackLayout Orientation="Vertical">
+                    <Label Text="No Deseo Comprar Comida" FontSize="24"/>
+                </StackLayout>
             </StackLayout>
         <FlexLayout>
             <Label x:Name="txtidcine" Text="{Binding IdCine}" TextColor="Transparent"/>

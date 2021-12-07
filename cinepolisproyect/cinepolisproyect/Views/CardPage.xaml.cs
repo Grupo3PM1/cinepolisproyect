@@ -16,6 +16,7 @@ namespace cinepolisproyect.Views
         Authentication authentication;
         public string user = "1";
         public string user_email = "1";
+        int totalpago = 0;
         public CardPage()
         {
             InitializeComponent();
@@ -50,6 +51,33 @@ namespace cinepolisproyect.Views
             }
             user = usuariosdata.us_id;
             user_email = usuariosdata.us_email;
+
+
+            //Sacar Total a Pagar
+            //precio por asiento L.70.00
+            int cantbutaca = Convert.ToInt32(txtcontbutaca.Text);
+            int refrescoextra = Convert.ToInt32(txtRefrescoExtra.Text);
+            int combo = 0;
+
+            if (txtIdCombo.Text == "1")
+            {
+                combo = 120;
+            }
+            else if (txtIdCombo.Text == "2")
+            {
+                combo = 95;
+            }
+            else if (txtIdCombo.Text == "3")
+            {
+                combo = 100;
+            }
+            else
+            {
+                combo = 0;
+            }
+            totalpago = (cantbutaca * 70) + combo + (refrescoextra * 35);
+
+            await DisplayAlert("Alerta", "Su Pago total seria: "+ totalpago.ToString(), "OK");
         }
 
         //Validar los campos de los formularios
@@ -71,29 +99,7 @@ namespace cinepolisproyect.Views
 
             if (await validarFormulario())
             {
-                //precio por asiento L.70.00
-                int cantbutaca = Convert.ToInt32(txtcontbutaca.Text);
-                int totalpago = 0;
-                int refrescoextra = Convert.ToInt32(txtRefrescoExtra.Text);
-                int combo = 0;
-
-                if(txtIdCombo.Text == "1")
-                {
-                    combo = 120;
-                }
-                else if (txtIdCombo.Text == "2")
-                {
-                    combo = 95;
-                }
-                else if (txtIdCombo.Text == "3")
-                {
-                    combo = 100;
-                }
-                else
-                {
-                    combo = 0;
-                }
-                totalpago = (cantbutaca * 70) + combo + (refrescoextra * 35);
+                
                 var postcard = new Models.ApiCard
                 {
                     trj_ntarjeta = this.txtncard.Text,
@@ -148,9 +154,13 @@ namespace cinepolisproyect.Views
                 {
                     combostr = "palomitas de maíz + un regreso";
                 }
-                else
+                else if(txtIdCombo.Text == "3")
                 {
                     combostr = "nachos + un refresco";
+                }
+                else
+                {
+                    combostr = "Ninguno";
                 }
 
                 //Declaramos una variable string la cual se utilizara para igualar la pelicula y el combo

@@ -41,7 +41,11 @@
                     <Label Text="Duracion: "/>
                     <Label Text="2h 37m"/>
                 </StackLayout>
-            </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Precio: "/>
+                    <Label Text="L.70.00"/>
+                    </StackLayout>
+                </StackLayout>
         </StackLayout>
                 <StackLayout Orientation="Horizontal" Margin="10,15,0,15" BackgroundColor="Transparent">
             <StackLayout.GestureRecognizers>
@@ -63,6 +67,10 @@
                 <StackLayout Orientation="Horizontal">
                     <Label Text="Duracion: "/>
                     <Label Text="1h 38m"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Precio: "/>
+                    <Label Text="L.70.00"/>
                 </StackLayout>
             </StackLayout>
         </StackLayout>
@@ -86,6 +94,10 @@
                 <StackLayout Orientation="Horizontal">
                     <Label Text="Duracion: "/>
                     <Label Text="2h 13m"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Precio: "/>
+                    <Label Text="L.70.00"/>
                 </StackLayout>
             </StackLayout>
         </StackLayout>

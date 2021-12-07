@@ -41,6 +41,7 @@ namespace cinepolisproyect.Views
         }
         public async void refresh()
         {
+            await DisplayAlert("Alerta", "Cargando Butacas...", "OK");
             butacadata = new Models.pelihorario
             {
                 idpeli = this.txtidpeli.Text,
@@ -516,234 +517,241 @@ namespace cinepolisproyect.Views
             else
                 this.seat40.BackgroundColor = Color.Transparent;
             #endregion
-            await DisplayAlert("Alerta", "Cargando Butacas...", "OK");
         }
 
         #region
         private async void btncomprar_Clicked(object sender, EventArgs e)
         {
-            String asientosSelected="";
-            #region guardar_asientos_seleccionados
-            if (Selecciono.a1 == "1")
+            if (cantasientos > 0)
             {
-                asientosSelected = asientosSelected + "A1 ";
-            }
-            if (Selecciono.a2 == "1")
-            {
-                asientosSelected = asientosSelected + "A2 ";
-            }
-            if (Selecciono.a3 == "1")
-            {
-                asientosSelected = asientosSelected + "A3 ";
-            }
-            if (Selecciono.a4 == "1")
-            {
-                asientosSelected = asientosSelected + "A4 ";
-            }
-            if (Selecciono.a5 == "1")
-            {
-                asientosSelected = asientosSelected + "A5 ";
-            }
-            if (Selecciono.a6 == "1")
-            {
-                asientosSelected = asientosSelected + "A6 ";
-            }
-            if (Selecciono.a7 == "1")
-            {
-                asientosSelected = asientosSelected + "A7 ";
-            }
-            if (Selecciono.b1 == "1")
-            {
-                asientosSelected = asientosSelected + "B1 ";
-            }
-            if (Selecciono.b2 == "1")
-            {
-                asientosSelected = asientosSelected + "B2 ";
-            }
-            if (Selecciono.b3 == "1")
-            {
-                asientosSelected = asientosSelected + "B3 ";
-            }
-            if (Selecciono.b4 == "1")
-            {
-                asientosSelected = asientosSelected + "B4 ";
-            }
-            if (Selecciono.b5 == "1")
-            {
-                asientosSelected = asientosSelected + "B5 ";
-            }
-            if (Selecciono.b6 == "1")
-            {
-                asientosSelected = asientosSelected + "B6 ";
-            }
-            if (Selecciono.b7 == "1")
-            {
-                asientosSelected = asientosSelected + "B7 ";
-            }
-            if (Selecciono.c1 == "1")
-            {
-                asientosSelected = asientosSelected + "C1 ";
-            }
-            if (Selecciono.c2 == "1")
-            {
-                asientosSelected = asientosSelected + "C2 ";
-            }
-            if (Selecciono.c3 == "1")
-            {
-                asientosSelected = asientosSelected + "C3 ";
-            }
-            if (Selecciono.c4 == "1")
-            {
-                asientosSelected = asientosSelected + "C4 ";
-            }
-            if (Selecciono.c5 == "1")
-            {
-                asientosSelected = asientosSelected + "C5 ";
-            }
-            if (Selecciono.c6 == "1")
-            {
-                asientosSelected = asientosSelected + "C6 ";
-            }
-            if (Selecciono.c7 == "1")
-            {
-                asientosSelected = asientosSelected + "C7 ";
-            }
-            if (Selecciono.d1 == "1")
-            {
-                asientosSelected = asientosSelected + "D1 ";
-            }
-            if (Selecciono.d2 == "1")
-            {
-                asientosSelected = asientosSelected + "D2 ";
-            }
-            if (Selecciono.d3 == "1")
-            {
-                asientosSelected = asientosSelected + "D3 ";
-            }
-            if (Selecciono.d4 == "1")
-            {
-                asientosSelected = asientosSelected + "D4 ";
-            }
-            if (Selecciono.d5 == "1")
-            {
-                asientosSelected = asientosSelected + "D5 ";
-            }
-            if (Selecciono.d6 == "1")
-            {
-                asientosSelected = asientosSelected + "D6 ";
-            }
-            if (Selecciono.d7 == "1")
-            {
-                asientosSelected = asientosSelected + "D7 ";
-            }
-            if (Selecciono.e1 == "1")
-            {
-                asientosSelected = asientosSelected + "E1 ";
-            }
-            if (Selecciono.e2 == "1")
-            {
-                asientosSelected = asientosSelected + "E2 ";
-            }
-            if (Selecciono.e3 == "1")
-            {
-                asientosSelected = asientosSelected + "E3 ";
-            }
-            if (Selecciono.e4 == "1")
-            {
-                asientosSelected = asientosSelected + "E4 ";
-            }
-            if (Selecciono.e5 == "1")
-            {
-                asientosSelected = asientosSelected + "E5 ";
-            }
-            if (Selecciono.e6 == "1")
-            {
-                asientosSelected = asientosSelected + "E6 ";
-            }
-            if (Selecciono.e7 == "1")
-            {
-                asientosSelected = asientosSelected + "E7 ";
-            }
-            if (Selecciono.f1 == "1")
-            {
-                asientosSelected = asientosSelected + "F1 ";
-            }
-            if (Selecciono.f2 == "1")
-            {
-                asientosSelected = asientosSelected + "F2 ";
-            }
-            if (Selecciono.f3 == "1")
-            {
-                asientosSelected = asientosSelected + "F3 ";
-            }
-            if (Selecciono.f4 == "1")
-            {
-                asientosSelected = asientosSelected + "F4 ";
-            }
-            if (Selecciono.f5 == "1")
-            {
-                asientosSelected = asientosSelected + "F5 ";
-            }
-            #endregion
-            var but = new Models.Butaca
-            {
-                idbutaca = this.txtidbutaca.Text,
-                a1 = listabutacas.a1,
-                a2 = listabutacas.a2,
-                a3 = listabutacas.a3,
-                a4 = listabutacas.a4,
-                a5 = listabutacas.a5,
-                a6 = listabutacas.a6,
-                a7 = listabutacas.a7,
-                b1 = listabutacas.b1,
-                b2 = listabutacas.b2,
-                b3 = listabutacas.b3,
-                b4 = listabutacas.b4,
-                b5 = listabutacas.b5,
-                b6 = listabutacas.b6,
-                b7 = listabutacas.b7,
-                c1 = listabutacas.c1,
-                c2 = listabutacas.c2,
-                c3 = listabutacas.c3,
-                c4 = listabutacas.c4,
-                c5 = listabutacas.c5,
-                c6 = listabutacas.c6,
-                c7 = listabutacas.c7,
-                d1 = listabutacas.d1,
-                d2 = listabutacas.d2,
-                d3 = listabutacas.d3,
-                d4 = listabutacas.d4,
-                d5 = listabutacas.d5,
-                d6 = listabutacas.d6,
-                d7 = listabutacas.d7,
-                e1 = listabutacas.e1,
-                e2 = listabutacas.e2,
-                e3 = listabutacas.e3,
-                e4 = listabutacas.e4,
-                e5 = listabutacas.e5,
-                e6 = listabutacas.e6,
-                e7 = listabutacas.e7,
-                f1 = listabutacas.f1,
-                f2 = listabutacas.f2,
-                f3 = listabutacas.f3,
-                f4 = listabutacas.f4,
-                f5 = listabutacas.f5,
-            };
+                String asientosSelected="";
+                #region guardar_asientos_seleccionados
+                if (Selecciono.a1 == "1")
+                {
+                    asientosSelected = asientosSelected + "A1 ";
+                }
+                if (Selecciono.a2 == "1")
+                {
+                    asientosSelected = asientosSelected + "A2 ";
+                }
+                if (Selecciono.a3 == "1")
+                {
+                    asientosSelected = asientosSelected + "A3 ";
+                }
+                if (Selecciono.a4 == "1")
+                {
+                    asientosSelected = asientosSelected + "A4 ";
+                }
+                if (Selecciono.a5 == "1")
+                {
+                    asientosSelected = asientosSelected + "A5 ";
+                }
+                if (Selecciono.a6 == "1")
+                {
+                    asientosSelected = asientosSelected + "A6 ";
+                }
+                if (Selecciono.a7 == "1")
+                {
+                    asientosSelected = asientosSelected + "A7 ";
+                }
+                if (Selecciono.b1 == "1")
+                {
+                    asientosSelected = asientosSelected + "B1 ";
+                }
+                if (Selecciono.b2 == "1")
+                {
+                    asientosSelected = asientosSelected + "B2 ";
+                }
+                if (Selecciono.b3 == "1")
+                {
+                    asientosSelected = asientosSelected + "B3 ";
+                }
+                if (Selecciono.b4 == "1")
+                {
+                    asientosSelected = asientosSelected + "B4 ";
+                }
+                if (Selecciono.b5 == "1")
+                {
+                    asientosSelected = asientosSelected + "B5 ";
+                }
+                if (Selecciono.b6 == "1")
+                {
+                    asientosSelected = asientosSelected + "B6 ";
+                }
+                if (Selecciono.b7 == "1")
+                {
+                    asientosSelected = asientosSelected + "B7 ";
+                }
+                if (Selecciono.c1 == "1")
+                {
+                    asientosSelected = asientosSelected + "C1 ";
+                }
+                if (Selecciono.c2 == "1")
+                {
+                    asientosSelected = asientosSelected + "C2 ";
+                }
+                if (Selecciono.c3 == "1")
+                {
+                    asientosSelected = asientosSelected + "C3 ";
+                }
+                if (Selecciono.c4 == "1")
+                {
+                    asientosSelected = asientosSelected + "C4 ";
+                }
+                if (Selecciono.c5 == "1")
+                {
+                    asientosSelected = asientosSelected + "C5 ";
+                }
+                if (Selecciono.c6 == "1")
+                {
+                    asientosSelected = asientosSelected + "C6 ";
+                }
+                if (Selecciono.c7 == "1")
+                {
+                    asientosSelected = asientosSelected + "C7 ";
+                }
+                if (Selecciono.d1 == "1")
+                {
+                    asientosSelected = asientosSelected + "D1 ";
+                }
+                if (Selecciono.d2 == "1")
+                {
+                    asientosSelected = asientosSelected + "D2 ";
+                }
+                if (Selecciono.d3 == "1")
+                {
+                    asientosSelected = asientosSelected + "D3 ";
+                }
+                if (Selecciono.d4 == "1")
+                {
+                    asientosSelected = asientosSelected + "D4 ";
+                }
+                if (Selecciono.d5 == "1")
+                {
+                    asientosSelected = asientosSelected + "D5 ";
+                }
+                if (Selecciono.d6 == "1")
+                {
+                    asientosSelected = asientosSelected + "D6 ";
+                }
+                if (Selecciono.d7 == "1")
+                {
+                    asientosSelected = asientosSelected + "D7 ";
+                }
+                if (Selecciono.e1 == "1")
+                {
+                    asientosSelected = asientosSelected + "E1 ";
+                }
+                if (Selecciono.e2 == "1")
+                {
+                    asientosSelected = asientosSelected + "E2 ";
+                }
+                if (Selecciono.e3 == "1")
+                {
+                    asientosSelected = asientosSelected + "E3 ";
+                }
+                if (Selecciono.e4 == "1")
+                {
+                    asientosSelected = asientosSelected + "E4 ";
+                }
+                if (Selecciono.e5 == "1")
+                {
+                    asientosSelected = asientosSelected + "E5 ";
+                }
+                if (Selecciono.e6 == "1")
+                {
+                    asientosSelected = asientosSelected + "E6 ";
+                }
+                if (Selecciono.e7 == "1")
+                {
+                    asientosSelected = asientosSelected + "E7 ";
+                }
+                if (Selecciono.f1 == "1")
+                {
+                    asientosSelected = asientosSelected + "F1 ";
+                }
+                if (Selecciono.f2 == "1")
+                {
+                    asientosSelected = asientosSelected + "F2 ";
+                }
+                if (Selecciono.f3 == "1")
+                {
+                    asientosSelected = asientosSelected + "F3 ";
+                }
+                if (Selecciono.f4 == "1")
+                {
+                    asientosSelected = asientosSelected + "F4 ";
+                }
+                if (Selecciono.f5 == "1")
+                {
+                    asientosSelected = asientosSelected + "F5 ";
+                }
+                #endregion
+                var but = new Models.Butaca
+                {
+                    idbutaca = this.txtidbutaca.Text,
+                    a1 = listabutacas.a1,
+                    a2 = listabutacas.a2,
+                    a3 = listabutacas.a3,
+                    a4 = listabutacas.a4,
+                    a5 = listabutacas.a5,
+                    a6 = listabutacas.a6,
+                    a7 = listabutacas.a7,
+                    b1 = listabutacas.b1,
+                    b2 = listabutacas.b2,
+                    b3 = listabutacas.b3,
+                    b4 = listabutacas.b4,
+                    b5 = listabutacas.b5,
+                    b6 = listabutacas.b6,
+                    b7 = listabutacas.b7,
+                    c1 = listabutacas.c1,
+                    c2 = listabutacas.c2,
+                    c3 = listabutacas.c3,
+                    c4 = listabutacas.c4,
+                    c5 = listabutacas.c5,
+                    c6 = listabutacas.c6,
+                    c7 = listabutacas.c7,
+                    d1 = listabutacas.d1,
+                    d2 = listabutacas.d2,
+                    d3 = listabutacas.d3,
+                    d4 = listabutacas.d4,
+                    d5 = listabutacas.d5,
+                    d6 = listabutacas.d6,
+                    d7 = listabutacas.d7,
+                    e1 = listabutacas.e1,
+                    e2 = listabutacas.e2,
+                    e3 = listabutacas.e3,
+                    e4 = listabutacas.e4,
+                    e5 = listabutacas.e5,
+                    e6 = listabutacas.e6,
+                    e7 = listabutacas.e7,
+                    f1 = listabutacas.f1,
+                    f2 = listabutacas.f2,
+                    f3 = listabutacas.f3,
+                    f4 = listabutacas.f4,
+                    f5 = listabutacas.f5,
+                };
 
-            await Controllers.ButacasController.UpdateSitio(but);
-            await DisplayAlert("Logrado", "Actualizado Exitosamente", "Ok");
+                await Controllers.ButacasController.UpdateSitio(but);
+                await DisplayAlert("Logrado", "Actualizado Exitosamente", "Ok");
 
-            Models.pelicula classdata = new Models.pelicula
+                Models.pelicula classdata = new Models.pelicula
+                {
+                    IdCine = this.txtidcine.Text,
+                    IdPelicula = this.txtidpeli.Text,
+                    IdHorario = this.txtidhorario.Text,
+                    ContButaca = cantasientos.ToString(),
+                    asientosSelected = asientosSelected,
+                };
+                var page = new Views.TiendaPage();
+                page.BindingContext = classdata;
+                await Navigation.PushAsync(page);
+
+            }
+            else
             {
-                IdCine = this.txtidcine.Text,
-                IdPelicula = this.txtidpeli.Text,
-                IdHorario = this.txtidhorario.Text,
-                ContButaca = cantasientos.ToString(),
-                asientosSelected = asientosSelected,
-            };
-            var page = new Views.TiendaPage();
-            page.BindingContext = classdata;
-            await Navigation.PushAsync(page);
+                await DisplayAlert("Alerta", "Seleccione al menos 1 butaca", "OK");
+            }
         }
 
         private void seat1_Clicked(object sender, EventArgs e)
