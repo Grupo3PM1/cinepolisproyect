@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -48,6 +48,12 @@ namespace cinepolisproyect.Views
                 return false;
             }
 
+            //Valida conexión a Internet
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                await this.DisplayAlert("Sin Internet", "Se ha perdido la conexion a internet", "Ok");
+                return false;
+            }
 
             return true;
         }
