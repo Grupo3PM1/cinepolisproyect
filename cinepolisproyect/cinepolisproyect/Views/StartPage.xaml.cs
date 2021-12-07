@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+using Xamarin.Essentials;
+
 namespace cinepolisproyect.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
@@ -16,16 +18,38 @@ namespace cinepolisproyect.Views
         {
             NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
+            
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
+        
+        private async void Button_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new RegistroPage());
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                await DisplayAlert("Sin Internet", "Por favor active su conexion a internet", "Ok");
+                return;
+            }
+            else
+            {
+                await DisplayAlert("", "Bienvenido", "Ok");
+                Navigation.PushAsync(new RegistroPage());
+            }
         }
 
-        private void Button_Clicked_1(object sender, EventArgs e)
+        private async void Button_Clicked_1(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new LoginPage());
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                await DisplayAlert("Sin Internet", "Por favor active su conexion a internet", "Ok");
+                return;
+            }
+            else
+            {
+                await DisplayAlert("", "Bienvenido", "Ok");
+                Navigation.PushAsync(new LoginPage());
+            }
+            
+            
         }
     }
 }
