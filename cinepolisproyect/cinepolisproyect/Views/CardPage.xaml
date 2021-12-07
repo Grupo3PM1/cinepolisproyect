@@ -17,12 +17,12 @@
     <StackLayout>
         <Frame Padding="8" CornerRadius="0">
             <FlexLayout>
-                <Image Source="LogoCinepolis.png" HeightRequest="40" HorizontalOptions="Start"/>
-                <Label Text="CINEPOLIS" HorizontalOptions="Center" FontSize="24"/>
+                <Image Source="LogoCinepolis.png"  HeightRequest="40" HorizontalOptions="Start"/>
+                <Label Text="CINEPOLIS" TextColor="#010630" HorizontalOptions="Center" FontSize="24"/>
             </FlexLayout>
         </Frame>
     
-    <Grid Padding="5">
+    <Grid >
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -30,47 +30,52 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
-        <Label Text="Information" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"
+        
+        
+            <Label Text="Efectue su pago con tarjeta" Padding="10" FontAttributes="Bold" HorizontalOptions="Center" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"
                FontSize="Large"/>
-        <Label Text="credit/debit" FontSize="Medium"
-               Grid.Row="1" Grid.Column="0"/>
+            <Label Text="credito / debito" HorizontalOptions="Center"  FontSize="Medium" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"/>
 
-        <Label Text="Number" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" VerticalOptions="Center"/>
-        <Entry Text="{Binding CardNumber, Mode=TwoWay}" x:Name="txtncard" Keyboard="Numeric"
-               Placeholder="Enter your card number" Grid.Row="2" Grid.Column="1">
-            <Entry.Behaviors>
-                <fastEntry:XamarinFastEntryBehaviour Mask="#### #### #### ####" 
-                                                     MaxLength="19"/>
-            </Entry.Behaviors>
-        </Entry>
-        <Image Grid.Row="2" Grid.Column="2" Source="tarjeta.png"/>
+            <Image Grid.Row="2" Grid.Column="0" HorizontalOptions="Center" Margin="30" Source="visa.png" />
+            <Image Grid.Row="2" Grid.Column="1" HorizontalOptions="End" Margin="30" Source="mastercard.png" />
 
-        <Label Text="Expire at" Grid.Row="3" Grid.Column="0" VerticalOptions="Center"/>
+
+
+            <Label Text="Número" Margin="5" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" VerticalOptions="Center"/>
+            <Entry Text="{Binding CardNumber, Mode=TwoWay}" x:Name="txtncard" Keyboard="Numeric" Placeholder="Ingrese su número de tarjeta" Grid.Row="3" Grid.Column="1">
+                <Entry.Behaviors>
+                    <fastEntry:XamarinFastEntryBehaviour Mask="#### #### #### ####" MaxLength="19"/>
+                </Entry.Behaviors>
+            </Entry>
+            
+
+            <Label Text="fecha de caducidad" Grid.Row="4" Grid.Column="0" VerticalOptions="Center" Margin="5"/>
         <Entry Text="{Binding Expiration, Mode=TwoWay}" x:Name="txtexpcard" Keyboard="Numeric"
-               Placeholder="MM/YY  " Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2">
+               Placeholder="MM/YY  " Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="1"  >
             <Entry.Behaviors>
                 <fastEntry:XamarinFastEntryBehaviour Mask="##/##" 
                                                      MaxLength="19"/>
             </Entry.Behaviors>
         </Entry>
 
-        <Label Text="CVC" Grid.Row="4" Grid.Column="0" VerticalOptions="Center"/>
-        <Entry Text="{Binding CVC, Mode=TwoWay}" IsPassword="True"
+            <Label Text="CCV" Grid.Row="5" Margin="5" Grid.Column="0" VerticalOptions="Center"/>
+        <Entry Text="{Binding CVC, Mode=TwoWay}" 
                Keyboard="Numeric" x:Name="txtcvccard"
-               Placeholder="" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2">
+               Placeholder="CCV" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2">
             <Entry.Behaviors>
                 <fastEntry:XamarinFastEntryBehaviour Mask="###" 
                                                      MaxLength="3"/>
             </Entry.Behaviors>
         </Entry>
-        <Button Text="pagar con esta tarjeta" Grid.Row="5" Grid.ColumnSpan="3" x:Name="btncard" Clicked="btncard_Clicked"  CornerRadius="25" 
+            <Button Text="pagar con esta tarjeta" Margin="20" Grid.Row="6" Grid.ColumnSpan="3" x:Name="btncard" Clicked="btncard_Clicked"  CornerRadius="25" 
                 TextColor="#20366b" BackgroundColor="#FFCC01"/>
 
             <Label x:Name="txtidcine" Text="{Binding IdCine}" TextColor="Transparent"/>
