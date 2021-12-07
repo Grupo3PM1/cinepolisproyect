@@ -79,5 +79,27 @@ namespace cinepolisproyect.Views
             //Por ultimo enviamos la variable Page referenciado a HorariosPage con los datos de la clase mediante un Navigation.PushAsync
             await Navigation.PushAsync(page);
         }
+
+        private async void StackCombo0_Tapped(object sender, EventArgs e)
+        {
+
+            //pasamos a cargarlos valores a la clase para enviarlos al siguiente ContentPage HorariosPage por medio de BindingContext
+            Models.pelicula classdata = new Models.pelicula
+            {
+                IdCine = this.txtidcine.Text,
+                IdPelicula = this.txtidpeli.Text,
+                IdHorario = this.txtidhorario.Text,
+                IdCombo = "0",
+                RefrescoExtra = this.txtrefrescoextra.Text,
+                ContButaca = this.txtcontbutaca.Text,
+                asientosSelected = this.txtasientosSelected.Text
+            };
+            //Creamos una variable page para referenciar a HorariosPage
+            var page = new Views.CardPage();
+            //Mediante BindingContext enviamos la clase classdata hacia a HorariosPage mediante la variable page
+            page.BindingContext = classdata;
+            //Por ultimo enviamos la variable Page referenciado a HorariosPage con los datos de la clase mediante un Navigation.PushAsync
+            await Navigation.PushAsync(page);
+        }
     }
 }

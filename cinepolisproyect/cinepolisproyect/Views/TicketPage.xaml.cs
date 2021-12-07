@@ -59,6 +59,19 @@ namespace cinepolisproyect.Views
             //colocamos el nombre al StackLayout y le damos el valor
             //qr del objeto creado que es
             stkQR.Children.Add(qr);
+
+            if (IdPelicula == "1")
+            {
+                imgpeli.Source = "cartelera1.jpg";
+            }
+            else if (IdPelicula == "2")
+            {
+                imgpeli.Source = "cartelera2.jpg";
+            }
+            else
+            {
+                imgpeli.Source = "cartelera3.jpg";
+            }
         }
 
         private void btn_home_Clicked(object sender, EventArgs e)

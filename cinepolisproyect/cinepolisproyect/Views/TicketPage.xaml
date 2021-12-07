@@ -4,7 +4,7 @@
              BackgroundColor="#20366b"
              NavigationPage.HasNavigationBar="False"
              x:Class="cinepolisproyect.Views.TicketPage">
-
+    <ScrollView>
         <StackLayout x:Name="stkQR" >
         <Frame Padding="8" CornerRadius="0">
             <FlexLayout>
@@ -25,11 +25,11 @@
         </FlexLayout>
 
             <Label Text="PELICULA" HorizontalOptions="Center" FontSize="30" Margin="20, 0, 20, 0" TextColor="#FFFFFAF0" />
-            <Image Source="img1.jpg" WidthRequest="350" HorizontalOptions="Center"/>
+            <Image x:Name="imgpeli" HeightRequest="150" HorizontalOptions="Center"/>
             <Label Text="Ticket" HorizontalOptions="Center" FontSize="25" Margin="20, 0, 20, 0" TextColor="#FFFFFAF0" />
            
 
         </StackLayout>
-
+    </ScrollView>
 
 </ContentPage>
