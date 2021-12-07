@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -26,6 +26,13 @@ namespace cinepolisproyect.Views
 
         private async Task<bool> validarFormulario()
         {
+            //Valida conexión a Internet
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                await this.DisplayAlert("Sin Internet", "Se ha perdido la conexion a internet", "Ok");
+                return false;
+            }
+
             //Valida si el valor en el Entry se encuentra vacio o es igual a Null
             if (String.IsNullOrWhiteSpace(ttemail_user.Text) || String.IsNullOrWhiteSpace(ttpassword.Text))
             {
@@ -47,7 +54,6 @@ namespace cinepolisproyect.Views
                 await this.DisplayAlert("Advertencia", "La contraseña debe ser mayor o igual a 8 dígitos. ", "OK");
                 return false;
             }
-
 
             return true;
         }
