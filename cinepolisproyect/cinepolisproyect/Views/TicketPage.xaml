@@ -9,7 +9,7 @@
         <Frame Padding="8" CornerRadius="0">
             <FlexLayout>
                 <Image Source="LogoCinepolis.png"  HeightRequest="40" HorizontalOptions="Start"/>
-                <Label Text="CINEPOLIS"  TextColor="Gray" HorizontalOptions="Center" FontSize="24"/>
+                    <Label Text="CINEPOLIS"  TextColor="#010630" HorizontalOptions="Center" FontSize="24"/>
                 <Button Text="Home" TextColor="Gray"  Margin="95,0,0,0"  ContentLayout="Right,20"  Image="outline_home_black_24dp.png"  BackgroundColor="Transparent" x:Name="btn_home" Clicked="btn_home_Clicked"/>
                
             </FlexLayout>
