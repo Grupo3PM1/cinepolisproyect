@@ -144,37 +144,14 @@ namespace cinepolisproyect.Droid
             }
         }
 
-        public async Task<string> ResetPassword(string email)
+        public async Task ResetPassword(string email)
         {
             //Primero debemos de mandar a llamar una instancia de Firebase
             //para saber si el correo electronico que se proporciona tiene una sesion activa en la plataforma
             //luego le pasamos el metodo SendPasswordResetEmailAsync que enviara un enlace al email proporcionado.
-            try
-            {
-                var user = Firebase.Auth.FirebaseAuth.Instance.CurrentUser;
-                if (user != null)
-                {
-                    await FirebaseAuth.Instance.SendPasswordResetEmailAsync(email);
-                }
-                else
-                {
-                    return string.Empty;
-                }
+    
+                await FirebaseAuth.Instance.SendPasswordResetEmailAsync(email);
 
-                var token = user.GetIdToken(false);
-                return (string)token;
-
-            }
-            catch (FirebaseAuthInvalidUserException e)
-            {
-                e.PrintStackTrace();
-                return string.Empty;
-            }
-            catch (FirebaseAuthInvalidCredentialsException e)
-            {
-                e.PrintStackTrace();
-                return string.Empty;
-            }
 
         }
 

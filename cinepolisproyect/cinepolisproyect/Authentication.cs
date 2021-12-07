@@ -19,7 +19,7 @@ namespace cinepolisproyect
 
         //Creamos una tarea llamada ResetPassword que tendra un unico parametro de tipo string,
         //el email para enviar un enlace por correo electronico para restablecer contraseña. 
-        Task<string> ResetPassword(string email);
+        Task ResetPassword(string email);
 
         //Obtener el Uid del usuario
         Task<string> Uid();
