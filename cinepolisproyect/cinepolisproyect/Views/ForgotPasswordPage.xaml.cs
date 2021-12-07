@@ -54,9 +54,7 @@ namespace cinepolisproyect.Views
             //Confirma que los campos esten validados
             if (await validarFormulario())
             {
-                var user = await authentication.ResetPassword(ttemail_user_recu.Text);
-                if (user != string.Empty)
-                {
+
                     //Ya validados los campos, se invoca al task ResetPassword y el contenido del entry
                     //del email. 
                     await authentication.ResetPassword(ttemail_user_recu.Text);
@@ -67,12 +65,6 @@ namespace cinepolisproyect.Views
 
                     //Navegacion hacia la pagina del LoginPage()
                     await Navigation.PushAsync(new LoginPage());
-                }
-                else
-                {
-                    await this.DisplayAlert("Error", "El correo electronico que proporcionaste no corresponde a ninguna cuenta de usuario. Vuelve a intentarlo. ", "OK");
-                }
-
             }
         }
 
