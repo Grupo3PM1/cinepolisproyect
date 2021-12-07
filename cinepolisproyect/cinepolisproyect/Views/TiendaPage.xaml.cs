@@ -26,8 +26,12 @@ namespace cinepolisproyect.Views
             }
             else
             {
-                //pasamos a cargarlos valores a la clase para enviarlos al siguiente ContentPage HorariosPage por medio de BindingContext
-                Models.pelicula classdata = new Models.pelicula
+                if(txtrefrescoextra.Text== "" || txtrefrescoextra.Text == "0")
+                {
+                    txtrefrescoextra.Text = "00";
+                }
+                    //pasamos a cargarlos valores a la clase para enviarlos al siguiente ContentPage HorariosPage por medio de BindingContext
+                    Models.pelicula classdata = new Models.pelicula
                 {
                     IdCine = this.txtidcine.Text,
                     IdPelicula = this.txtidpeli.Text,
@@ -56,6 +60,10 @@ namespace cinepolisproyect.Views
             }
             else
             {
+                if (txtrefrescoextra.Text == "" || txtrefrescoextra.Text == "0")
+                {
+                    txtrefrescoextra.Text = "00";
+                }
                 //pasamos a cargarlos valores a la clase para enviarlos al siguiente ContentPage HorariosPage por medio de BindingContext
                 Models.pelicula classdata = new Models.pelicula
                 {
@@ -86,6 +94,10 @@ namespace cinepolisproyect.Views
             }
             else
             {
+                if (txtrefrescoextra.Text == "" || txtrefrescoextra.Text == "0")
+                {
+                    txtrefrescoextra.Text = "00";
+                }
                 //pasamos a cargarlos valores a la clase para enviarlos al siguiente ContentPage HorariosPage por medio de BindingContext
                 Models.pelicula classdata = new Models.pelicula
                 {
@@ -116,6 +128,10 @@ namespace cinepolisproyect.Views
             }
             else
             {
+                if (txtrefrescoextra.Text == "" || txtrefrescoextra.Text == "0")
+                {
+                    txtrefrescoextra.Text = "00";
+                }
                 //pasamos a cargarlos valores a la clase para enviarlos al siguiente ContentPage HorariosPage por medio de BindingContext
                 Models.pelicula classdata = new Models.pelicula
                 {
