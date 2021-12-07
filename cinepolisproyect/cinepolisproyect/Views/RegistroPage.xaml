@@ -31,8 +31,7 @@
                            TextColor="Black"
                            HorizontalOptions="FillAndExpand" 
                            PlaceholderColor="Black" 
-                           Keyboard="Text" 
-                           MaxLength="50"/>
+                           Keyboard="Text"/>
 
                 </StackLayout>
 
@@ -44,8 +43,7 @@
                            TextColor="Black"
                            PlaceholderColor="Black" 
                            HorizontalOptions="FillAndExpand" 
-                           Keyboard="Text"
-                           MaxLength="50"/>
+                           Keyboard="Text"/>
                 </StackLayout>
 
 
@@ -58,8 +56,7 @@
                             TextColor="Black"
                             PlaceholderColor="Black" 
                             Keyboard="Email" 
-                            HorizontalOptions="FillAndExpand"
-                            MaxLength="100"/>
+                            HorizontalOptions="FillAndExpand"/>
                 </StackLayout>
 
 
