@@ -207,8 +207,8 @@ namespace cinepolisproyect.Views
 
 
                 //--------- FIN ENVIO DE CORREO ELECTRONICO CON PELICULA Y PRODUCTOS  --------//
-
-
+                string but = txtjsonbutaca.Text;
+                await Controllers.ButacasController.UpdateSitio(but);
                 await Controllers.CardController.CrearTarjeta(postcard); 
                 await this.DisplayAlert("Exito", "Datos guardados, revise su correo electronico", "OK");
             

@@ -22,5 +22,6 @@ namespace cinepolisproyect.Models
         public string RefrescoExtra { get; set; }
         public string asientosSelected { get; set; }
         public string totalpagar { get; set; }
+        public string JsonButaca { get; set; }
     }
 }

@@ -1,4 +1,5 @@
-﻿using SkiaSharp;
+﻿using Newtonsoft.Json;
+using SkiaSharp;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -731,9 +732,10 @@ namespace cinepolisproyect.Views
                     f4 = listabutacas.f4,
                     f5 = listabutacas.f5,
                 };
-
-                await Controllers.ButacasController.UpdateSitio(but);
-                await DisplayAlert("Logrado", "Actualizado Exitosamente", "Ok");
+                String JsonContent2 = JsonConvert.SerializeObject(but);
+                String JsonContent = "{\"butaca\":[" + JsonContent2 + "]}";
+                //await Controllers.ButacasController.UpdateSitio(but);
+                //await DisplayAlert("Logrado", "Actualizado Exitosamente", "Ok");
 
                 Models.pelicula classdata = new Models.pelicula
                 {
@@ -742,6 +744,7 @@ namespace cinepolisproyect.Views
                     IdHorario = this.txtidhorario.Text,
                     ContButaca = cantasientos.ToString(),
                     asientosSelected = asientosSelected,
+                    JsonButaca = JsonContent
                 };
                 var page = new Views.TiendaPage();
                 page.BindingContext = classdata;

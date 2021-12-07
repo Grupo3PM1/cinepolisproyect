@@ -54,11 +54,10 @@ namespace cinepolisproyect.Controllers
         //}
 
         //METODO UPDATE
-        public async static Task UpdateSitio(Models.Butaca butaca)
+        public async static Task UpdateSitio(string butaca)
         {
-            String JsonContent2 = JsonConvert.SerializeObject(butaca);
-            String JsonContent = "{\"butaca\":[" + JsonContent2 + "]}";
-            StringContent contenido = new StringContent(JsonContent, Encoding.UTF8, "application/json");
+            
+            StringContent contenido = new StringContent(butaca, Encoding.UTF8, "application/json");
             HttpResponseMessage response = null;
             using (HttpClient client = new HttpClient())
             {

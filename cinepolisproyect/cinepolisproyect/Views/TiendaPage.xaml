@@ -93,6 +93,7 @@
             <Label x:Name="txtidhorario" Text="{Binding IdHorario}" TextColor="Transparent"/>
             <Label x:Name="txtcontbutaca" Text="{Binding ContButaca}" TextColor="Transparent"/>
             <Label x:Name="txtasientosSelected" Text="{Binding asientosSelected}" TextColor="Transparent"/>
+            <Label x:Name="txtjsonbutaca" Text="{Binding JsonButaca}" TextColor="Transparent"/>
         </FlexLayout>
     </StackLayout>
     </ScrollView>
