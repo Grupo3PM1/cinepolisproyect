@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -27,8 +28,23 @@ namespace cinepolisproyect.Views
         {
             base.OnAppearing();
             //llamamos la funcion para mandar a llamar el ID del usuario por su IUD de Firebase
-            traerID();
+            ValidarInternet();
 
+        }
+        public async void ValidarInternet()
+        {
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                await DisplayAlert("Sin Internet", "Se ha perdido la conexion a internet", "Ok");
+                txtNodata.Text = "--por favor active el internet--";
+                return;
+            }
+            else
+            {
+                txtNodata.Text = "";
+                traerID();
+
+            }
         }
         public async void traerID()
         {
@@ -152,7 +168,7 @@ namespace cinepolisproyect.Views
         private async void btn_Refresh_Clicked(object sender, EventArgs e)
         {
             //este boton sirve para recargar entonces realmente ejecutamos la misma funcion que al iniciar el contentpage
-            traerID();
+            ValidarInternet();
         }
     }
 }
