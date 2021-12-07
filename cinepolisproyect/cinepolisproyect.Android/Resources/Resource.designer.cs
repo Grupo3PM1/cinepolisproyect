@@ -25,6 +25,7 @@ namespace cinepolisproyect.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::Plugin.LocalNotifications.Resource.Drawable.plugin_lc_smallicon = global::cinepolisproyect.Droid.Resource.Drawable.plugin_lc_smallicon;
 			global::SkiaSharp.Views.Forms.Resource.Animation.abc_fade_in = global::cinepolisproyect.Droid.Resource.Animation.abc_fade_in;
 			global::SkiaSharp.Views.Forms.Resource.Animation.abc_fade_out = global::cinepolisproyect.Droid.Resource.Animation.abc_fade_out;
 			global::SkiaSharp.Views.Forms.Resource.Animation.abc_grow_fade_in_from_bottom = global::cinepolisproyect.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
@@ -14508,40 +14509,43 @@ namespace cinepolisproyect.Droid
 			public const int outline_home_black_24dp = 2131165381;
 			
 			// aapt resource value: 0x7F0700C6
-			public const int refresco = 2131165382;
+			public const int plugin_lc_smallicon = 2131165382;
 			
 			// aapt resource value: 0x7F0700C7
-			public const int refresh = 2131165383;
+			public const int refresco = 2131165383;
 			
 			// aapt resource value: 0x7F0700C8
-			public const int show = 2131165384;
+			public const int refresh = 2131165384;
 			
 			// aapt resource value: 0x7F0700C9
-			public const int siete = 2131165385;
+			public const int show = 2131165385;
 			
 			// aapt resource value: 0x7F0700CA
-			public const int splash_screen = 2131165386;
+			public const int siete = 2131165386;
 			
 			// aapt resource value: 0x7F0700CB
-			public const int tarjeta = 2131165387;
+			public const int splash_screen = 2131165387;
 			
 			// aapt resource value: 0x7F0700CC
-			public const int test_custom_background = 2131165388;
+			public const int tarjeta = 2131165388;
 			
 			// aapt resource value: 0x7F0700CD
-			public const int Time = 2131165389;
+			public const int test_custom_background = 2131165389;
 			
 			// aapt resource value: 0x7F0700CE
-			public const int tooltip_frame_dark = 2131165390;
+			public const int Time = 2131165390;
 			
 			// aapt resource value: 0x7F0700CF
-			public const int tooltip_frame_light = 2131165391;
+			public const int tooltip_frame_dark = 2131165391;
 			
 			// aapt resource value: 0x7F0700D0
-			public const int tres = 2131165392;
+			public const int tooltip_frame_light = 2131165392;
 			
 			// aapt resource value: 0x7F0700D1
-			public const int visa = 2131165393;
+			public const int tres = 2131165393;
+			
+			// aapt resource value: 0x7F0700D2
+			public const int visa = 2131165394;
 			
 			static Drawable()
 			{

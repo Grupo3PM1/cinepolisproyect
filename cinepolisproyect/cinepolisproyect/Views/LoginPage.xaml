@@ -26,7 +26,7 @@
                 <Label Text="Inicia sesión para continuar" TextColor="Black" VerticalOptions="Start" HorizontalOptions="Start" Margin="15,0,0,0"  FontSize="14" />
 
                 <StackLayout Orientation="Horizontal" Margin="0,30,0,10">
-                    <Entry x:Name="ttemail_user" TextColor="Black" PlaceholderColor="Black" FontSize="15" Placeholder="Correo electrónico" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,0,0" Keyboard="Email" />
+                    <Entry x:Name="ttemail_user" TextColor="Black" PlaceholderColor="Black" FontSize="15" Placeholder="Correo electrónico" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,0,0" Keyboard="Email" MaxLength="100"/>
                 </StackLayout>
 
                 <StackLayout Orientation="Horizontal" Margin="0,0,0,20">

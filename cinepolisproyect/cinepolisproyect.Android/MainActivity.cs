@@ -4,6 +4,7 @@ using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
 using Firebase;
+using Plugin.LocalNotifications;
 
 namespace cinepolisproyect.Droid
 {
@@ -12,6 +13,7 @@ namespace cinepolisproyect.Droid
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            LocalNotificationsImplementation.NotificationIconId = Resource.Drawable.cinepolis_share;
             base.OnCreate(savedInstanceState);
 
             //Inicializamos firebase pasandole el contexto de nuestra aplicacion android

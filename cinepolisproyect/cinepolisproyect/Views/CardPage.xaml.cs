@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Plugin.LocalNotifications;
 
 namespace cinepolisproyect.Views
 {
@@ -158,6 +159,44 @@ namespace cinepolisproyect.Views
                         asientosSelected = this.txtasientosSelected.Text,
                         totalpagar = totalpago.ToString()
                     };
+
+                    //Desicion de peliculas a mostrar en el correo
+                    int horapelicula = 0;
+                    if (this.txtidhorario.Text == "1")
+                    {
+                        horapelicula = 15;
+                    }
+                    else if (this.txtidhorario.Text == "2")
+                    {
+                        horapelicula = 17;
+                    }
+                    else if (this.txtidhorario.Text == "3")
+                    {
+                        horapelicula = 19;
+                    }
+
+                    DateTime date1 = new DateTime(2021, 12,
+                                             7, horapelicula, 0, 0);
+
+                    DateTime date2 = new DateTime(2021, 12,
+                                             7, int.Parse(DateTime.Now.ToString("hh")), int.Parse(DateTime.Now.ToString("mm")), int.Parse(DateTime.Now.ToString("ss")));
+
+                    TimeSpan value;
+                    if (date1 >= date2)
+                    {
+                        value = date1.Subtract(date2);
+                    }
+                    else
+                    {
+                        DateTime date1a = new DateTime(2021, 12,
+                         8, horapelicula, 0, 0);
+
+                        DateTime date2a = new DateTime(2021, 12,
+                                                 7, int.Parse(DateTime.Now.ToString("hh")), int.Parse(DateTime.Now.ToString("mm")), int.Parse(DateTime.Now.ToString("ss")));
+                        value = date2a.Subtract(date1a);
+                    }
+
+                    CrossLocalNotifications.Current.Show("!Hola, Te recordamos¡", "Tu funcion empieza en "+value+" restantes", 0,DateTime.Now.AddSeconds(10));
 
 
 
