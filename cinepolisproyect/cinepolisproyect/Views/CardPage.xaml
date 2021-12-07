@@ -21,35 +21,35 @@
                 <Label Text="CINEPOLIS" TextColor="#010630" HorizontalOptions="Center" FontSize="24"/>
             </FlexLayout>
         </Frame>
-    
-    <Grid >
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
+
+        <Grid >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="Auto"/>
-        </Grid.ColumnDefinitions>
-        
-        
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
             <Label Text="Efectue su pago con tarjeta" Padding="10" FontAttributes="Bold" HorizontalOptions="Center" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"
                FontSize="Large"/>
-            <Label Text="credito / debito" HorizontalOptions="Center"  FontSize="Medium" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"/>
 
-            <Image Grid.Row="2" Grid.Column="0" HorizontalOptions="Center" Margin="30" Source="visa.png" />
-            <Image Grid.Row="2" Grid.Column="1" HorizontalOptions="End" Margin="30" Source="mastercard.png" />
+            <Label Text="credito / debito" Padding="10" Margin="20" FontAttributes="Bold" HorizontalOptions="Center" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"
+               FontSize="Medium"/>
+
+            <Image Grid.Row="2" Grid.Column="0" Margin="10" Source="visa.png" HorizontalOptions="End"/>
+            <Image Grid.Row="2" Grid.Column="1" Margin="10" Source="mastercard.png" HorizontalOptions="Fill"/>
 
 
-
-            <Label Text="Número" Margin="5" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" VerticalOptions="Center"/>
+            <Label Text="Número" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" VerticalOptions="Center"/>
             <Entry Text="{Binding CardNumber, Mode=TwoWay}" x:Name="txtncard" Keyboard="Numeric" Placeholder="Ingrese su número de tarjeta" Grid.Row="3" Grid.Column="1">
                 <Entry.Behaviors>
                     <fastEntry:XamarinFastEntryBehaviour Mask="#### #### #### ####" MaxLength="19"/>
@@ -57,26 +57,25 @@
             </Entry>
             
 
-            <Label Text="fecha de caducidad" Grid.Row="4" Grid.Column="0" VerticalOptions="Center" Margin="5"/>
-        <Entry Text="{Binding Expiration, Mode=TwoWay}" x:Name="txtexpcard" Keyboard="Numeric"
-               Placeholder="MM/YY  " Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="1"  >
-            <Entry.Behaviors>
-                <fastEntry:XamarinFastEntryBehaviour Mask="##/##" 
-                                                     MaxLength="5"/>
-            </Entry.Behaviors>
-        </Entry>
+            <Label Text="fecha de caducidad" Grid.Row="4" Grid.Column="0" VerticalOptions="Center"/>
+            <Entry Text="{Binding Expiration, Mode=TwoWay}" x:Name="txtexpcard" Keyboard="Numeric"
+               Placeholder="MM/YY  " Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2">
+                <Entry.Behaviors>
+                    <fastEntry:XamarinFastEntryBehaviour Mask="##/##" 
+                                                     MaxLength="19"/>
+                </Entry.Behaviors>
+            </Entry>
 
-            <Label Text="CCV" Grid.Row="5" Margin="5" Grid.Column="0" VerticalOptions="Center"/>
-        <Entry Text="{Binding CVC, Mode=TwoWay}" 
+            <Label Text="CVC" Grid.Row="5" Grid.Column="0" VerticalOptions="Center"/>
+            <Entry Text="{Binding CVC, Mode=TwoWay}" IsPassword="True"
                Keyboard="Numeric" x:Name="txtcvccard"
-               Placeholder="CCV" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2"
-               IsPassword="True">
-            <Entry.Behaviors>
-                <fastEntry:XamarinFastEntryBehaviour Mask="###" 
+               Placeholder="CVC" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2">
+                <Entry.Behaviors>
+                    <fastEntry:XamarinFastEntryBehaviour Mask="###" 
                                                      MaxLength="3"/>
-            </Entry.Behaviors>
-        </Entry>
-            <Button Text="pagar con esta tarjeta" Margin="20" Grid.Row="6" Grid.ColumnSpan="3" x:Name="btncard" Clicked="btncard_Clicked"  CornerRadius="25" 
+                </Entry.Behaviors>
+            </Entry>
+            <Button Text="pagar con esta tarjeta" Margin="30" Grid.Row="6" Grid.ColumnSpan="3" x:Name="btncard" Clicked="btncard_Clicked"  CornerRadius="25" 
                 TextColor="#20366b" BackgroundColor="#FFCC01"/>
 
             <Label x:Name="txtidcine" Text="{Binding IdCine}" TextColor="Transparent"/>
@@ -86,7 +85,6 @@
             <Label x:Name="txtRefrescoExtra" Text="{Binding RefrescoExtra}" TextColor="Transparent"/>
             <Label x:Name="txtcontbutaca" Text="{Binding ContButaca}" TextColor="Transparent"/>
             <Label x:Name="txtasientosSelected" Text="{Binding asientosSelected}" TextColor="Transparent"/>
-            <Label x:Name="txtjsonbutaca" Text="{Binding JsonButaca}" TextColor="Transparent"/>
-    </Grid>
+        </Grid>
     </StackLayout>
 </ContentPage> 
